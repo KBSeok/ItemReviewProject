@@ -38,7 +38,6 @@
             this.gradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ordersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cusInfo = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCusInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cusInfo)).BeginInit();
             this.SuspendLayout();
@@ -111,20 +110,10 @@
             // 
             this.cusInfo.DataSource = typeof(MiniProject.Customer);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(430, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // CustomerInfoControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvCusInfo);
             this.Controls.Add(this.label1);
             this.Name = "CustomerInfoControl";
@@ -146,6 +135,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gradeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ordersDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource cusInfo;
-        private System.Windows.Forms.Button button1;
     }
 }
