@@ -33,30 +33,29 @@
             this.cbbGrade = new System.Windows.Forms.ComboBox();
             this.chbCusId = new System.Windows.Forms.CheckBox();
             this.txbCusId = new System.Windows.Forms.TextBox();
+            this.btnCusSearch = new System.Windows.Forms.Button();
             this.gbCusSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbCusSearch
             // 
+            this.gbCusSearch.Controls.Add(this.btnCusSearch);
             this.gbCusSearch.Controls.Add(this.chbCusGrade);
             this.gbCusSearch.Controls.Add(this.cbbGrade);
             this.gbCusSearch.Controls.Add(this.chbCusId);
             this.gbCusSearch.Controls.Add(this.txbCusId);
-            this.gbCusSearch.Location = new System.Drawing.Point(9, 4);
-            this.gbCusSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbCusSearch.Location = new System.Drawing.Point(8, 3);
             this.gbCusSearch.Name = "gbCusSearch";
-            this.gbCusSearch.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbCusSearch.Size = new System.Drawing.Size(647, 71);
+            this.gbCusSearch.Size = new System.Drawing.Size(566, 57);
             this.gbCusSearch.TabIndex = 0;
             this.gbCusSearch.TabStop = false;
             // 
             // chbCusGrade
             // 
             this.chbCusGrade.AutoSize = true;
-            this.chbCusGrade.Location = new System.Drawing.Point(293, 30);
-            this.chbCusGrade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chbCusGrade.Location = new System.Drawing.Point(256, 24);
             this.chbCusGrade.Name = "chbCusGrade";
-            this.chbCusGrade.Size = new System.Drawing.Size(104, 19);
+            this.chbCusGrade.Size = new System.Drawing.Size(84, 16);
             this.chbCusGrade.TabIndex = 3;
             this.chbCusGrade.Text = "고객등급 : ";
             this.chbCusGrade.UseVisualStyleBackColor = true;
@@ -64,39 +63,44 @@
             // cbbGrade
             // 
             this.cbbGrade.FormattingEnabled = true;
-            this.cbbGrade.Location = new System.Drawing.Point(407, 28);
-            this.cbbGrade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbbGrade.Location = new System.Drawing.Point(356, 22);
             this.cbbGrade.Name = "cbbGrade";
-            this.cbbGrade.Size = new System.Drawing.Size(122, 23);
+            this.cbbGrade.Size = new System.Drawing.Size(107, 20);
             this.cbbGrade.TabIndex = 1;
             // 
             // chbCusId
             // 
             this.chbCusId.AutoSize = true;
-            this.chbCusId.Location = new System.Drawing.Point(7, 30);
-            this.chbCusId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chbCusId.Location = new System.Drawing.Point(6, 24);
             this.chbCusId.Name = "chbCusId";
-            this.chbCusId.Size = new System.Drawing.Size(87, 19);
+            this.chbCusId.Size = new System.Drawing.Size(71, 16);
             this.chbCusId.TabIndex = 2;
             this.chbCusId.Text = "회원 ID :";
             this.chbCusId.UseVisualStyleBackColor = true;
             // 
             // txbCusId
             // 
-            this.txbCusId.Location = new System.Drawing.Point(91, 26);
-            this.txbCusId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txbCusId.Location = new System.Drawing.Point(80, 21);
             this.txbCusId.Name = "txbCusId";
-            this.txbCusId.Size = new System.Drawing.Size(177, 25);
+            this.txbCusId.Size = new System.Drawing.Size(155, 21);
             this.txbCusId.TabIndex = 0;
+            // 
+            // btnCusSearch
+            // 
+            this.btnCusSearch.Location = new System.Drawing.Point(485, 20);
+            this.btnCusSearch.Name = "btnCusSearch";
+            this.btnCusSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnCusSearch.TabIndex = 4;
+            this.btnCusSearch.Text = "검색";
+            this.btnCusSearch.UseVisualStyleBackColor = true;
             // 
             // CustomerSearchControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gbCusSearch);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CustomerSearchControl";
-            this.Size = new System.Drawing.Size(662, 82);
+            this.Size = new System.Drawing.Size(579, 66);
             this.gbCusSearch.ResumeLayout(false);
             this.gbCusSearch.PerformLayout();
             this.ResumeLayout(false);
@@ -110,5 +114,6 @@
         private System.Windows.Forms.ComboBox cbbGrade;
         private System.Windows.Forms.CheckBox chbCusId;
         private System.Windows.Forms.TextBox txbCusId;
+        private System.Windows.Forms.Button btnCusSearch;
     }
 }
