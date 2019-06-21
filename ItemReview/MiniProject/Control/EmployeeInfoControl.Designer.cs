@@ -33,16 +33,12 @@
             this.dgvEmployeeInfo = new System.Windows.Forms.DataGridView();
             this.EmployeeInfo = new System.Windows.Forms.BindingSource(this.components);
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rankDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hireDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.homePhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginPWDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ordersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hireDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeInfo)).BeginInit();
             this.SuspendLayout();
@@ -63,16 +59,12 @@
             this.dgvEmployeeInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployeeInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.employeeIDDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
             this.rankDataGridViewTextBoxColumn,
-            this.genderDataGridViewTextBoxColumn,
-            this.birthDateDataGridViewTextBoxColumn,
-            this.hireDateDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
             this.homePhoneDataGridViewTextBoxColumn,
-            this.loginIDDataGridViewTextBoxColumn,
-            this.loginPWDataGridViewTextBoxColumn,
-            this.ordersDataGridViewTextBoxColumn});
+            this.addressDataGridViewTextBoxColumn,
+            this.genderDataGridViewTextBoxColumn,
+            this.hireDateDataGridViewTextBoxColumn});
             this.dgvEmployeeInfo.DataSource = this.EmployeeInfo;
             this.dgvEmployeeInfo.Location = new System.Drawing.Point(6, 34);
             this.dgvEmployeeInfo.Name = "dgvEmployeeInfo";
@@ -90,41 +82,17 @@
             this.employeeIDDataGridViewTextBoxColumn.HeaderText = "EmployeeID";
             this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
             // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
             // rankDataGridViewTextBoxColumn
             // 
             this.rankDataGridViewTextBoxColumn.DataPropertyName = "rank";
             this.rankDataGridViewTextBoxColumn.HeaderText = "rank";
             this.rankDataGridViewTextBoxColumn.Name = "rankDataGridViewTextBoxColumn";
             // 
-            // genderDataGridViewTextBoxColumn
+            // nameDataGridViewTextBoxColumn
             // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            // 
-            // birthDateDataGridViewTextBoxColumn
-            // 
-            this.birthDateDataGridViewTextBoxColumn.DataPropertyName = "BirthDate";
-            this.birthDateDataGridViewTextBoxColumn.HeaderText = "BirthDate";
-            this.birthDateDataGridViewTextBoxColumn.Name = "birthDateDataGridViewTextBoxColumn";
-            // 
-            // hireDateDataGridViewTextBoxColumn
-            // 
-            this.hireDateDataGridViewTextBoxColumn.DataPropertyName = "HireDate";
-            this.hireDateDataGridViewTextBoxColumn.HeaderText = "HireDate";
-            this.hireDateDataGridViewTextBoxColumn.Name = "hireDateDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             // 
             // homePhoneDataGridViewTextBoxColumn
             // 
@@ -132,23 +100,23 @@
             this.homePhoneDataGridViewTextBoxColumn.HeaderText = "HomePhone";
             this.homePhoneDataGridViewTextBoxColumn.Name = "homePhoneDataGridViewTextBoxColumn";
             // 
-            // loginIDDataGridViewTextBoxColumn
+            // addressDataGridViewTextBoxColumn
             // 
-            this.loginIDDataGridViewTextBoxColumn.DataPropertyName = "LoginID";
-            this.loginIDDataGridViewTextBoxColumn.HeaderText = "LoginID";
-            this.loginIDDataGridViewTextBoxColumn.Name = "loginIDDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             // 
-            // loginPWDataGridViewTextBoxColumn
+            // genderDataGridViewTextBoxColumn
             // 
-            this.loginPWDataGridViewTextBoxColumn.DataPropertyName = "LoginPW";
-            this.loginPWDataGridViewTextBoxColumn.HeaderText = "LoginPW";
-            this.loginPWDataGridViewTextBoxColumn.Name = "loginPWDataGridViewTextBoxColumn";
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
             // 
-            // ordersDataGridViewTextBoxColumn
+            // hireDateDataGridViewTextBoxColumn
             // 
-            this.ordersDataGridViewTextBoxColumn.DataPropertyName = "Orders";
-            this.ordersDataGridViewTextBoxColumn.HeaderText = "Orders";
-            this.ordersDataGridViewTextBoxColumn.Name = "ordersDataGridViewTextBoxColumn";
+            this.hireDateDataGridViewTextBoxColumn.DataPropertyName = "HireDate";
+            this.hireDateDataGridViewTextBoxColumn.HeaderText = "HireDate";
+            this.hireDateDataGridViewTextBoxColumn.Name = "hireDateDataGridViewTextBoxColumn";
             // 
             // EmployeeInfoControl
             // 
@@ -168,17 +136,13 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvEmployeeInfo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rankDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hireDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn homePhoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loginIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loginPWDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ordersDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource EmployeeInfo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rankDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn homePhoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hireDateDataGridViewTextBoxColumn;
     }
 }

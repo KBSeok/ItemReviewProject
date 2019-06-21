@@ -33,13 +33,8 @@
             this.ProductList = new System.Windows.Forms.BindingSource(this.components);
             this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parentsCategoryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderDetailsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parentsCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductList)).BeginInit();
             this.SuspendLayout();
@@ -51,13 +46,8 @@
             this.dgvOrderList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.productIdDataGridViewTextBoxColumn,
             this.productNameDataGridViewTextBoxColumn,
-            this.supplierIdDataGridViewTextBoxColumn,
             this.parentsCategoryIdDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.stockAmountDataGridViewTextBoxColumn,
-            this.orderDetailsDataGridViewTextBoxColumn,
-            this.parentsCategoryDataGridViewTextBoxColumn,
-            this.supplierDataGridViewTextBoxColumn});
+            this.stockAmountDataGridViewTextBoxColumn});
             this.dgvOrderList.DataSource = this.ProductList;
             this.dgvOrderList.Location = new System.Drawing.Point(3, 3);
             this.dgvOrderList.Name = "dgvOrderList";
@@ -81,47 +71,17 @@
             this.productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
             this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
             // 
-            // supplierIdDataGridViewTextBoxColumn
-            // 
-            this.supplierIdDataGridViewTextBoxColumn.DataPropertyName = "SupplierId";
-            this.supplierIdDataGridViewTextBoxColumn.HeaderText = "SupplierId";
-            this.supplierIdDataGridViewTextBoxColumn.Name = "supplierIdDataGridViewTextBoxColumn";
-            // 
             // parentsCategoryIdDataGridViewTextBoxColumn
             // 
             this.parentsCategoryIdDataGridViewTextBoxColumn.DataPropertyName = "ParentsCategoryId";
             this.parentsCategoryIdDataGridViewTextBoxColumn.HeaderText = "ParentsCategoryId";
             this.parentsCategoryIdDataGridViewTextBoxColumn.Name = "parentsCategoryIdDataGridViewTextBoxColumn";
             // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
             // stockAmountDataGridViewTextBoxColumn
             // 
             this.stockAmountDataGridViewTextBoxColumn.DataPropertyName = "StockAmount";
             this.stockAmountDataGridViewTextBoxColumn.HeaderText = "StockAmount";
             this.stockAmountDataGridViewTextBoxColumn.Name = "stockAmountDataGridViewTextBoxColumn";
-            // 
-            // orderDetailsDataGridViewTextBoxColumn
-            // 
-            this.orderDetailsDataGridViewTextBoxColumn.DataPropertyName = "Order_Details";
-            this.orderDetailsDataGridViewTextBoxColumn.HeaderText = "Order_Details";
-            this.orderDetailsDataGridViewTextBoxColumn.Name = "orderDetailsDataGridViewTextBoxColumn";
-            // 
-            // parentsCategoryDataGridViewTextBoxColumn
-            // 
-            this.parentsCategoryDataGridViewTextBoxColumn.DataPropertyName = "ParentsCategory";
-            this.parentsCategoryDataGridViewTextBoxColumn.HeaderText = "ParentsCategory";
-            this.parentsCategoryDataGridViewTextBoxColumn.Name = "parentsCategoryDataGridViewTextBoxColumn";
-            // 
-            // supplierDataGridViewTextBoxColumn
-            // 
-            this.supplierDataGridViewTextBoxColumn.DataPropertyName = "Supplier";
-            this.supplierDataGridViewTextBoxColumn.HeaderText = "Supplier";
-            this.supplierDataGridViewTextBoxColumn.Name = "supplierDataGridViewTextBoxColumn";
             // 
             // StockListControl
             // 
@@ -139,15 +99,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvOrderList;
+        private System.Windows.Forms.BindingSource ProductList;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn supplierIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn parentsCategoryIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stockAmountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderDetailsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn parentsCategoryDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn supplierDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource ProductList;
     }
 }

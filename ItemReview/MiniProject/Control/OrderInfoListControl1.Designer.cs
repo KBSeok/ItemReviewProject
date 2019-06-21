@@ -32,17 +32,8 @@
             this.dgvOrderList = new System.Windows.Forms.DataGridView();
             this.orderList = new System.Windows.Forms.BindingSource(this.components);
             this.orderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requiredDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shippedDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shiperIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.freightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderDetailsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shipperDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderList)).BeginInit();
             this.SuspendLayout();
@@ -53,17 +44,8 @@
             this.dgvOrderList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrderList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.orderIDDataGridViewTextBoxColumn,
-            this.customerNameDataGridViewTextBoxColumn,
             this.employeeIDDataGridViewTextBoxColumn,
-            this.orderDateDataGridViewTextBoxColumn,
-            this.requiredDateDataGridViewTextBoxColumn,
-            this.shippedDateDataGridViewTextBoxColumn,
-            this.shiperIDDataGridViewTextBoxColumn,
-            this.freightDataGridViewTextBoxColumn,
-            this.customerDataGridViewTextBoxColumn,
-            this.employeeDataGridViewTextBoxColumn,
-            this.orderDetailsDataGridViewTextBoxColumn,
-            this.shipperDataGridViewTextBoxColumn});
+            this.orderDateDataGridViewTextBoxColumn});
             this.dgvOrderList.DataSource = this.orderList;
             this.dgvOrderList.Location = new System.Drawing.Point(5, 13);
             this.dgvOrderList.Name = "dgvOrderList";
@@ -81,12 +63,6 @@
             this.orderIDDataGridViewTextBoxColumn.HeaderText = "OrderID";
             this.orderIDDataGridViewTextBoxColumn.Name = "orderIDDataGridViewTextBoxColumn";
             // 
-            // customerNameDataGridViewTextBoxColumn
-            // 
-            this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
-            this.customerNameDataGridViewTextBoxColumn.HeaderText = "CustomerName";
-            this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
-            // 
             // employeeIDDataGridViewTextBoxColumn
             // 
             this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "EmployeeID";
@@ -98,54 +74,6 @@
             this.orderDateDataGridViewTextBoxColumn.DataPropertyName = "OrderDate";
             this.orderDateDataGridViewTextBoxColumn.HeaderText = "OrderDate";
             this.orderDateDataGridViewTextBoxColumn.Name = "orderDateDataGridViewTextBoxColumn";
-            // 
-            // requiredDateDataGridViewTextBoxColumn
-            // 
-            this.requiredDateDataGridViewTextBoxColumn.DataPropertyName = "RequiredDate";
-            this.requiredDateDataGridViewTextBoxColumn.HeaderText = "RequiredDate";
-            this.requiredDateDataGridViewTextBoxColumn.Name = "requiredDateDataGridViewTextBoxColumn";
-            // 
-            // shippedDateDataGridViewTextBoxColumn
-            // 
-            this.shippedDateDataGridViewTextBoxColumn.DataPropertyName = "ShippedDate";
-            this.shippedDateDataGridViewTextBoxColumn.HeaderText = "ShippedDate";
-            this.shippedDateDataGridViewTextBoxColumn.Name = "shippedDateDataGridViewTextBoxColumn";
-            // 
-            // shiperIDDataGridViewTextBoxColumn
-            // 
-            this.shiperIDDataGridViewTextBoxColumn.DataPropertyName = "ShiperID";
-            this.shiperIDDataGridViewTextBoxColumn.HeaderText = "ShiperID";
-            this.shiperIDDataGridViewTextBoxColumn.Name = "shiperIDDataGridViewTextBoxColumn";
-            // 
-            // freightDataGridViewTextBoxColumn
-            // 
-            this.freightDataGridViewTextBoxColumn.DataPropertyName = "Freight";
-            this.freightDataGridViewTextBoxColumn.HeaderText = "Freight";
-            this.freightDataGridViewTextBoxColumn.Name = "freightDataGridViewTextBoxColumn";
-            // 
-            // customerDataGridViewTextBoxColumn
-            // 
-            this.customerDataGridViewTextBoxColumn.DataPropertyName = "Customer";
-            this.customerDataGridViewTextBoxColumn.HeaderText = "Customer";
-            this.customerDataGridViewTextBoxColumn.Name = "customerDataGridViewTextBoxColumn";
-            // 
-            // employeeDataGridViewTextBoxColumn
-            // 
-            this.employeeDataGridViewTextBoxColumn.DataPropertyName = "Employee";
-            this.employeeDataGridViewTextBoxColumn.HeaderText = "Employee";
-            this.employeeDataGridViewTextBoxColumn.Name = "employeeDataGridViewTextBoxColumn";
-            // 
-            // orderDetailsDataGridViewTextBoxColumn
-            // 
-            this.orderDetailsDataGridViewTextBoxColumn.DataPropertyName = "Order_Details";
-            this.orderDetailsDataGridViewTextBoxColumn.HeaderText = "Order_Details";
-            this.orderDetailsDataGridViewTextBoxColumn.Name = "orderDetailsDataGridViewTextBoxColumn";
-            // 
-            // shipperDataGridViewTextBoxColumn
-            // 
-            this.shipperDataGridViewTextBoxColumn.DataPropertyName = "Shipper";
-            this.shipperDataGridViewTextBoxColumn.HeaderText = "Shipper";
-            this.shipperDataGridViewTextBoxColumn.Name = "shipperDataGridViewTextBoxColumn";
             // 
             // OrderInfoListControl1
             // 
@@ -163,18 +91,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvOrderList;
+        private System.Windows.Forms.BindingSource orderList;
         private System.Windows.Forms.DataGridViewTextBoxColumn orderIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn orderDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn requiredDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shippedDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shiperIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn freightDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn employeeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderDetailsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shipperDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource orderList;
     }
 }
