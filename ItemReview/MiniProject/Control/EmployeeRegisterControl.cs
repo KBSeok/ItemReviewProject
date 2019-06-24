@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MiniProject.Data;
 
 namespace Miniproject
 {
@@ -25,8 +26,17 @@ namespace Miniproject
         {
             //using (ShoppingMallEntities context = new ShoppingMallEntities())
             //{
-            //    context.Employees.Add(txbNumber.Text, txbName.Text,cbbLevel.Text,
-            //        cbbGender.Text, );
+            //    Employee employee = new Employee();
+            //    employee.EmployeeID = Convert.ToInt32(txbNumber.Text);
+            //    employee.Name = txbName.Text;
+            //    employee.rank = cbbLevel.Text;
+            //    employee.Gender = cbbGender.Text;
+            //    employee.BirthDate = txbBirth.Text;
+            //    employee.HireDate = DateTime.Now.ToString();
+            //    employee.Address = txbAddress.Text;
+            //    employee.HomePhone = txbNumber.Text;
+
+            //    DB.
 
             //    context.SaveChanges();
             //}

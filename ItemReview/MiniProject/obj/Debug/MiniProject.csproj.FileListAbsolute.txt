@@ -33,23 +33,6 @@ D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\bin\Debug\EntityFramew
 D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\bin\Debug\EntityFramework.SqlServer.xml
 D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\bin\Debug\ko\EntityFramework.resources.dll
 D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.csprojAssemblyReference.cache
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.CustomerInfoControl.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.CustomerOrderListControl.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.CustomerSearchControl.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.EmployeeInfoControl.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.RegisterEmployeeControl.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.EmployeeSearch.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.OrderInfoListControl1.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.OrderSearchControl.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.StockListControl.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.StockSearchControl.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.CusOrderInfoForm.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.EmployeeInfoForm.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.OderListForm.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.StockManagementForm.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.InsertDeleteControl.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.Login_Form.resources
-D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\ItemReview.MainmenuForm.resources
 D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.Properties.Resources.resources
 D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.csproj.GenerateResource.cache
 D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.csproj.CoreCompileInputs.cache
@@ -120,3 +103,20 @@ C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\bin\Debug\EntityFramework.xml
 C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\bin\Debug\ko\EntityFramework.resources.dll
 C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\MiniProject.csproj.CopyComplete
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.CustomerInfoControl.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.CustomerOrderListControl.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.CustomerSearchControl.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.EmployeeInfoControl.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.RegisterEmployeeControl.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.EmployeeSearch.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.OrderInfoListControl1.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.OrderSearchControl.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.StockListControl.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.StockSearchControl.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.CusOrderInfoForm.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.EmployeeInfoForm.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.OderListForm.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.StockManagementForm.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.InsertDeleteControl.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.Login_Form.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.MainmenuForm.resources

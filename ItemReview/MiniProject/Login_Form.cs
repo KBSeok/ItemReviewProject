@@ -21,26 +21,25 @@ namespace Miniproject
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MainmenuForm form1 = new MainmenuForm();
-            form1.ShowDialog();
-            //using (ShoppingMallEntities context = new ShoppingMallEntities())
-            //{
-            //    if (DB.employee.GetEmployeeId().Contains(txbId.Text) == true)
-            //    {
-            //        if (DB.employee.GetEmployeePW().Contains(txbPassword.Text) == true)
-            //        {
-            //            MainmenuForm form1 = new MainmenuForm();
-            //            form1.ShowDialog();
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show("비밀번호가 잘못입력되었습니다", "알림", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //            return;
-            //        }
-            //    }
-            //    else
-            //        MessageBox.Show("아이디가 잘못되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+
+            using (ShoppingMallEntities context = new ShoppingMallEntities())
+            {
+                if (DB.employee.GetEmployeeId().Contains(txbId.Text) == true)
+                {
+                    if (DB.employee.GetEmployeePW().Contains(txbPassword.Text) == true)
+                    {
+                        MainmenuForm form1 = new MainmenuForm();
+                        form1.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("비밀번호가 잘못입력되었습니다", "알림", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                else
+                    MessageBox.Show("아이디가 잘못되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
     }
