@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chinook.Step2.Data
+namespace MiniProject.Data
 {
     class EntityData<T> where T : class
     {
@@ -17,7 +17,7 @@ namespace Chinook.Step2.Data
             using (ShoppingMallEntities context = new ShoppingMallEntities())
             {
                 context.Set<T>().Add(entity);
-
+                
                 context.SaveChanges();
             }
         }

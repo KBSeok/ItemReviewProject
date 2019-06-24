@@ -103,7 +103,7 @@
             // 
             // cusData
             // 
-            this.cusData.DataSource = typeof(Miniproject.Customer);
+            this.cusData.DataSource = typeof(MiniProject.Customer);
             // 
             // CustomerSearchControl
             // 

@@ -57,7 +57,7 @@
             // 
             // ProductList
             // 
-            this.ProductList.DataSource = typeof(Miniproject.Product);
+            this.ProductList.DataSource = typeof(MiniProject.Product);
             // 
             // productIdDataGridViewTextBoxColumn
             // 

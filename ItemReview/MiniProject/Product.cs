@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Miniproject
+namespace MiniProject
 {
     using System;
     using System.Collections.Generic;
@@ -26,11 +26,7 @@ namespace Miniproject
         public int ParentsCategoryId { get; set; }
         public int Price { get; set; }
         public int StockAmount { get; set; }
-        //public string Size { get; set; }
-        //public string Color { get; set; }
-        //public string SubCategoryName { get; set; }
-        //public string OrderDate { get; set; }
-
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order_Detail> Order_Details { get; set; }
         public virtual ParentsCategory ParentsCategory { get; set; }

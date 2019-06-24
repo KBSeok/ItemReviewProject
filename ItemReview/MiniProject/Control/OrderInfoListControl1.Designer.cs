@@ -55,7 +55,7 @@
             // 
             // orderList
             // 
-            this.orderList.DataSource = typeof(Miniproject.Order);
+            this.orderList.DataSource = typeof(MiniProject.Order);
             // 
             // orderIDDataGridViewTextBoxColumn
             // 

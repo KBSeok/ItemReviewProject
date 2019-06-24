@@ -91,7 +91,7 @@
       <DependentUpon>EmployeeSearchControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs">
-      <DependentUpon>ShoppingMaill.tt</DependentUpon>
+      <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\EntityData.cs" />
     <Compile Include="Data\ProductData.cs" />
@@ -99,7 +99,7 @@
     <Compile Include="Data\DB.cs" />
     <Compile Include="Data\EmployeeData.cs" />
     <Compile Include="Employee.cs">
-      <DependentUpon>ShoppingMaill.tt</DependentUpon>
+      <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
     <Compile Include="Form\EmployeeInfoForm.cs">
       <SubType>Form</SubType>
@@ -150,16 +150,16 @@
       <DependentUpon>MainmenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Order.cs">
-      <DependentUpon>ShoppingMaill.tt</DependentUpon>
+      <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
     <Compile Include="Order_Detail.cs">
-      <DependentUpon>ShoppingMaill.tt</DependentUpon>
+      <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
     <Compile Include="ParentsCategory.cs">
-      <DependentUpon>ShoppingMaill.tt</DependentUpon>
+      <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>ShoppingMaill.tt</DependentUpon>
+      <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -188,28 +188,28 @@
       <DependentUpon>StockSearchControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Shipper.cs">
-      <DependentUpon>ShoppingMaill.tt</DependentUpon>
+      <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
-    <Compile Include="ShoppingMaill.Context.cs">
+    <Compile Include="ShoppingMall.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ShoppingMaill.Context.tt</DependentUpon>
+      <DependentUpon>ShoppingMall.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ShoppingMaill.cs">
+    <Compile Include="ShoppingMall.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ShoppingMaill.tt</DependentUpon>
+      <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
-    <Compile Include="ShoppingMaill.Designer.cs">
+    <Compile Include="ShoppingMall.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ShoppingMaill.edmx</DependentUpon>
+      <DependentUpon>ShoppingMall.edmx</DependentUpon>
     </Compile>
     <Compile Include="SubCategory.cs">
-      <DependentUpon>ShoppingMaill.tt</DependentUpon>
+      <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
     <Compile Include="Supplier.cs">
-      <DependentUpon>ShoppingMaill.tt</DependentUpon>
+      <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Control\CustomerInfoControl.resx">
       <DependentUpon>CustomerInfoControl.cs</DependentUpon>
@@ -286,31 +286,31 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="ShoppingMaill.edmx">
+    <EntityDeploy Include="ShoppingMall.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ShoppingMaill.Designer.cs</LastGenOutput>
+      <LastGenOutput>ShoppingMall.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ShoppingMaill.edmx.diagram">
-      <DependentUpon>ShoppingMaill.edmx</DependentUpon>
+    <None Include="ShoppingMall.edmx.diagram">
+      <DependentUpon>ShoppingMall.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ShoppingMaill.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ShoppingMaill.Context.cs</LastGenOutput>
-      <DependentUpon>ShoppingMaill.edmx</DependentUpon>
-    </Content>
-    <Content Include="ShoppingMaill.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ShoppingMaill.edmx</DependentUpon>
-      <LastGenOutput>ShoppingMaill.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="ShoppingMall.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ShoppingMall.edmx</DependentUpon>
+      <LastGenOutput>ShoppingMall.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ShoppingMall.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ShoppingMall.edmx</DependentUpon>
+      <LastGenOutput>ShoppingMall.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

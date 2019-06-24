@@ -1,4 +1,5 @@
-﻿using Miniproject;
+﻿
+using Miniproject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Windows.Forms;
 
 namespace MiniProject.Data
 {
-    class EmployeeData
+    class EmployeeData : EntityData<Employee>
     {
         public List<string> GetEmployeeId()
         {

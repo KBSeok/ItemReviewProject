@@ -68,7 +68,7 @@
             // 
             // cusInfo
             // 
-            this.cusInfo.DataSource = typeof(Miniproject.Customer);
+            this.cusInfo.DataSource = typeof(MiniProject.Customer);
             // 
             // customerNameDataGridViewTextBoxColumn
             // 

@@ -74,7 +74,7 @@
             // 
             // EmployeeInfo
             // 
-            this.EmployeeInfo.DataSource = typeof(Miniproject.Employee);
+            this.EmployeeInfo.DataSource = typeof(MiniProject.Employee);
             // 
             // employeeIDDataGridViewTextBoxColumn
             // 
