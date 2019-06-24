@@ -19,10 +19,7 @@ namespace Miniproject
         }
 
         
-        private void CusOrderInfoForm_Load(object sender, EventArgs e)
-        {
-            uscSearchCusInfo.LoadCutomerData();
-        }
+        
 
         private void customerSearchControl1_OnButtonSearchCusInfo(object sender, CustomerSearchControl.OnButtonSearchCusInfoEventArgs e)
         {

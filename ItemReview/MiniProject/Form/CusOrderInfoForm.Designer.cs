@@ -78,7 +78,6 @@
             this.Controls.Add(this.uscSearchCusInfo);
             this.Name = "CusOrderInfoForm";
             this.Text = "회원관리";
-            this.Load += new System.EventHandler(this.CusOrderInfoForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

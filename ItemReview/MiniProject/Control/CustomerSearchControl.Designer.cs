@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.gbCusSearch = new System.Windows.Forms.GroupBox();
             this.btnCusSearch = new System.Windows.Forms.Button();
             this.chbCusGrade = new System.Windows.Forms.CheckBox();
             this.cbbGrade = new System.Windows.Forms.ComboBox();
             this.chbCusId = new System.Windows.Forms.CheckBox();
             this.txbCusId = new System.Windows.Forms.TextBox();
-            this.cusData = new System.Windows.Forms.BindingSource(this.components);
             this.gbCusSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cusData)).BeginInit();
             this.SuspendLayout();
             // 
             // gbCusSearch
@@ -75,8 +72,6 @@
             // 
             // cbbGrade
             // 
-            this.cbbGrade.DataSource = this.cusData;
-            this.cbbGrade.DisplayMember = "Grade";
             this.cbbGrade.FormattingEnabled = true;
             this.cbbGrade.Location = new System.Drawing.Point(356, 22);
             this.cbbGrade.Name = "cbbGrade";
@@ -101,10 +96,6 @@
             this.txbCusId.Size = new System.Drawing.Size(155, 21);
             this.txbCusId.TabIndex = 0;
             // 
-            // cusData
-            // 
-            this.cusData.DataSource = typeof(MiniProject.Customer);
-            // 
             // CustomerSearchControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -114,7 +105,6 @@
             this.Size = new System.Drawing.Size(579, 66);
             this.gbCusSearch.ResumeLayout(false);
             this.gbCusSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cusData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -127,6 +117,5 @@
         private System.Windows.Forms.CheckBox chbCusId;
         private System.Windows.Forms.TextBox txbCusId;
         private System.Windows.Forms.Button btnCusSearch;
-        private System.Windows.Forms.BindingSource cusData;
     }
 }

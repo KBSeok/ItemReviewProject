@@ -39,9 +39,9 @@
             this.label1.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(6, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 19);
+            this.label1.Size = new System.Drawing.Size(135, 19);
             this.label1.TabIndex = 1;
-            this.label1.Text = "주문조회";
+            this.label1.Text = "고객 주문 내역";
             // 
             // dgvOrderInfo
             // 

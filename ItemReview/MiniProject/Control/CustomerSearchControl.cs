@@ -16,12 +16,12 @@ namespace Miniproject
         public CustomerSearchControl()
         {
             InitializeComponent();
+            string[] Grade = { "vvip", "vip", "Gold", "Sliver"};
+            cbbGrade.Items.AddRange(Grade);
+
         }
 
-        public void LoadCutomerData()
-        {
-            cusData.DataSource = DB.customer.GetAll();
-        }
+       
         
 
         private void btnCusSearch_Click(object sender, EventArgs e)
