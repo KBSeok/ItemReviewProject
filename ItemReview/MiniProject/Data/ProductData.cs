@@ -37,10 +37,6 @@ namespace MiniProject.Data
                 }
 
 
-
-
-
-
                 return list.ConvertAll(x => x.product);
             }
         }

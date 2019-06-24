@@ -29,71 +29,80 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgvOrderList = new System.Windows.Forms.DataGridView();
-            this.orderList = new System.Windows.Forms.BindingSource(this.components);
-            this.orderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderList)).BeginInit();
+            this.bdsOrder = new System.Windows.Forms.DataGridView();
+            this.bdsOrderList = new System.Windows.Forms.BindingSource(this.components);
+            this.OrderNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsOrderList)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvOrderList
+            // bdsOrder
             // 
-            this.dgvOrderList.AutoGenerateColumns = false;
-            this.dgvOrderList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrderList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.orderIDDataGridViewTextBoxColumn,
-            this.employeeIDDataGridViewTextBoxColumn,
-            this.orderDateDataGridViewTextBoxColumn});
-            this.dgvOrderList.DataSource = this.orderList;
-            this.dgvOrderList.Location = new System.Drawing.Point(5, 13);
-            this.dgvOrderList.Name = "dgvOrderList";
-            this.dgvOrderList.RowTemplate.Height = 23;
-            this.dgvOrderList.Size = new System.Drawing.Size(706, 200);
-            this.dgvOrderList.TabIndex = 0;
+            this.bdsOrder.AutoGenerateColumns = false;
+            this.bdsOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bdsOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.OrderNumber,
+            this.CustomerName,
+            this.OrderDate});
+            this.bdsOrder.DataSource = this.bdsOrderList;
+            this.bdsOrder.Location = new System.Drawing.Point(6, 16);
+            this.bdsOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bdsOrder.Name = "bdsOrder";
+            this.bdsOrder.RowHeadersWidth = 51;
+            this.bdsOrder.RowTemplate.Height = 23;
+            this.bdsOrder.Size = new System.Drawing.Size(807, 250);
+            this.bdsOrder.TabIndex = 0;
             // 
-            // orderList
+            // bdsOrderList
             // 
-            this.orderList.DataSource = typeof(MiniProject.Order);
+            this.bdsOrderList.DataSource = typeof(MiniProject.Order);
             // 
-            // orderIDDataGridViewTextBoxColumn
+            // OrderNumber
             // 
-            this.orderIDDataGridViewTextBoxColumn.DataPropertyName = "OrderID";
-            this.orderIDDataGridViewTextBoxColumn.HeaderText = "OrderID";
-            this.orderIDDataGridViewTextBoxColumn.Name = "orderIDDataGridViewTextBoxColumn";
+            this.OrderNumber.DataPropertyName = "OrderNumber";
+            this.OrderNumber.HeaderText = "OrderNumber";
+            this.OrderNumber.MinimumWidth = 6;
+            this.OrderNumber.Name = "OrderNumber";
+            this.OrderNumber.Width = 125;
             // 
-            // employeeIDDataGridViewTextBoxColumn
+            // CustomerName
             // 
-            this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "EmployeeID";
-            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "EmployeeID";
-            this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
+            this.CustomerName.DataPropertyName = "CustomerName";
+            this.CustomerName.HeaderText = "CustomerName";
+            this.CustomerName.MinimumWidth = 6;
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.Width = 125;
             // 
-            // orderDateDataGridViewTextBoxColumn
+            // OrderDate
             // 
-            this.orderDateDataGridViewTextBoxColumn.DataPropertyName = "OrderDate";
-            this.orderDateDataGridViewTextBoxColumn.HeaderText = "OrderDate";
-            this.orderDateDataGridViewTextBoxColumn.Name = "orderDateDataGridViewTextBoxColumn";
+            this.OrderDate.DataPropertyName = "OrderDate";
+            this.OrderDate.HeaderText = "OrderDate";
+            this.OrderDate.MinimumWidth = 6;
+            this.OrderDate.Name = "OrderDate";
+            this.OrderDate.Width = 125;
             // 
             // OrderInfoListControl1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgvOrderList);
+            this.Controls.Add(this.bdsOrder);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OrderInfoListControl1";
-            this.Size = new System.Drawing.Size(717, 234);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderList)).EndInit();
+            this.Size = new System.Drawing.Size(819, 292);
+            ((System.ComponentModel.ISupportInitialize)(this.bdsOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsOrderList)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvOrderList;
-        private System.Windows.Forms.BindingSource orderList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView bdsOrder;
+        private System.Windows.Forms.BindingSource bdsOrderList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderDate;
     }
 }

@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>MiniProject</RootNamespace>
     <AssemblyName>MiniProject</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -97,6 +97,7 @@
       <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\EntityData.cs" />
+    <Compile Include="Data\OrderData.cs" />
     <Compile Include="Data\ProductData.cs" />
     <Compile Include="Data\CustomerData.cs" />
     <Compile Include="Data\DB.cs" />
