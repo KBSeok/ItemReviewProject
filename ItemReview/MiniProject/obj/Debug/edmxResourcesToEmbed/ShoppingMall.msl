@@ -1,15 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="ShoppingMallModelStoreContainer" CdmEntityContainer="ShoppingMallEntities">
-    <EntitySetMapping Name="CategoryLines">
-      <EntityTypeMapping TypeName="ShoppingMallModel.CategoryLine">
-        <MappingFragment StoreEntitySet="CategoryLine">
-          <ScalarProperty Name="ParentsCategoryId" ColumnName="ParentsCategoryId" />
-          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
-          <ScalarProperty Name="CategoryLineId" ColumnName="CategoryLineId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Customers">
       <EntityTypeMapping TypeName="ShoppingMallModel.Customer">
         <MappingFragment StoreEntitySet="Customer">

@@ -116,6 +116,7 @@
             // 
             // cbbColor
             // 
+            this.cbbColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbColor.FormattingEnabled = true;
             this.cbbColor.Location = new System.Drawing.Point(427, 86);
             this.cbbColor.Name = "cbbColor";
@@ -124,6 +125,7 @@
             // 
             // cbbSize
             // 
+            this.cbbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSize.FormattingEnabled = true;
             this.cbbSize.Location = new System.Drawing.Point(426, 30);
             this.cbbSize.Name = "cbbSize";
@@ -132,6 +134,7 @@
             // 
             // cbbLCategory
             // 
+            this.cbbLCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLCategory.FormattingEnabled = true;
             this.cbbLCategory.Location = new System.Drawing.Point(228, 87);
             this.cbbLCategory.Name = "cbbLCategory";

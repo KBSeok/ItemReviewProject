@@ -60,9 +60,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryLine.cs">
-      <DependentUpon>ShoppingMall.tt</DependentUpon>
-    </Compile>
     <Compile Include="Control\CustomerInfoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -97,6 +94,7 @@
       <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\EntityData.cs" />
+    <Compile Include="Data\OrderDetailData.cs" />
     <Compile Include="Data\ProductData.cs" />
     <Compile Include="Data\CustomerData.cs" />
     <Compile Include="Data\DB.cs" />
@@ -279,6 +277,7 @@
     <None Include="Properties\DataSources\Customer.datasource" />
     <None Include="Properties\DataSources\Employee.datasource" />
     <None Include="Properties\DataSources\Order.datasource" />
+    <None Include="Properties\DataSources\Order_Detail.datasource" />
     <None Include="Properties\DataSources\Product.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

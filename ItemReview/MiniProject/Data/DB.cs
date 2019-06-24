@@ -13,5 +13,7 @@ namespace MiniProject.Data
         public static CustomerData customer { get; } = new CustomerData();
 
         public static ProductData product { get; } = new ProductData();
+
+        public static OrderDetailData orderdetail { get; } = new OrderDetailData();
     }
 }

@@ -25,7 +25,6 @@ namespace MiniProject
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<CategoryLine> CategoryLines { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Order_Detail> Order_Details { get; set; }

@@ -17,9 +17,11 @@ namespace Miniproject
         {
             InitializeComponent();
         }
-        public void SetDataCusOrderData(List<Product> product)
+        public void SetDataCusOrderData(List<Order_Detail> oderdetail)
         {
-            dgvOrderInfo.DataSource = product;
+            dgvOrderInfo.DataSource = oderdetail;
         }
+
+        
     }
 }

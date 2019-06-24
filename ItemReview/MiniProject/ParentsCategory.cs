@@ -17,7 +17,6 @@ namespace MiniProject
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ParentsCategory()
         {
-            this.CategoryLines = new HashSet<CategoryLine>();
             this.Products = new HashSet<Product>();
             this.SubCategories = new HashSet<SubCategory>();
         }
@@ -25,8 +24,6 @@ namespace MiniProject
         public int ParentsCategoryId { get; set; }
         public string ParentsCategoryName { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CategoryLine> CategoryLines { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Products { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

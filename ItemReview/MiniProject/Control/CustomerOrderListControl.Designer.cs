@@ -31,14 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvOrderInfo = new System.Windows.Forms.DataGridView();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ParentsCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderDetailBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -56,12 +53,9 @@
             this.dgvOrderInfo.AutoGenerateColumns = false;
             this.dgvOrderInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrderInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.productIdDataGridViewTextBoxColumn,
             this.ParentsCategoryName,
-            this.productNameDataGridViewTextBoxColumn,
-            this.sizeDataGridViewTextBoxColumn,
-            this.colorDataGridViewTextBoxColumn});
-            this.dgvOrderInfo.DataSource = this.productBindingSource;
+            this.OrderDate});
+            this.dgvOrderInfo.DataSource = this.orderDetailBindingSource;
             this.dgvOrderInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvOrderInfo.Location = new System.Drawing.Point(0, 85);
             this.dgvOrderInfo.Name = "dgvOrderInfo";
@@ -69,15 +63,9 @@
             this.dgvOrderInfo.Size = new System.Drawing.Size(710, 150);
             this.dgvOrderInfo.TabIndex = 2;
             // 
-            // productBindingSource
+            // orderDetailBindingSource
             // 
-            this.productBindingSource.DataSource = typeof(MiniProject.Product);
-            // 
-            // productIdDataGridViewTextBoxColumn
-            // 
-            this.productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
-            this.productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
-            this.productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
+            this.orderDetailBindingSource.DataSource = typeof(MiniProject.Order_Detail);
             // 
             // ParentsCategoryName
             // 
@@ -85,23 +73,11 @@
             this.ParentsCategoryName.HeaderText = "ParentsCategoryName";
             this.ParentsCategoryName.Name = "ParentsCategoryName";
             // 
-            // productNameDataGridViewTextBoxColumn
+            // OrderDate
             // 
-            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
-            this.productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
-            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            // 
-            // sizeDataGridViewTextBoxColumn
-            // 
-            this.sizeDataGridViewTextBoxColumn.DataPropertyName = "Size";
-            this.sizeDataGridViewTextBoxColumn.HeaderText = "Size";
-            this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
-            // 
-            // colorDataGridViewTextBoxColumn
-            // 
-            this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
-            this.colorDataGridViewTextBoxColumn.HeaderText = "Color";
-            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
+            this.OrderDate.DataPropertyName = "OrderDate";
+            this.OrderDate.HeaderText = "OrderDate";
+            this.OrderDate.Name = "OrderDate";
             // 
             // CustomerOrderListControl
             // 
@@ -112,7 +88,7 @@
             this.Name = "CustomerOrderListControl";
             this.Size = new System.Drawing.Size(710, 235);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderDetailBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,14 +96,10 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.DataGridView dgvOrderInfo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn subCateGoryNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource orderDetailBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn ParentsCategoryName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderDate;
     }
 }
