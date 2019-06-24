@@ -25,6 +25,8 @@ namespace Miniproject
         {
             var customers = DB.customer.SearchInfo(e.Id, e.Grade);
             uscOutputCusInfo.SetDataCustomerData(customers);
+            var products = DB.product.SearchProductInfo(e.Id, e.Grade);
+            uscCusOrderInfo.SetDataCusOrderData(products);
         }
     }
 }

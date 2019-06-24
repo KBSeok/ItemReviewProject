@@ -22,6 +22,8 @@ namespace Miniproject
             dgvCusInfo.DataSource = customer;
         }
 
+        
+
 
     }
 }

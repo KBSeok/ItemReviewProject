@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MiniProject;
 
 namespace Miniproject
 {
@@ -15,6 +16,10 @@ namespace Miniproject
         public CustomerOrderListControl()
         {
             InitializeComponent();
+        }
+        public void SetDataCusOrderData(List<Product> product)
+        {
+            dgvOrderInfo.DataSource = product;
         }
     }
 }

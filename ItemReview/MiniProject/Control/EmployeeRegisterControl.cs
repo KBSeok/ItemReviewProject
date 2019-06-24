@@ -31,8 +31,8 @@ namespace Miniproject
 
                 employee.EmployeeID = Convert.ToInt32(txbNumber.Text);
                 employee.Name = txbName.Text;
-                employee.rank = cbbLevel.SelectedText;
-                employee.Gender = cbbGender.SelectedText;
+                employee.rank = cbbLevel.Text;
+                employee.Gender = cbbGender.Text;
                 employee.BirthDate = txbBirth.Text;
                 employee.HireDate = DateTime.Now.ToString("yyyy-mm-dd");
                 employee.Address = txbAddress.Text;

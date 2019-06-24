@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="ShoppingMallModelStoreContainer" CdmEntityContainer="ShoppingMallEntities">
+    <EntitySetMapping Name="CategoryLines">
+      <EntityTypeMapping TypeName="ShoppingMallModel.CategoryLine">
+        <MappingFragment StoreEntitySet="CategoryLine">
+          <ScalarProperty Name="ParentsCategoryId" ColumnName="ParentsCategoryId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="CategoryLineId" ColumnName="CategoryLineId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Customers">
       <EntityTypeMapping TypeName="ShoppingMallModel.Customer">
         <MappingFragment StoreEntitySet="Customer">
@@ -57,7 +66,7 @@
       <EntityTypeMapping TypeName="ShoppingMallModel.ParentsCategory">
         <MappingFragment StoreEntitySet="ParentsCategory">
           <ScalarProperty Name="ParentsCategoryId" ColumnName="ParentsCategoryId" />
-          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="ParentsCategoryName" ColumnName="ParentsCategoryName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -69,6 +78,8 @@
           <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
           <ScalarProperty Name="ParentsCategoryId" ColumnName="ParentsCategoryId" />
           <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
           <ScalarProperty Name="StockAmount" ColumnName="StockAmount" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -82,22 +93,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="SubCategories">
+      <EntityTypeMapping TypeName="ShoppingMallModel.SubCategory">
+        <MappingFragment StoreEntitySet="SubCategory">
+          <ScalarProperty Name="ParentsCategoryId" ColumnName="ParentsCategoryId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Suppliers">
       <EntityTypeMapping TypeName="ShoppingMallModel.Supplier">
         <MappingFragment StoreEntitySet="Supplier">
           <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
           <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="SubCategories">
-      <EntityTypeMapping TypeName="ShoppingMallModel.SubCategory">
-        <MappingFragment StoreEntitySet="SubCategory">
-          <ScalarProperty Name="ParentsCategoryId" ColumnName="ParentsCategoryId" />
-          <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
-          <ScalarProperty Name="Size" ColumnName="Size" />
-          <ScalarProperty Name="Color" ColumnName="Color" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

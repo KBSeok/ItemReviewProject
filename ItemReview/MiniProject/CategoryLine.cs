@@ -12,11 +12,11 @@ namespace MiniProject
     using System;
     using System.Collections.Generic;
     
-    public partial class SubCategory
+    public partial class CategoryLine
     {
         public int ParentsCategoryId { get; set; }
         public int SubCategoryId { get; set; }
-        public string SubCategoryName { get; set; }
+        public int CategoryLineId { get; set; }
     
         public virtual ParentsCategory ParentsCategory { get; set; }
     }

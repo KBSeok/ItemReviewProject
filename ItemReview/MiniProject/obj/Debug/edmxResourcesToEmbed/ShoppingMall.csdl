@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ShoppingMallModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CategoryLine">
+    <Key>
+      <PropertyRef Name="CategoryLineId" />
+    </Key>
+    <Property Name="ParentsCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="SubCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="CategoryLineId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ParentsCategory" Relationship="Self.FK_CategoryLine_ParentsCategory" FromRole="CategoryLine" ToRole="ParentsCategory" />
+  </EntityType>
   <EntityType Name="Customer">
     <Key>
       <PropertyRef Name="CustomerName" />
@@ -62,7 +71,8 @@
       <PropertyRef Name="ParentsCategoryId" />
     </Key>
     <Property Name="ParentsCategoryId" Type="Int32" Nullable="false" />
-    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ParentsCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="CategoryLines" Relationship="Self.FK_CategoryLine_ParentsCategory" FromRole="ParentsCategory" ToRole="CategoryLine" />
     <NavigationProperty Name="Products" Relationship="Self.FK_Product_ParentsCategory" FromRole="ParentsCategory" ToRole="Product" />
     <NavigationProperty Name="SubCategories" Relationship="Self.FK_SubCategory_ParentsCategory" FromRole="ParentsCategory" ToRole="SubCategory" />
   </EntityType>
@@ -75,7 +85,9 @@
     <Property Name="SupplierId" Type="Int32" Nullable="false" />
     <Property Name="ParentsCategoryId" Type="Int32" Nullable="false" />
     <Property Name="Price" Type="Int32" Nullable="false" />
-    <Property Name="StockAmount" Type="Int32" Nullable="false" />
+    <Property Name="Size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StockAmount" Type="Int32" />
     <NavigationProperty Name="Order_Details" Relationship="Self.FK_Order_Details_Product" FromRole="Product" ToRole="Order_Details" />
     <NavigationProperty Name="ParentsCategory" Relationship="Self.FK_Product_ParentsCategory" FromRole="Product" ToRole="ParentsCategory" />
     <NavigationProperty Name="Supplier" Relationship="Self.FK_Product_Supplier" FromRole="Product" ToRole="Supplier" />
@@ -89,6 +101,16 @@
     <Property Name="PhoneNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Shippers" FromRole="Shippers" ToRole="Orders" />
   </EntityType>
+  <EntityType Name="SubCategory">
+    <Key>
+      <PropertyRef Name="ParentsCategoryId" />
+      <PropertyRef Name="SubCategoryId" />
+    </Key>
+    <Property Name="ParentsCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="SubCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="SubCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ParentsCategory" Relationship="Self.FK_SubCategory_ParentsCategory" FromRole="SubCategory" ToRole="ParentsCategory" />
+  </EntityType>
   <EntityType Name="Supplier">
     <Key>
       <PropertyRef Name="SupplierId" />
@@ -98,19 +120,18 @@
     <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Products" Relationship="Self.FK_Product_Supplier" FromRole="Supplier" ToRole="Product" />
   </EntityType>
-  <EntityType Name="SubCategory">
-    <Key>
-      <PropertyRef Name="ParentsCategoryId" />
-      <PropertyRef Name="SubCategoryName" />
-      <PropertyRef Name="Size" />
-      <PropertyRef Name="Color" />
-    </Key>
-    <Property Name="ParentsCategoryId" Type="Int32" Nullable="false" />
-    <Property Name="SubCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="ParentsCategory" Relationship="Self.FK_SubCategory_ParentsCategory" FromRole="SubCategory" ToRole="ParentsCategory" />
-  </EntityType>
+  <Association Name="FK_CategoryLine_ParentsCategory">
+    <End Role="ParentsCategory" Type="Self.ParentsCategory" Multiplicity="1" />
+    <End Role="CategoryLine" Type="Self.CategoryLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParentsCategory">
+        <PropertyRef Name="ParentsCategoryId" />
+      </Principal>
+      <Dependent Role="CategoryLine">
+        <PropertyRef Name="ParentsCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Orders_Customer">
     <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
     <End Role="Orders" Type="Self.Order" Multiplicity="*" />
@@ -208,6 +229,7 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="ShoppingMallEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CategoryLines" EntityType="Self.CategoryLine" />
     <EntitySet Name="Customers" EntityType="Self.Customer" />
     <EntitySet Name="Employees" EntityType="Self.Employee" />
     <EntitySet Name="Order_Details" EntityType="Self.Order_Detail" />
@@ -215,8 +237,12 @@
     <EntitySet Name="ParentsCategories" EntityType="Self.ParentsCategory" />
     <EntitySet Name="Products" EntityType="Self.Product" />
     <EntitySet Name="Shippers" EntityType="Self.Shipper" />
-    <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
     <EntitySet Name="SubCategories" EntityType="Self.SubCategory" />
+    <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+    <AssociationSet Name="FK_CategoryLine_ParentsCategory" Association="Self.FK_CategoryLine_ParentsCategory">
+      <End Role="ParentsCategory" EntitySet="ParentsCategories" />
+      <End Role="CategoryLine" EntitySet="CategoryLines" />
+    </AssociationSet>
     <AssociationSet Name="FK_Orders_Customer" Association="Self.FK_Orders_Customer">
       <End Role="Customer" EntitySet="Customers" />
       <End Role="Orders" EntitySet="Orders" />

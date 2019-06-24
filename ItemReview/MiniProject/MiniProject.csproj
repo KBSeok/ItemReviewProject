@@ -60,6 +60,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryLine.cs">
+      <DependentUpon>ShoppingMall.tt</DependentUpon>
+    </Compile>
     <Compile Include="Control\CustomerInfoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

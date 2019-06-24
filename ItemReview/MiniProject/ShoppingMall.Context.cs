@@ -25,6 +25,7 @@ namespace MiniProject
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<CategoryLine> CategoryLines { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Order_Detail> Order_Details { get; set; }
@@ -32,7 +33,7 @@ namespace MiniProject
         public virtual DbSet<ParentsCategory> ParentsCategories { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Shipper> Shippers { get; set; }
-        public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<SubCategory> SubCategories { get; set; }
+        public virtual DbSet<Supplier> Suppliers { get; set; }
     }
 }

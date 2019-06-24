@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.uscOutputCusInfo = new Miniproject.CustomerInfoControl();
             this.uscSearchCusInfo = new Miniproject.CustomerSearchControl();
-            this.customerOrderListControl1 = new Miniproject.CustomerOrderListControl();
+            this.uscCusOrderInfo = new Miniproject.CustomerOrderListControl();
             this.SuspendLayout();
             // 
             // label1
@@ -60,19 +60,19 @@
             this.uscSearchCusInfo.TabIndex = 0;
             this.uscSearchCusInfo.OnButtonSearchCusInfo += new System.EventHandler<Miniproject.CustomerSearchControl.OnButtonSearchCusInfoEventArgs>(this.customerSearchControl1_OnButtonSearchCusInfo);
             // 
-            // customerOrderListControl1
+            // uscCusOrderInfo
             // 
-            this.customerOrderListControl1.Location = new System.Drawing.Point(22, 198);
-            this.customerOrderListControl1.Name = "customerOrderListControl1";
-            this.customerOrderListControl1.Size = new System.Drawing.Size(713, 238);
-            this.customerOrderListControl1.TabIndex = 3;
+            this.uscCusOrderInfo.Location = new System.Drawing.Point(12, 198);
+            this.uscCusOrderInfo.Name = "uscCusOrderInfo";
+            this.uscCusOrderInfo.Size = new System.Drawing.Size(713, 238);
+            this.uscCusOrderInfo.TabIndex = 3;
             // 
             // CusOrderInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 448);
-            this.Controls.Add(this.customerOrderListControl1);
+            this.Controls.Add(this.uscCusOrderInfo);
             this.Controls.Add(this.uscOutputCusInfo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uscSearchCusInfo);
@@ -88,7 +88,7 @@
         private CustomerSearchControl uscSearchCusInfo;
         private System.Windows.Forms.Label label1;
         private CustomerInfoControl uscOutputCusInfo;
-        private CustomerOrderListControl customerOrderListControl1;
+        private CustomerOrderListControl uscCusOrderInfo;
     }
 }
 
