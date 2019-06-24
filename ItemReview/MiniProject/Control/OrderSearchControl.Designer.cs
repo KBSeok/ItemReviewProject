@@ -52,6 +52,7 @@
             this.gbOrderSearch.Size = new System.Drawing.Size(653, 84);
             this.gbOrderSearch.TabIndex = 0;
             this.gbOrderSearch.TabStop = false;
+            //this.gbOrderSearch.Enter += new System.EventHandler(this.GbOrderSearch_Enter);
             // 
             // btnOrderSearch
             // 
@@ -66,6 +67,7 @@
             // 
             // txbCusId
             // 
+            this.txbCusId.BackColor = System.Drawing.SystemColors.Window;
             this.txbCusId.Enabled = false;
             this.txbCusId.Location = new System.Drawing.Point(377, 38);
             this.txbCusId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -127,7 +129,7 @@
             this.Controls.Add(this.gbOrderSearch);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OrderSearchControl";
-            this.Size = new System.Drawing.Size(670, 119);
+            this.Size = new System.Drawing.Size(702, 132);
             this.gbOrderSearch.ResumeLayout(false);
             this.gbOrderSearch.PerformLayout();
             this.ResumeLayout(false);
