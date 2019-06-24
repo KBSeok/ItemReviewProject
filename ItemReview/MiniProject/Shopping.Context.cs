@@ -13,10 +13,10 @@ namespace MiniProject
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ShoppingMallEntities : DbContext
+    public partial class ShoppingMallEntities1 : DbContext
     {
-        public ShoppingMallEntities()
-            : base("name=ShoppingMallEntities")
+        public ShoppingMallEntities1()
+            : base("name=ShoppingMallEntities1")
         {
         }
     
@@ -33,6 +33,7 @@ namespace MiniProject
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Shipper> Shippers { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<SubCategory> SubCategories { get; set; }
     }
 }

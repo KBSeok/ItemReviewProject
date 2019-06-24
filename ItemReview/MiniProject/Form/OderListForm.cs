@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniProject.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,13 @@ namespace ItemReview
             InitializeComponent();
         }
 
+        private void OrderSearchControl2_OnSearchBottonClicked(object sender, OrderSearchControl.OnSearchBottonClickedEventArgs e)
+        {
+            var Orders = DB.Order.Search(e.TxbOrderNumber);
+            bdsOrder.DataSource = Orders;
+
+            //MessageBox.Show($"{e.TxbOrderNumber}/{e.TxbCusId}");
+        }
     }
 }
+

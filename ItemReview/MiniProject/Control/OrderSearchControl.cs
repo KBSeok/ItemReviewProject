@@ -30,10 +30,8 @@ namespace ItemReview
         
         private void BtnOrderSearch_Click(object sender, EventArgs e)
         {
-            //OnSearchBottonClicked(txbOrderNumber.Text, txbCusId.Text);
+            OnOnSearchBottonClicked(txbOrderNumber.Text, txbCusId.Text);
         }
-
-        
         #region OnSearchBottonClicked event things for C# 3.0
         public event EventHandler<OnSearchBottonClickedEventArgs> OnSearchBottonClicked;
 
@@ -43,9 +41,9 @@ namespace ItemReview
                 OnSearchBottonClicked(this, e);
         }
 
-        private OnSearchBottonClickedEventArgs OnOnSearchBottonClicked(string orderNumber, string cusId)
+        private OnSearchBottonClickedEventArgs OnOnSearchBottonClicked(string txbOrderNumber, string txbCusId)
         {
-            OnSearchBottonClickedEventArgs args = new OnSearchBottonClickedEventArgs(orderNumber, cusId);
+            OnSearchBottonClickedEventArgs args = new OnSearchBottonClickedEventArgs(txbOrderNumber, txbCusId);
             OnOnSearchBottonClicked(args);
 
             return args;
@@ -61,19 +59,21 @@ namespace ItemReview
 
         public class OnSearchBottonClickedEventArgs : EventArgs
         {
-            public string OrderNumber { get; set; }
-            public string CusId { get; set; }
+            public string TxbOrderNumber { get; set; }
+            public string TxbCusId { get; set; }
 
             public OnSearchBottonClickedEventArgs()
             {
             }
 
-            public OnSearchBottonClickedEventArgs(string orderNumber, string cusId)
+            public OnSearchBottonClickedEventArgs(string txbOrderNumber, string txbCusId)
             {
-                OrderNumber = orderNumber;
-                CusId = cusId;
+                TxbOrderNumber = txbOrderNumber;
+                TxbCusId = txbCusId;
             }
         }
         #endregion
+
+
     }
 }

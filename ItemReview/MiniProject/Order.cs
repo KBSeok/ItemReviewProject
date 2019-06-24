@@ -21,6 +21,7 @@ namespace MiniProject
         }
     
         public int OrderID { get; set; }
+        public string OrderNumber { get; set; }
         public string CustomerName { get; set; }
         public int EmployeeID { get; set; }
         public string OrderDate { get; set; }
