@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gbCusSearch = new System.Windows.Forms.GroupBox();
+            this.btnCusSearch = new System.Windows.Forms.Button();
             this.chbCusGrade = new System.Windows.Forms.CheckBox();
             this.cbbGrade = new System.Windows.Forms.ComboBox();
             this.chbCusId = new System.Windows.Forms.CheckBox();
             this.txbCusId = new System.Windows.Forms.TextBox();
-            this.btnCusSearch = new System.Windows.Forms.Button();
+            this.cusData = new System.Windows.Forms.BindingSource(this.components);
             this.gbCusSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cusData)).BeginInit();
             this.SuspendLayout();
             // 
             // gbCusSearch
@@ -50,6 +53,15 @@
             this.gbCusSearch.TabIndex = 0;
             this.gbCusSearch.TabStop = false;
             // 
+            // btnCusSearch
+            // 
+            this.btnCusSearch.Location = new System.Drawing.Point(485, 20);
+            this.btnCusSearch.Name = "btnCusSearch";
+            this.btnCusSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnCusSearch.TabIndex = 4;
+            this.btnCusSearch.Text = "검색";
+            this.btnCusSearch.UseVisualStyleBackColor = true;
+            // 
             // chbCusGrade
             // 
             this.chbCusGrade.AutoSize = true;
@@ -62,11 +74,14 @@
             // 
             // cbbGrade
             // 
+            this.cbbGrade.DataSource = this.cusData;
+            this.cbbGrade.DisplayMember = "Grade";
             this.cbbGrade.FormattingEnabled = true;
             this.cbbGrade.Location = new System.Drawing.Point(356, 22);
             this.cbbGrade.Name = "cbbGrade";
             this.cbbGrade.Size = new System.Drawing.Size(107, 20);
             this.cbbGrade.TabIndex = 1;
+            this.cbbGrade.ValueMember = "Grade";
             // 
             // chbCusId
             // 
@@ -85,14 +100,9 @@
             this.txbCusId.Size = new System.Drawing.Size(155, 21);
             this.txbCusId.TabIndex = 0;
             // 
-            // btnCusSearch
+            // cusData
             // 
-            this.btnCusSearch.Location = new System.Drawing.Point(485, 20);
-            this.btnCusSearch.Name = "btnCusSearch";
-            this.btnCusSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnCusSearch.TabIndex = 4;
-            this.btnCusSearch.Text = "검색";
-            this.btnCusSearch.UseVisualStyleBackColor = true;
+            this.cusData.DataSource = typeof(MiniProject.Customer);
             // 
             // CustomerSearchControl
             // 
@@ -103,6 +113,7 @@
             this.Size = new System.Drawing.Size(579, 66);
             this.gbCusSearch.ResumeLayout(false);
             this.gbCusSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cusData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -115,5 +126,6 @@
         private System.Windows.Forms.CheckBox chbCusId;
         private System.Windows.Forms.TextBox txbCusId;
         private System.Windows.Forms.Button btnCusSearch;
+        private System.Windows.Forms.BindingSource cusData;
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.customerInfoControl1 = new ItemReview.CustomerInfoControl();
-            this.customerSearchControl1 = new ItemReview.CustomerSearchControl();
+            this.uscOutputCusInfo = new ItemReview.CustomerInfoControl();
+            this.uscSearchCusInfo = new ItemReview.CustomerSearchControl();
             this.customerOrderListControl1 = new ItemReview.CustomerOrderListControl();
             this.SuspendLayout();
             // 
@@ -45,19 +45,20 @@
             this.label1.Text = "회원관리";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // customerInfoControl1
+            // uscOutputCusInfo
             // 
-            this.customerInfoControl1.Location = new System.Drawing.Point(22, 87);
-            this.customerInfoControl1.Name = "customerInfoControl1";
-            this.customerInfoControl1.Size = new System.Drawing.Size(717, 99);
-            this.customerInfoControl1.TabIndex = 2;
+            this.uscOutputCusInfo.Location = new System.Drawing.Point(22, 87);
+            this.uscOutputCusInfo.Name = "uscOutputCusInfo";
+            this.uscOutputCusInfo.Size = new System.Drawing.Size(717, 99);
+            this.uscOutputCusInfo.TabIndex = 2;
             // 
-            // customerSearchControl1
+            // uscSearchCusInfo
             // 
-            this.customerSearchControl1.Location = new System.Drawing.Point(158, 12);
-            this.customerSearchControl1.Name = "customerSearchControl1";
-            this.customerSearchControl1.Size = new System.Drawing.Size(579, 66);
-            this.customerSearchControl1.TabIndex = 0;
+            this.uscSearchCusInfo.Location = new System.Drawing.Point(158, 12);
+            this.uscSearchCusInfo.Name = "uscSearchCusInfo";
+            this.uscSearchCusInfo.Size = new System.Drawing.Size(579, 66);
+            this.uscSearchCusInfo.TabIndex = 0;
+            this.uscSearchCusInfo.OnButtonSearchCusInfo += new System.EventHandler<ItemReview.CustomerSearchControl.OnButtonSearchCusInfoEventArgs>(this.UscSearchCusInfo_OnButtonSearchCusInfo);
             // 
             // customerOrderListControl1
             // 
@@ -72,11 +73,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 448);
             this.Controls.Add(this.customerOrderListControl1);
-            this.Controls.Add(this.customerInfoControl1);
+            this.Controls.Add(this.uscOutputCusInfo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.customerSearchControl1);
+            this.Controls.Add(this.uscSearchCusInfo);
             this.Name = "CusOrderInfoForm";
             this.Text = "회원관리";
+            this.Load += new System.EventHandler(this.CusOrderInfoForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,9 +86,9 @@
 
         #endregion
 
-        private CustomerSearchControl customerSearchControl1;
+        private CustomerSearchControl uscSearchCusInfo;
         private System.Windows.Forms.Label label1;
-        private CustomerInfoControl customerInfoControl1;
+        private CustomerInfoControl uscOutputCusInfo;
         private CustomerOrderListControl customerOrderListControl1;
     }
 }

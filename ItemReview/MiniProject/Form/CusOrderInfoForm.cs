@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniProject.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,19 @@ namespace ItemReview
         public CusOrderInfoForm()
         {
             InitializeComponent();
+        }
+
+        
+
+        private void UscSearchCusInfo_OnButtonSearchCusInfo(object sender, CustomerSearchControl.OnButtonSearchCusInfoEventArgs e)
+        {
+            var customers = DB.customer.SearchInfo(e.Id, e.Grade);
+            uscOutputCusInfo.SetDataCustomerData(customers);
+        }
+
+        private void CusOrderInfoForm_Load(object sender, EventArgs e)
+        {
+            uscSearchCusInfo.LoadCutomerData();
         }
     }
 }

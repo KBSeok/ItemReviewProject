@@ -92,6 +92,10 @@
     <Compile Include="Customer.cs">
       <DependentUpon>ShoppingMaill.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\CustomerData.cs" />
+    <Compile Include="Data\DB.cs" />
+    <Compile Include="Data\EmployeeData.cs" />
+    <Compile Include="Data\ProductData.cs" />
     <Compile Include="Employee.cs">
       <DependentUpon>ShoppingMaill.tt</DependentUpon>
     </Compile>
