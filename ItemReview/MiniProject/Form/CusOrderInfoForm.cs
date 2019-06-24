@@ -18,17 +18,18 @@ namespace ItemReview
             InitializeComponent();
         }
 
-        
-
-        private void UscSearchCusInfo_OnButtonSearchCusInfo(object sender, CustomerSearchControl.OnButtonSearchCusInfoEventArgs e)
-        {
-            var customers = DB.customer.SearchInfo(e.Id, e.Grade);
-            uscOutputCusInfo.SetDataCustomerData(customers);
-        }
+       
 
         private void CusOrderInfoForm_Load(object sender, EventArgs e)
         {
             uscSearchCusInfo.LoadCutomerData();
+        }
+
+        private void UscSearchCusInfo_OnButtonSearchCusInfo(object sender, CustomerSearchControl.ButtonSearchCusInfoEventArgs e)
+        {
+            var Customers = DB.customer.SearchInfo(e.Id, e.Grade);
+
+            uscOutputCusInfo.SetDataCustomerData(Customers);
         }
     }
 }

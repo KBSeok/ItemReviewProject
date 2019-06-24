@@ -16,6 +16,7 @@ namespace ItemReview
         public CustomerSearchControl()
         {
             InitializeComponent();
+            cbbGrade.Text = "";
         }
 
         public void LoadCutomerData()
@@ -23,50 +24,49 @@ namespace ItemReview
             cusData.DataSource = DB.customer.GetAll();
         }
 
-
-        private void btnCusSearch_Click(object sender, EventArgs e)
+        private void BtnCusSearch_Click(object sender, EventArgs e)
         {
             string Id = txbCusId.Text;
             string Grade = cbbGrade.Text;
 
-            OnOnButtonSearchCusInfo(Id, Grade);
+            OnButtonSearchCusInfo(Id, Grade);
         }
 
-        #region OnButtonSearchCusInfo event things for C# 3.0
-        public event EventHandler<OnButtonSearchCusInfoEventArgs> OnButtonSearchCusInfo;
+        #region ButtonSearchCusInfo event things for C# 3.0
+        public event EventHandler<ButtonSearchCusInfoEventArgs> ButtonSearchCusInfo;
 
-        protected virtual void OnOnButtonSearchCusInfo(OnButtonSearchCusInfoEventArgs e)
+        protected virtual void OnButtonSearchCusInfo(ButtonSearchCusInfoEventArgs e)
         {
-            if (OnButtonSearchCusInfo != null)
-                OnButtonSearchCusInfo(this, e);
+            if (ButtonSearchCusInfo != null)
+                ButtonSearchCusInfo(this, e);
         }
 
-        private OnButtonSearchCusInfoEventArgs OnOnButtonSearchCusInfo(string id, string grade)
+        private ButtonSearchCusInfoEventArgs OnButtonSearchCusInfo(string id, string grade)
         {
-            OnButtonSearchCusInfoEventArgs args = new OnButtonSearchCusInfoEventArgs(id, grade);
-            OnOnButtonSearchCusInfo(args);
+            ButtonSearchCusInfoEventArgs args = new ButtonSearchCusInfoEventArgs(id, grade);
+            OnButtonSearchCusInfo(args);
 
             return args;
         }
 
-        private OnButtonSearchCusInfoEventArgs OnOnButtonSearchCusInfoForOut()
+        private ButtonSearchCusInfoEventArgs OnButtonSearchCusInfoForOut()
         {
-            OnButtonSearchCusInfoEventArgs args = new OnButtonSearchCusInfoEventArgs();
-            OnOnButtonSearchCusInfo(args);
+            ButtonSearchCusInfoEventArgs args = new ButtonSearchCusInfoEventArgs();
+            OnButtonSearchCusInfo(args);
 
             return args;
         }
 
-        public class OnButtonSearchCusInfoEventArgs : EventArgs
+        public class ButtonSearchCusInfoEventArgs : EventArgs
         {
             public string Id { get; set; }
             public string Grade { get; set; }
 
-            public OnButtonSearchCusInfoEventArgs()
+            public ButtonSearchCusInfoEventArgs()
             {
             }
 
-            public OnButtonSearchCusInfoEventArgs(string id, string grade)
+            public ButtonSearchCusInfoEventArgs(string id, string grade)
             {
                 Id = id;
                 Grade = grade;

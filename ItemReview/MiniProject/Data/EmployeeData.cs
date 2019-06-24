@@ -21,6 +21,14 @@ namespace MiniProject.Data
             }
         }
 
+        public List<Employee> GetAll()
+        {
+            using(ShoppingMallEntities context = new ShoppingMallEntities())
+            {
+                return context.Employees.ToList();
+            }
+        }
+
         
         
     }

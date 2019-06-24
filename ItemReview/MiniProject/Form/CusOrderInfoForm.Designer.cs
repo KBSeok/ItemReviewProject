@@ -58,7 +58,7 @@
             this.uscSearchCusInfo.Name = "uscSearchCusInfo";
             this.uscSearchCusInfo.Size = new System.Drawing.Size(579, 66);
             this.uscSearchCusInfo.TabIndex = 0;
-            this.uscSearchCusInfo.OnButtonSearchCusInfo += new System.EventHandler<ItemReview.CustomerSearchControl.OnButtonSearchCusInfoEventArgs>(this.UscSearchCusInfo_OnButtonSearchCusInfo);
+            this.uscSearchCusInfo.ButtonSearchCusInfo += new System.EventHandler<ItemReview.CustomerSearchControl.ButtonSearchCusInfoEventArgs>(this.UscSearchCusInfo_OnButtonSearchCusInfo);
             // 
             // customerOrderListControl1
             // 

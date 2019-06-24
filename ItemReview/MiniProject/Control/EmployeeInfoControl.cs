@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MiniProject.Data;
 
 namespace ItemReview
 {
@@ -15,6 +16,11 @@ namespace ItemReview
         public EmployeeInfoControl()
         {
             InitializeComponent();
+        }
+
+        public void SetOrderData()
+        {
+            dgvEmployeeInfo.DataSource = DB.employee.GetAll();
         }
     }
 }
