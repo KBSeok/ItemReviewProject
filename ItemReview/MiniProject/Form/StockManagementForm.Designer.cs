@@ -1,4 +1,4 @@
-﻿namespace ItemReview
+﻿namespace Miniproject
 {
     partial class StockManagementForm
     {
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.stockSearchControl1 = new ItemReview.StockSearchControl();
+            this.stockSearchControl1 = new Miniproject.StockSearchControl();
             this.label1 = new System.Windows.Forms.Label();
-            this.stockListControl1 = new ItemReview.StockListControl();
+            this.stockListControl1 = new Miniproject.StockListControl();
             this.SuspendLayout();
             // 
             // stockSearchControl1

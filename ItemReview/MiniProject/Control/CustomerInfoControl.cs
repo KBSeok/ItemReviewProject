@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MiniProject;
 
-namespace ItemReview
+namespace Miniproject
 {
     public partial class CustomerInfoControl : UserControl
     {
@@ -17,10 +16,11 @@ namespace ItemReview
         {
             InitializeComponent();
         }
-
         public void SetDataCustomerData(List<Customer> customer)
         {
             dgvCusInfo.DataSource = customer;
         }
+
+
     }
 }

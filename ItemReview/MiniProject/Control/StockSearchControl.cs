@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ItemReview
+namespace Miniproject
 {
     public partial class StockSearchControl : UserControl
     {

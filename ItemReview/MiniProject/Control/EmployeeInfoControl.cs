@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MiniProject.Data;
 
-namespace ItemReview
+namespace Miniproject
 {
     public partial class EmployeeInfoControl : UserControl
     {
@@ -18,9 +18,9 @@ namespace ItemReview
             InitializeComponent();
         }
 
-        public void SetOrderData()
+        public void SetDataEmployeeData(List<Employee> employee)
         {
-            dgvEmployeeInfo.DataSource = DB.employee.GetAll();
+            dgvEmployeeInfo.DataSource = employee;
         }
     }
 }

@@ -56,3 +56,67 @@ D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.
 D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.csproj.CopyComplete
 D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.exe
 D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.pdb
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\bin\Debug\MiniProject.exe.config
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\bin\Debug\MiniProject.exe
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\bin\Debug\MiniProject.pdb
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\bin\Debug\EntityFramework.dll
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\bin\Debug\EntityFramework.xml
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\bin\Debug\ko\EntityFramework.resources.dll
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\MiniProject.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\MiniProject.Properties.Resources.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\MiniProject.csproj.GenerateResource.cache
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\MiniProject.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\MiniProject.csproj.CopyComplete
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\MiniProject.exe
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\MiniProject.pdb
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.CustomerInfoControl.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.CustomerOrderListControl.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.CustomerSearchControl.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.EmployeeInfoControl.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.RegisterEmployeeControl.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.EmployeeSearch.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.OrderInfoListControl1.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.OrderSearchControl.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.StockListControl.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.StockSearchControl.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.CusOrderInfoForm.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.EmployeeInfoForm.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.OderListForm.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.StockManagementForm.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.InsertDeleteControl.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.Login_Form.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\Miniproject.MainmenuForm.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\MiniProject.csprojAssemblyReference.cache
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.CustomerInfoControl.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.CustomerOrderListControl.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.CustomerSearchControl.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.EmployeeInfoControl.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.RegisterEmployeeControl.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.EmployeeSearch.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.OrderInfoListControl1.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.OrderSearchControl.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.StockListControl.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.StockSearchControl.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.CusOrderInfoForm.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.EmployeeInfoForm.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.OderListForm.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.StockManagementForm.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.InsertDeleteControl.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.Login_Form.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\Miniproject.MainmenuForm.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\MiniProject.Properties.Resources.resources
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\MiniProject.csproj.GenerateResource.cache
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\MiniProject.csproj.CoreCompileInputs.cache
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\MiniProject.exe
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\MiniProject.pdb
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\bin\Debug\MiniProject.exe.config
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\bin\Debug\MiniProject.exe
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\bin\Debug\MiniProject.pdb
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\bin\Debug\EntityFramework.dll
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\bin\Debug\EntityFramework.xml
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\bin\Debug\ko\EntityFramework.resources.dll
+C:\Users\301-06\Desktop\ItemReview (2)\MiniProject\obj\Debug\MiniProject.csproj.CopyComplete

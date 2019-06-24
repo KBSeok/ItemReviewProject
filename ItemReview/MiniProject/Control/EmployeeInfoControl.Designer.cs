@@ -1,4 +1,4 @@
-﻿namespace ItemReview
+﻿namespace Miniproject
 {
     partial class EmployeeInfoControl
     {
@@ -74,7 +74,7 @@
             // 
             // EmployeeInfo
             // 
-            this.EmployeeInfo.DataSource = typeof(MiniProject.Employee);
+            this.EmployeeInfo.DataSource = typeof(Miniproject.Employee);
             // 
             // employeeIDDataGridViewTextBoxColumn
             // 

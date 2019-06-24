@@ -1,5 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using Miniproject;
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MiniProject.Data
 {
@@ -10,6 +15,7 @@ namespace MiniProject.Data
             using(ShoppingMallEntities context = new ShoppingMallEntities())
             {
                 return context.Employees.Select(x => x.LoginID).ToList();
+                
             }
         }
 
@@ -21,11 +27,15 @@ namespace MiniProject.Data
             }
         }
 
-        public List<Employee> GetAll()
+        public List<Employee> SearchInfo(string Name)
         {
             using(ShoppingMallEntities context = new ShoppingMallEntities())
             {
-                return context.Employees.ToList();
+                var query = from x in context.Employees
+                            where x.Name == Name
+                            select x;
+
+                return query.ToList();
             }
         }
 

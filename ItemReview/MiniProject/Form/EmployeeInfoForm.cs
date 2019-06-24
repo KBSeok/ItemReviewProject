@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniProject.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ItemReview
+namespace Miniproject
 {
     public partial class EmployeeInfoForm : Form
     {
@@ -17,6 +18,10 @@ namespace ItemReview
             InitializeComponent();
         }
 
-        
+        private void EmployeeSearch1_EnterSearchEmpoyeeInfo(object sender, EmployeeSearch.EnterSearchEmpoyeeInfoEventArgs e)
+        {
+            var emplyees = DB.employee.SearchInfo(e.Name);
+            uscEmployeeInfo.SetDataEmployeeData(emplyees);
+        }
     }
 }

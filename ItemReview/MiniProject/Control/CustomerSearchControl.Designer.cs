@@ -1,4 +1,4 @@
-﻿namespace ItemReview
+﻿namespace Miniproject
 {
     partial class CustomerSearchControl
     {
@@ -33,9 +33,9 @@
             this.btnCusSearch = new System.Windows.Forms.Button();
             this.chbCusGrade = new System.Windows.Forms.CheckBox();
             this.cbbGrade = new System.Windows.Forms.ComboBox();
-            this.cusData = new System.Windows.Forms.BindingSource(this.components);
             this.chbCusId = new System.Windows.Forms.CheckBox();
             this.txbCusId = new System.Windows.Forms.TextBox();
+            this.cusData = new System.Windows.Forms.BindingSource(this.components);
             this.gbCusSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cusData)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +61,7 @@
             this.btnCusSearch.TabIndex = 4;
             this.btnCusSearch.Text = "검색";
             this.btnCusSearch.UseVisualStyleBackColor = true;
-            this.btnCusSearch.Click += new System.EventHandler(this.BtnCusSearch_Click);
+            this.btnCusSearch.Click += new System.EventHandler(this.btnCusSearch_Click);
             // 
             // chbCusGrade
             // 
@@ -84,10 +84,6 @@
             this.cbbGrade.TabIndex = 1;
             this.cbbGrade.ValueMember = "Grade";
             // 
-            // cusData
-            // 
-            this.cusData.DataSource = typeof(MiniProject.Customer);
-            // 
             // chbCusId
             // 
             this.chbCusId.AutoSize = true;
@@ -104,6 +100,10 @@
             this.txbCusId.Name = "txbCusId";
             this.txbCusId.Size = new System.Drawing.Size(155, 21);
             this.txbCusId.TabIndex = 0;
+            // 
+            // cusData
+            // 
+            this.cusData.DataSource = typeof(Miniproject.Customer);
             // 
             // CustomerSearchControl
             // 

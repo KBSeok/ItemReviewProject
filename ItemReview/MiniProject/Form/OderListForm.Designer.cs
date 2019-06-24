@@ -1,4 +1,4 @@
-﻿namespace ItemReview
+﻿namespace Miniproject
 {
     partial class OderListForm
     {
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.orderInfoListControl11 = new ItemReview.OrderInfoListControl1();
-            this.orderSearchControl1 = new ItemReview.OrderSearchControl();
-            this.insertDeleteControl1 = new ItemReview.InsertDeleteControl();
+            this.orderInfoListControl11 = new Miniproject.OrderInfoListControl1();
+            this.orderSearchControl1 = new Miniproject.OrderSearchControl();
+            this.insertDeleteControl1 = new Miniproject.InsertDeleteControl();
             this.SuspendLayout();
             // 
             // label1

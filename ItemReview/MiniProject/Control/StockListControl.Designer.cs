@@ -1,4 +1,4 @@
-﻿namespace ItemReview
+﻿namespace Miniproject
 {
     partial class StockListControl
     {
@@ -57,7 +57,7 @@
             // 
             // ProductList
             // 
-            this.ProductList.DataSource = typeof(MiniProject.Product);
+            this.ProductList.DataSource = typeof(Miniproject.Product);
             // 
             // productIdDataGridViewTextBoxColumn
             // 

@@ -1,4 +1,4 @@
-﻿namespace ItemReview
+﻿namespace Miniproject
 {
     partial class EmployeeSearch
     {
@@ -48,6 +48,7 @@
             this.txbSearchName.Name = "txbSearchName";
             this.txbSearchName.Size = new System.Drawing.Size(150, 21);
             this.txbSearchName.TabIndex = 1;
+            this.txbSearchName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxbSearchName_KeyPress);
             // 
             // EmployeeSearch
             // 

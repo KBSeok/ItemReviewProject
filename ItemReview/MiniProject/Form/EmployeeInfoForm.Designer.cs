@@ -1,4 +1,4 @@
-﻿namespace ItemReview
+﻿namespace Miniproject
 {
     partial class EmployeeInfoForm
     {
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.employeeSearch1 = new ItemReview.EmployeeSearch();
-            this.employeeInfoControl1 = new ItemReview.EmployeeInfoControl();
-            this.registerEmployeeControl1 = new ItemReview.RegisterEmployeeControl();
+            this.employeeSearch1 = new Miniproject.EmployeeSearch();
+            this.uscEmployeeInfo = new Miniproject.EmployeeInfoControl();
+            this.registerEmployeeControl1 = new Miniproject.RegisterEmployeeControl();
             this.SuspendLayout();
             // 
             // employeeSearch1
@@ -39,13 +39,14 @@
             this.employeeSearch1.Name = "employeeSearch1";
             this.employeeSearch1.Size = new System.Drawing.Size(267, 34);
             this.employeeSearch1.TabIndex = 2;
+            this.employeeSearch1.EnterSearchEmpoyeeInfo += new System.EventHandler<Miniproject.EmployeeSearch.EnterSearchEmpoyeeInfoEventArgs>(this.EmployeeSearch1_EnterSearchEmpoyeeInfo);
             // 
-            // employeeInfoControl1
+            // uscEmployeeInfo
             // 
-            this.employeeInfoControl1.Location = new System.Drawing.Point(14, 252);
-            this.employeeInfoControl1.Name = "employeeInfoControl1";
-            this.employeeInfoControl1.Size = new System.Drawing.Size(707, 169);
-            this.employeeInfoControl1.TabIndex = 1;
+            this.uscEmployeeInfo.Location = new System.Drawing.Point(14, 252);
+            this.uscEmployeeInfo.Name = "uscEmployeeInfo";
+            this.uscEmployeeInfo.Size = new System.Drawing.Size(707, 169);
+            this.uscEmployeeInfo.TabIndex = 1;
             // 
             // registerEmployeeControl1
             // 
@@ -60,7 +61,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(749, 450);
             this.Controls.Add(this.employeeSearch1);
-            this.Controls.Add(this.employeeInfoControl1);
+            this.Controls.Add(this.uscEmployeeInfo);
             this.Controls.Add(this.registerEmployeeControl1);
             this.Name = "EmployeeInfoForm";
             this.Text = "EmployeeInfo";
@@ -71,7 +72,7 @@
         #endregion
 
         private RegisterEmployeeControl registerEmployeeControl1;
-        private EmployeeInfoControl employeeInfoControl1;
+        private EmployeeInfoControl uscEmployeeInfo;
         private EmployeeSearch employeeSearch1;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace ItemReview
+﻿namespace Miniproject
 {
     partial class CusOrderInfoForm
     {
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.uscOutputCusInfo = new ItemReview.CustomerInfoControl();
-            this.uscSearchCusInfo = new ItemReview.CustomerSearchControl();
-            this.customerOrderListControl1 = new ItemReview.CustomerOrderListControl();
+            this.uscOutputCusInfo = new Miniproject.CustomerInfoControl();
+            this.uscSearchCusInfo = new Miniproject.CustomerSearchControl();
+            this.customerOrderListControl1 = new Miniproject.CustomerOrderListControl();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +58,7 @@
             this.uscSearchCusInfo.Name = "uscSearchCusInfo";
             this.uscSearchCusInfo.Size = new System.Drawing.Size(579, 66);
             this.uscSearchCusInfo.TabIndex = 0;
-            this.uscSearchCusInfo.ButtonSearchCusInfo += new System.EventHandler<ItemReview.CustomerSearchControl.ButtonSearchCusInfoEventArgs>(this.UscSearchCusInfo_OnButtonSearchCusInfo);
+            this.uscSearchCusInfo.OnButtonSearchCusInfo += new System.EventHandler<Miniproject.CustomerSearchControl.OnButtonSearchCusInfoEventArgs>(this.customerSearchControl1_OnButtonSearchCusInfo);
             // 
             // customerOrderListControl1
             // 

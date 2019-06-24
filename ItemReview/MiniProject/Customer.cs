@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MiniProject
+namespace Miniproject
 {
     using System;
     using System.Collections.Generic;

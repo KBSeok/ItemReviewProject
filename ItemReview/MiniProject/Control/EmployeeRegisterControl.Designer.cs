@@ -1,4 +1,4 @@
-﻿namespace ItemReview
+﻿namespace Miniproject
 {
     partial class RegisterEmployeeControl
     {
@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.gbEmployeeRegister = new System.Windows.Forms.GroupBox();
+            this.txbDate = new System.Windows.Forms.TextBox();
+            this.txbNumber = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.txbAddress = new System.Windows.Forms.TextBox();
             this.txbPhoneNumber = new System.Windows.Forms.TextBox();
             this.txbName = new System.Windows.Forms.TextBox();
@@ -40,16 +45,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txbNumber = new System.Windows.Forms.TextBox();
-            this.txbDate = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txbBirth = new System.Windows.Forms.TextBox();
             this.gbEmployeeRegister.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbEmployeeRegister
             // 
+            this.gbEmployeeRegister.Controls.Add(this.txbBirth);
+            this.gbEmployeeRegister.Controls.Add(this.label9);
             this.gbEmployeeRegister.Controls.Add(this.txbDate);
             this.gbEmployeeRegister.Controls.Add(this.txbNumber);
             this.gbEmployeeRegister.Controls.Add(this.label8);
@@ -70,6 +74,50 @@
             this.gbEmployeeRegister.Size = new System.Drawing.Size(706, 151);
             this.gbEmployeeRegister.TabIndex = 0;
             this.gbEmployeeRegister.TabStop = false;
+            // 
+            // txbDate
+            // 
+            this.txbDate.Location = new System.Drawing.Point(88, 99);
+            this.txbDate.Name = "txbDate";
+            this.txbDate.Size = new System.Drawing.Size(95, 21);
+            this.txbDate.TabIndex = 16;
+            // 
+            // txbNumber
+            // 
+            this.txbNumber.Location = new System.Drawing.Point(277, 62);
+            this.txbNumber.Name = "txbNumber";
+            this.txbNumber.Size = new System.Drawing.Size(95, 21);
+            this.txbNumber.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Location = new System.Drawing.Point(16, 99);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 16);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "입사일 :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Location = new System.Drawing.Point(189, 65);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 16);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "사원번호 :";
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.Location = new System.Drawing.Point(593, 122);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(95, 23);
+            this.btnRegister.TabIndex = 12;
+            this.btnRegister.Text = "등록";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
             // 
             // txbAddress
             // 
@@ -95,7 +143,7 @@
             // cbbGender
             // 
             this.cbbGender.FormattingEnabled = true;
-            this.cbbGender.Location = new System.Drawing.Point(271, 29);
+            this.cbbGender.Location = new System.Drawing.Point(277, 29);
             this.cbbGender.Name = "cbbGender";
             this.cbbGender.Size = new System.Drawing.Size(95, 20);
             this.cbbGender.TabIndex = 8;
@@ -152,7 +200,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(215, 30);
+            this.label4.Location = new System.Drawing.Point(221, 30);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 16);
             this.label4.TabIndex = 4;
@@ -168,48 +216,22 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "직원등록";
             // 
-            // btnRegister
+            // label9
             // 
-            this.btnRegister.Location = new System.Drawing.Point(593, 122);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(95, 23);
-            this.btnRegister.TabIndex = 12;
-            this.btnRegister.Text = "등록";
-            this.btnRegister.UseVisualStyleBackColor = true;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label9.Location = new System.Drawing.Point(189, 98);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 16);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "생년월일 :";
             // 
-            // label7
+            // txbBirth
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(183, 65);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 16);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "사원번호 :";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(199, 99);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 16);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "입사일 :";
-            // 
-            // txbNumber
-            // 
-            this.txbNumber.Location = new System.Drawing.Point(271, 62);
-            this.txbNumber.Name = "txbNumber";
-            this.txbNumber.Size = new System.Drawing.Size(95, 21);
-            this.txbNumber.TabIndex = 15;
-            // 
-            // txbDate
-            // 
-            this.txbDate.Location = new System.Drawing.Point(271, 99);
-            this.txbDate.Name = "txbDate";
-            this.txbDate.Size = new System.Drawing.Size(95, 21);
-            this.txbDate.TabIndex = 16;
+            this.txbBirth.Location = new System.Drawing.Point(277, 94);
+            this.txbBirth.Name = "txbBirth";
+            this.txbBirth.Size = new System.Drawing.Size(95, 21);
+            this.txbBirth.TabIndex = 18;
             // 
             // RegisterEmployeeControl
             // 
@@ -245,5 +267,7 @@
         private System.Windows.Forms.TextBox txbNumber;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txbBirth;
+        private System.Windows.Forms.Label label9;
     }
 }

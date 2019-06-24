@@ -1,5 +1,4 @@
-﻿using MiniProject.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MiniProject.Data;
 
-namespace ItemReview
+namespace Miniproject
 {
     public partial class CusOrderInfoForm : Form
     {
@@ -18,18 +18,16 @@ namespace ItemReview
             InitializeComponent();
         }
 
-       
-
+        
         private void CusOrderInfoForm_Load(object sender, EventArgs e)
         {
             uscSearchCusInfo.LoadCutomerData();
         }
 
-        private void UscSearchCusInfo_OnButtonSearchCusInfo(object sender, CustomerSearchControl.ButtonSearchCusInfoEventArgs e)
+        private void customerSearchControl1_OnButtonSearchCusInfo(object sender, CustomerSearchControl.OnButtonSearchCusInfoEventArgs e)
         {
-            var Customers = DB.customer.SearchInfo(e.Id, e.Grade);
-
-            uscOutputCusInfo.SetDataCustomerData(Customers);
+            var customers = DB.customer.SearchInfo(e.Id, e.Grade);
+            uscOutputCusInfo.SetDataCustomerData(customers);
         }
     }
 }

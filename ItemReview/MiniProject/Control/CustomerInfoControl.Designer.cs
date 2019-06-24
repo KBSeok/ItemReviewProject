@@ -1,4 +1,4 @@
-﻿namespace ItemReview
+﻿namespace Miniproject
 {
     partial class CustomerInfoControl
     {
@@ -68,7 +68,7 @@
             // 
             // cusInfo
             // 
-            this.cusInfo.DataSource = typeof(MiniProject.Customer);
+            this.cusInfo.DataSource = typeof(Miniproject.Customer);
             // 
             // customerNameDataGridViewTextBoxColumn
             // 

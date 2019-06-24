@@ -1,4 +1,4 @@
-﻿namespace ItemReview
+﻿namespace Miniproject
 {
     partial class OrderInfoListControl1
     {
@@ -55,7 +55,7 @@
             // 
             // orderList
             // 
-            this.orderList.DataSource = typeof(MiniProject.Order);
+            this.orderList.DataSource = typeof(Miniproject.Order);
             // 
             // orderIDDataGridViewTextBoxColumn
             // 
