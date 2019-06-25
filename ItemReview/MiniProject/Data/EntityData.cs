@@ -32,6 +32,8 @@ namespace MiniProject.Data
             }
         }
 
+
+
         public void Delete(T entity)
         {
             using (ShoppingMallEntities context = new ShoppingMallEntities())

@@ -22,5 +22,17 @@ namespace Miniproject
         {
             dgvOrderList.DataSource = order;
         }
+
+        private void DgvOrderList_CellStateChanged(object sender, DataGridViewCellStateChangedEventArgs e)
+        {
+
+            //e.StateChanged
+
+        }
+
+        private void DgvOrderList_CurrentCellChanged(object sender, EventArgs e)
+        {
+            //e.
+        }
     }
 }

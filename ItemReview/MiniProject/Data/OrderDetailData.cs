@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace MiniProject.Data
 {
-    class OrderDetailData
+    class OrderDetailData : EntityData<Order_Detail>
     {
         public List<Order_Detail> SearchProductInfo(string Id, string Grade)
         {
@@ -142,17 +142,17 @@ namespace MiniProject.Data
             using (ShoppingMallEntities context = new ShoppingMallEntities())
             {
                var query = from x in context.Order_Details
-                            where x.Order.OrderNumber == orderNumber && x.Order.Customer.UserId == cusId
+                            where x.Order.OrderNumber == orderNumber || x.Order.Customer.UserId == cusId
                             select new
                             {
                                 orderdetail = x,
                                 //order = x.Order,
-                                //product = x.Product,                                
+                                product = x.Product,                                
                                 //customer = x.Order.Customer,
                                 ordernumber = x.Order.OrderNumber,
                                 userId = x.Order.Customer.UserId,
                                 price = x.Product.Price,
-                                productorName = x.Product.ProductName,
+                                productName = x.Product.ProductName,
                                 size = x.Product.Size,
                                 color = x.Product.Color,
                                 amount = x.Order.Amount,
@@ -167,7 +167,7 @@ namespace MiniProject.Data
                     x.orderdetail.OrderNumber = x.ordernumber;
                     x.orderdetail.UserId = x.userId;
                     x.orderdetail.Price = x.price;
-                    x.orderdetail.PuductorName = x.productorName;
+                    x.orderdetail.ProductName = x.productName;
                     x.orderdetail.Color = x.color;
                     x.orderdetail.Size = x.size;
                     x.orderdetail.Amount = x.amount;
