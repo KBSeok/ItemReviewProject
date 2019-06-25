@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.stockSearchControl1 = new Miniproject.StockSearchControl();
             this.label1 = new System.Windows.Forms.Label();
-            this.stockListControl1 = new Miniproject.StockListControl();
+            this.uscProductInfo = new Miniproject.StockListControl();
+            this.uscSearchProduct = new Miniproject.StockSearchControl();
             this.SuspendLayout();
-            // 
-            // stockSearchControl1
-            // 
-            this.stockSearchControl1.Location = new System.Drawing.Point(72, 35);
-            this.stockSearchControl1.Name = "stockSearchControl1";
-            this.stockSearchControl1.Size = new System.Drawing.Size(592, 175);
-            this.stockSearchControl1.TabIndex = 0;
             // 
             // label1
             // 
@@ -48,23 +41,31 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 21);
             this.label1.TabIndex = 1;
-            this.label1.Text = "재고관리";
+            this.label1.Text = "재고조회";
             // 
-            // stockListControl1
+            // uscProductInfo
             // 
-            this.stockListControl1.Location = new System.Drawing.Point(16, 207);
-            this.stockListControl1.Name = "stockListControl1";
-            this.stockListControl1.Size = new System.Drawing.Size(714, 195);
-            this.stockListControl1.TabIndex = 2;
+            this.uscProductInfo.Location = new System.Drawing.Point(16, 207);
+            this.uscProductInfo.Name = "uscProductInfo";
+            this.uscProductInfo.Size = new System.Drawing.Size(714, 195);
+            this.uscProductInfo.TabIndex = 2;
+            // 
+            // uscSearchProduct
+            // 
+            this.uscSearchProduct.Location = new System.Drawing.Point(16, 35);
+            this.uscSearchProduct.Name = "uscSearchProduct";
+            this.uscSearchProduct.Size = new System.Drawing.Size(699, 168);
+            this.uscSearchProduct.TabIndex = 3;
+            this.uscSearchProduct.ButtonSearchProduct += new System.EventHandler<Miniproject.StockSearchControl.ButtonSearchProductEventArgs>(this.stockSearchControl1_ButtonSearchProduct);
             // 
             // StockManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 426);
-            this.Controls.Add(this.stockListControl1);
+            this.Controls.Add(this.uscSearchProduct);
+            this.Controls.Add(this.uscProductInfo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.stockSearchControl1);
             this.Name = "StockManagementForm";
             this.Text = "StockManagement";
             this.ResumeLayout(false);
@@ -73,9 +74,8 @@
         }
 
         #endregion
-
-        private StockSearchControl stockSearchControl1;
         private System.Windows.Forms.Label label1;
-        private StockListControl stockListControl1;
+        private StockListControl uscProductInfo;
+        private StockSearchControl uscSearchProduct;
     }
 }

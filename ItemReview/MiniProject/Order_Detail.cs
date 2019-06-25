@@ -20,6 +20,10 @@ namespace MiniProject
         public int Amount { get; set; }
         public string ParentsCategoryName { get; set; }
         public string OrderDate { get; set; }
+        public string Size { get; set; }
+        public string Color { get; set; }
+        public string PuductorName { get; set; }
+
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }
     }

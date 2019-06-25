@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MiniProject;
 
 namespace Miniproject
 {
@@ -15,6 +16,10 @@ namespace Miniproject
         public StockListControl()
         {
             InitializeComponent();
+        }
+        public void SetDataProductData(List<Product> product)
+        {
+            dgvProductList.DataSource = product;
         }
     }
 }

@@ -30,12 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvOrderInfo = new System.Windows.Forms.DataGridView();
             this.orderDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ParentsCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrderInfo)).BeginInit();
+            this.dgvCusOrderInfo = new System.Windows.Forms.DataGridView();
+            this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.puductorNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parentsCategoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.orderDetailBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCusOrderInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -48,47 +53,82 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "고객 주문 내역";
             // 
-            // dgvOrderInfo
-            // 
-            this.dgvOrderInfo.AutoGenerateColumns = false;
-            this.dgvOrderInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrderInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ParentsCategoryName,
-            this.OrderDate});
-            this.dgvOrderInfo.DataSource = this.orderDetailBindingSource;
-            this.dgvOrderInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvOrderInfo.Location = new System.Drawing.Point(0, 85);
-            this.dgvOrderInfo.Name = "dgvOrderInfo";
-            this.dgvOrderInfo.RowTemplate.Height = 23;
-            this.dgvOrderInfo.Size = new System.Drawing.Size(710, 150);
-            this.dgvOrderInfo.TabIndex = 2;
-            // 
             // orderDetailBindingSource
             // 
             this.orderDetailBindingSource.DataSource = typeof(MiniProject.Order_Detail);
             // 
-            // ParentsCategoryName
+            // dgvCusOrderInfo
             // 
-            this.ParentsCategoryName.DataPropertyName = "ParentsCategoryName";
-            this.ParentsCategoryName.HeaderText = "ParentsCategoryName";
-            this.ParentsCategoryName.Name = "ParentsCategoryName";
+            this.dgvCusOrderInfo.AutoGenerateColumns = false;
+            this.dgvCusOrderInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCusOrderInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.productIdDataGridViewTextBoxColumn,
+            this.puductorNameDataGridViewTextBoxColumn,
+            this.parentsCategoryNameDataGridViewTextBoxColumn,
+            this.sizeDataGridViewTextBoxColumn,
+            this.colorDataGridViewTextBoxColumn,
+            this.amountDataGridViewTextBoxColumn,
+            this.orderDateDataGridViewTextBoxColumn});
+            this.dgvCusOrderInfo.DataSource = this.orderDetailBindingSource;
+            this.dgvCusOrderInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvCusOrderInfo.Location = new System.Drawing.Point(0, 42);
+            this.dgvCusOrderInfo.Name = "dgvCusOrderInfo";
+            this.dgvCusOrderInfo.RowTemplate.Height = 23;
+            this.dgvCusOrderInfo.Size = new System.Drawing.Size(710, 193);
+            this.dgvCusOrderInfo.TabIndex = 2;
             // 
-            // OrderDate
+            // productIdDataGridViewTextBoxColumn
             // 
-            this.OrderDate.DataPropertyName = "OrderDate";
-            this.OrderDate.HeaderText = "OrderDate";
-            this.OrderDate.Name = "OrderDate";
+            this.productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
+            this.productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
+            this.productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
+            // 
+            // puductorNameDataGridViewTextBoxColumn
+            // 
+            this.puductorNameDataGridViewTextBoxColumn.DataPropertyName = "PuductorName";
+            this.puductorNameDataGridViewTextBoxColumn.HeaderText = "PuductorName";
+            this.puductorNameDataGridViewTextBoxColumn.Name = "puductorNameDataGridViewTextBoxColumn";
+            // 
+            // parentsCategoryNameDataGridViewTextBoxColumn
+            // 
+            this.parentsCategoryNameDataGridViewTextBoxColumn.DataPropertyName = "ParentsCategoryName";
+            this.parentsCategoryNameDataGridViewTextBoxColumn.HeaderText = "ParentsCategoryName";
+            this.parentsCategoryNameDataGridViewTextBoxColumn.Name = "parentsCategoryNameDataGridViewTextBoxColumn";
+            // 
+            // sizeDataGridViewTextBoxColumn
+            // 
+            this.sizeDataGridViewTextBoxColumn.DataPropertyName = "Size";
+            this.sizeDataGridViewTextBoxColumn.HeaderText = "Size";
+            this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
+            // 
+            // colorDataGridViewTextBoxColumn
+            // 
+            this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
+            this.colorDataGridViewTextBoxColumn.HeaderText = "Color";
+            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            // 
+            // orderDateDataGridViewTextBoxColumn
+            // 
+            this.orderDateDataGridViewTextBoxColumn.DataPropertyName = "OrderDate";
+            this.orderDateDataGridViewTextBoxColumn.HeaderText = "OrderDate";
+            this.orderDateDataGridViewTextBoxColumn.Name = "orderDateDataGridViewTextBoxColumn";
             // 
             // CustomerOrderListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgvOrderInfo);
+            this.Controls.Add(this.dgvCusOrderInfo);
             this.Controls.Add(this.label1);
             this.Name = "CustomerOrderListControl";
             this.Size = new System.Drawing.Size(710, 235);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrderInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderDetailBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCusOrderInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,10 +136,14 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvOrderInfo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subCateGoryNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource orderDetailBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ParentsCategoryName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OrderDate;
+        private System.Windows.Forms.DataGridView dgvCusOrderInfo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn puductorNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parentsCategoryNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderDateDataGridViewTextBoxColumn;
     }
 }

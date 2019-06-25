@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Miniproject
+namespace MiniProject
 {
-    public partial class StockManagementForm : Form
+    public partial class Register_Login : Form
     {
-        public StockManagementForm()
+        public Register_Login()
         {
             InitializeComponent();
         }
 
-        private void stockSearchControl1_ButtonSearchProduct(object sender, StockSearchControl.ButtonSearchProductEventArgs e)
+        private void register_LoginControl1_ButtonCloseForm(object sender, Register_LoginControl.ButtonCloseFormEventArgs e)
         {
-            
+            this.Close();
         }
     }
 }

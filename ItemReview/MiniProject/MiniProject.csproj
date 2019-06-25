@@ -78,6 +78,18 @@
     <Compile Include="Control\CustomerSearchControl.Designer.cs">
       <DependentUpon>CustomerSearchControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control\EmployeeUpdateDelete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\EmployeeUpdateDelete.Designer.cs">
+      <DependentUpon>EmployeeUpdateDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\EmployeeControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\EmployeeControl.Designer.cs">
+      <DependentUpon>EmployeeControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\EmployeeInfoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -138,16 +150,16 @@
     <Compile Include="Control\InsertDeleteControl.Designer.cs">
       <DependentUpon>InsertDeleteControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login_Form.cs">
+    <Compile Include="Form\Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login_Form.designer.cs">
+    <Compile Include="Form\Login_Form.designer.cs">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainmenuForm.cs">
+    <Compile Include="Form\MainmenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainmenuForm.designer.cs">
+    <Compile Include="Form\MainmenuForm.designer.cs">
       <DependentUpon>MainmenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Order.cs">
@@ -188,6 +200,18 @@
     <Compile Include="Control\StockSearchControl.Designer.cs">
       <DependentUpon>StockSearchControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Register_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Register_Login.Designer.cs">
+      <DependentUpon>Register_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Register_LoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Register_LoginControl.Designer.cs">
+      <DependentUpon>Register_LoginControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Shipper.cs">
       <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
@@ -221,6 +245,12 @@
     <EmbeddedResource Include="Control\CustomerSearchControl.resx">
       <DependentUpon>CustomerSearchControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\EmployeeUpdateDelete.resx">
+      <DependentUpon>EmployeeUpdateDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\EmployeeControl.resx">
+      <DependentUpon>EmployeeControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\EmployeeInfoControl.resx">
       <DependentUpon>EmployeeInfoControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,16 +281,19 @@
     <EmbeddedResource Include="Form\OderListForm.resx">
       <DependentUpon>OderListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Register_Login.resx">
+      <DependentUpon>Register_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\StockManagementForm.resx">
       <DependentUpon>StockManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\InsertDeleteControl.resx">
       <DependentUpon>InsertDeleteControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login_Form.resx">
+    <EmbeddedResource Include="Form\Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainmenuForm.resx">
+    <EmbeddedResource Include="Form\MainmenuForm.resx">
       <DependentUpon>MainmenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -273,6 +306,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Control\Register_LoginControl.resx">
+      <DependentUpon>Register_LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Customer.datasource" />
     <None Include="Properties\DataSources\Employee.datasource" />

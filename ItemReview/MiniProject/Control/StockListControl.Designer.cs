@@ -29,27 +29,35 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgvOrderList = new System.Windows.Forms.DataGridView();
+            this.dgvProductList = new System.Windows.Forms.DataGridView();
             this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductList = new System.Windows.Forms.BindingSource(this.components);
-            this.orderDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderDetailBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvOrderList
+            // dgvProductList
             // 
-            this.dgvOrderList.AutoGenerateColumns = false;
-            this.dgvOrderList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrderList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.productIdDataGridViewTextBoxColumn});
-            this.dgvOrderList.DataSource = this.orderDetailBindingSource;
-            this.dgvOrderList.Location = new System.Drawing.Point(3, 3);
-            this.dgvOrderList.Name = "dgvOrderList";
-            this.dgvOrderList.RowTemplate.Height = 23;
-            this.dgvOrderList.Size = new System.Drawing.Size(700, 180);
-            this.dgvOrderList.TabIndex = 1;
+            this.dgvProductList.AutoGenerateColumns = false;
+            this.dgvProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.productIdDataGridViewTextBoxColumn,
+            this.productNameDataGridViewTextBoxColumn,
+            this.sizeDataGridViewTextBoxColumn,
+            this.colorDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.stockAmountDataGridViewTextBoxColumn});
+            this.dgvProductList.DataSource = this.ProductList;
+            this.dgvProductList.Location = new System.Drawing.Point(3, 3);
+            this.dgvProductList.Name = "dgvProductList";
+            this.dgvProductList.RowTemplate.Height = 23;
+            this.dgvProductList.Size = new System.Drawing.Size(700, 180);
+            this.dgvProductList.TabIndex = 1;
             // 
             // productIdDataGridViewTextBoxColumn
             // 
@@ -57,33 +65,62 @@
             this.productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
             this.productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
             // 
+            // productNameDataGridViewTextBoxColumn
+            // 
+            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            // 
+            // sizeDataGridViewTextBoxColumn
+            // 
+            this.sizeDataGridViewTextBoxColumn.DataPropertyName = "Size";
+            this.sizeDataGridViewTextBoxColumn.HeaderText = "Size";
+            this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
+            // 
+            // colorDataGridViewTextBoxColumn
+            // 
+            this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
+            this.colorDataGridViewTextBoxColumn.HeaderText = "Color";
+            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // stockAmountDataGridViewTextBoxColumn
+            // 
+            this.stockAmountDataGridViewTextBoxColumn.DataPropertyName = "StockAmount";
+            this.stockAmountDataGridViewTextBoxColumn.HeaderText = "StockAmount";
+            this.stockAmountDataGridViewTextBoxColumn.Name = "stockAmountDataGridViewTextBoxColumn";
+            // 
             // ProductList
             // 
             this.ProductList.DataSource = typeof(MiniProject.Product);
-            // 
-            // orderDetailBindingSource
-            // 
-            this.orderDetailBindingSource.DataSource = typeof(MiniProject.Order_Detail);
             // 
             // StockListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgvOrderList);
+            this.Controls.Add(this.dgvProductList);
             this.Name = "StockListControl";
             this.Size = new System.Drawing.Size(708, 190);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderDetailBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvOrderList;
+        private System.Windows.Forms.DataGridView dgvProductList;
         private System.Windows.Forms.BindingSource ProductList;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource orderDetailBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stockAmountDataGridViewTextBoxColumn;
     }
 }

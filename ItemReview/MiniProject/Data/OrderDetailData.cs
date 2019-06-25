@@ -18,7 +18,10 @@ namespace MiniProject.Data
                                 product = x.Product,
                                 orderdate = x.Order.OrderDate,
                                 parentscategotyname = x.Product.ParentsCategory.ParentsCategoryName,
-
+                                productname = x.Product.ProductName,
+                                size = x.Product.Size,
+                                color = x.Product.Color,
+                                amount = x.Product.StockAmount
                             };
 
                 var list = query.ToList();
@@ -27,10 +30,11 @@ namespace MiniProject.Data
                 {
                     x.order_detail.OrderDate = x.orderdate;
                     x.order_detail.ParentsCategoryName = x.parentscategotyname;
-                 
+                    x.order_detail.PuductorName = x.productname;
+                    x.order_detail.Amount = x.amount;
+                    x.order_detail.Size = x.size;
+                    x.order_detail.Color = x.color;
                 }
-
-
                 return list.ConvertAll(x => x.order_detail);
             }
         }

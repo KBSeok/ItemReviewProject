@@ -18,8 +18,6 @@ namespace Miniproject
             InitializeComponent();
         }
 
-        
-        
 
         private void customerSearchControl1_OnButtonSearchCusInfo(object sender, CustomerSearchControl.OnButtonSearchCusInfoEventArgs e)
         {

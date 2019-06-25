@@ -7,19 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MiniProject;
 
-namespace Miniproject
+namespace MiniProject
 {
-    public partial class CustomerOrderListControl : UserControl
+    public partial class EmployeeUpdateDelete : UserControl
     {
-        public CustomerOrderListControl()
+        public EmployeeUpdateDelete()
         {
             InitializeComponent();
-        }
-        public void SetDataCusOrderData(List<Order_Detail> oderdetail)
-        {
-            dgvCusOrderInfo.DataSource = oderdetail;
         }
 
         
