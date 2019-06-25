@@ -28,56 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.insertDeleteControl1 = new Miniproject.InsertDeleteControl();
-            this.orderSearchControl1 = new Miniproject.OrderSearchControl();
-            this.orderInfoListControl11 = new Miniproject.OrderInfoListControl1();
+            this.orderSearchControl2 = new Miniproject.OrderSearchControl();
+            this.orderInfoListControl = new Miniproject.OrderInfoListControl();
             this.SuspendLayout();
             // 
-            // label1
+            // orderSearchControl2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gulim", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(38, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 27);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "주문관리";
+            this.orderSearchControl2.Location = new System.Drawing.Point(107, 151);
+            this.orderSearchControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.orderSearchControl2.Name = "orderSearchControl2";
+            this.orderSearchControl2.Size = new System.Drawing.Size(670, 119);
+            this.orderSearchControl2.TabIndex = 1;
+            this.orderSearchControl2.SearchBottonClicked += new System.EventHandler<Miniproject.OrderSearchControl.SearchBottonClickedEventArgs>(this.OrderSearchControl_SearchBottonClicked);
             // 
-            // insertDeleteControl1
+            // orderInfoListControl
             // 
-            this.insertDeleteControl1.Location = new System.Drawing.Point(607, 491);
-            this.insertDeleteControl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.insertDeleteControl1.Name = "insertDeleteControl1";
-            this.insertDeleteControl1.Size = new System.Drawing.Size(255, 56);
-            this.insertDeleteControl1.TabIndex = 3;
-            // 
-            // orderSearchControl1
-            // 
-            this.orderSearchControl1.Location = new System.Drawing.Point(107, 74);
-            this.orderSearchControl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.orderSearchControl1.Name = "orderSearchControl1";
-            this.orderSearchControl1.Size = new System.Drawing.Size(673, 119);
-            this.orderSearchControl1.TabIndex = 1;
-            this.orderSearchControl1.SearchBottonClicked += new System.EventHandler<Miniproject.OrderSearchControl.SearchBottonClickedEventArgs>(this.OrderSearchControl1_SearchBottonClicked);
-            // 
-            // orderInfoListControl11
-            // 
-            this.orderInfoListControl11.Location = new System.Drawing.Point(27, 202);
-            this.orderInfoListControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.orderInfoListControl11.Name = "orderInfoListControl11";
-            this.orderInfoListControl11.Size = new System.Drawing.Size(819, 292);
-            this.orderInfoListControl11.TabIndex = 4;
+            this.orderInfoListControl.AutoSize = true;
+            this.orderInfoListControl.Location = new System.Drawing.Point(33, 361);
+            this.orderInfoListControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.orderInfoListControl.Name = "orderInfoListControl";
+            this.orderInfoListControl.Size = new System.Drawing.Size(830, 137);
+            this.orderInfoListControl.TabIndex = 0;
             // 
             // OderListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 562);
-            this.Controls.Add(this.orderInfoListControl11);
-            this.Controls.Add(this.insertDeleteControl1);
-            this.Controls.Add(this.orderSearchControl1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.orderSearchControl2);
+            this.Controls.Add(this.orderInfoListControl);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OderListForm";
             this.Text = "OderListForm";
@@ -87,10 +66,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private OrderSearchControl orderSearchControl1;
         private InsertDeleteControl insertDeleteControl1;
-        private OrderInfoListControl1 orderInfoListControl11;
+        private OrderInfoListControl orderInfoListControl11;
+        private OrderInfoListControl orderInfoListControl;
+        private OrderSearchControl orderSearchControl2;
     }
 }

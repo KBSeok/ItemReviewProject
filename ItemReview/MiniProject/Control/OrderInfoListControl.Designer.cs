@@ -1,6 +1,6 @@
 ﻿namespace Miniproject
 {
-    partial class OrderInfoListControl1
+    partial class OrderInfoListControl
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -30,10 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
-            this.bdsOrderList = new System.Windows.Forms.BindingSource(this.components);
             this.OrderNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdsOrderList = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsOrderList)).BeginInit();
             this.SuspendLayout();
@@ -44,20 +48,22 @@
             this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.OrderNumber,
-            this.CustomerName,
-            this.orderDateDataGridViewTextBoxColumn});
+            this.UserID,
+            this.Price,
+            this.ProductName,
+            this.Size,
+            this.Color,
+            this.Amount});
             this.dgvOrder.DataSource = this.bdsOrderList;
-            this.dgvOrder.Location = new System.Drawing.Point(6, 16);
+            this.dgvOrder.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvOrder.Location = new System.Drawing.Point(0, 18);
             this.dgvOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.RowHeadersWidth = 51;
             this.dgvOrder.RowTemplate.Height = 23;
-            this.dgvOrder.Size = new System.Drawing.Size(807, 250);
+            this.dgvOrder.Size = new System.Drawing.Size(893, 137);
             this.dgvOrder.TabIndex = 0;
-            // 
-            // bdsOrderList
-            // 
-            this.bdsOrderList.DataSource = typeof(MiniProject.Order);
+            //this.dgvOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvOrder_CellContentClick);
             // 
             // OrderNumber
             // 
@@ -67,30 +73,63 @@
             this.OrderNumber.Name = "OrderNumber";
             this.OrderNumber.Width = 125;
             // 
-            // CustomerName
+            // UserID
             // 
-            this.CustomerName.DataPropertyName = "CustomerName";
-            this.CustomerName.HeaderText = "CustomerName";
-            this.CustomerName.MinimumWidth = 6;
-            this.CustomerName.Name = "CustomerName";
-            this.CustomerName.Width = 125;
+            this.UserID.DataPropertyName = "UserID";
+            this.UserID.HeaderText = "UserID";
+            this.UserID.MinimumWidth = 6;
+            this.UserID.Name = "UserID";
+            this.UserID.Width = 125;
             // 
-            // orderDateDataGridViewTextBoxColumn
+            // Price
             // 
-            this.orderDateDataGridViewTextBoxColumn.DataPropertyName = "OrderDate";
-            this.orderDateDataGridViewTextBoxColumn.HeaderText = "OrderDate";
-            this.orderDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.orderDateDataGridViewTextBoxColumn.Name = "orderDateDataGridViewTextBoxColumn";
-            this.orderDateDataGridViewTextBoxColumn.Width = 125;
+            this.Price.DataPropertyName = "Price";
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            this.Price.Width = 125;
             // 
-            // OrderInfoListControl1
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "ProductName";
+            this.ProductName.HeaderText = "ProductName";
+            this.ProductName.MinimumWidth = 6;
+            this.ProductName.Name = "ProductName";
+            this.ProductName.Width = 125;
+            // 
+            // Size
+            // 
+            this.Size.DataPropertyName = "Size";
+            this.Size.HeaderText = "Size";
+            this.Size.MinimumWidth = 6;
+            this.Size.Name = "Size";
+            this.Size.Width = 125;
+            // 
+            // Color
+            // 
+            this.Color.DataPropertyName = "Color";
+            this.Color.HeaderText = "Color";
+            this.Color.MinimumWidth = 6;
+            this.Color.Name = "Color";
+            this.Color.Width = 125;
+            // 
+            // Amount
+            // 
+            this.Amount.DataPropertyName = "Amount";
+            this.Amount.HeaderText = "Amount";
+            this.Amount.MinimumWidth = 6;
+            this.Amount.Name = "Amount";
+            this.Amount.Width = 125;
+            // 
+            // OrderInfoListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.dgvOrder);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "OrderInfoListControl1";
-            this.Size = new System.Drawing.Size(819, 292);
+            this.Name = "OrderInfoListControl";
+           // this.Size = new System.Drawing.Size(893, 155);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsOrderList)).EndInit();
             this.ResumeLayout(false);
@@ -102,8 +141,12 @@
         private System.Windows.Forms.DataGridView dgvOrder;
         private System.Windows.Forms.BindingSource bdsOrderList;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Size;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Color;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn orderDateDataGridViewTextBoxColumn;
-
     }
 }

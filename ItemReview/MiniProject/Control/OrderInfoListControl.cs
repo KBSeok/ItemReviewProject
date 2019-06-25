@@ -11,21 +11,16 @@ using MiniProject;
 
 namespace Miniproject
 {
-    public partial class OrderInfoListControl1 : UserControl
+    public partial class OrderInfoListControl : UserControl
     {
-        public OrderInfoListControl1()
+        public OrderInfoListControl()
         {
             InitializeComponent();
         }
-
-        //public void SetDataEmployeeData(List<Employee> employee)
-        //{
-        //    dgvEmployeeInfo.DataSource = employee;
-        //}
-
         public void SetDataOrder(List<Order> order)
         {
             dgvOrder.DataSource = order;
         }
+
     }
 }

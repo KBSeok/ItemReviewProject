@@ -159,14 +159,12 @@ D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\bin\Debug\EntityFramew
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\bin\Debug\EntityFramework.xml
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\bin\Debug\EntityFramework.SqlServer.xml
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\bin\Debug\ko\EntityFramework.resources.dll
-D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.csprojAssemblyReference.cache
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.CustomerInfoControl.resources
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.CustomerOrderListControl.resources
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.CustomerSearchControl.resources
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.EmployeeInfoControl.resources
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.RegisterEmployeeControl.resources
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.EmployeeSearch.resources
-D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.OrderInfoListControl1.resources
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.OrderSearchControl.resources
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.StockListControl.resources
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.StockSearchControl.resources
@@ -183,3 +181,4 @@ D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.csproj.CopyComplete
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.exe
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.pdb
+D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.OrderInfoListControl.resources

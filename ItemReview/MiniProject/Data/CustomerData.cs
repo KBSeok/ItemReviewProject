@@ -28,5 +28,7 @@ namespace MiniProject.Data
                 return query.ToList();
             }
         }
+
+        
     }
 }
