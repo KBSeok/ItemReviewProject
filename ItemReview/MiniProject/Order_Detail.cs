@@ -16,20 +16,19 @@ namespace MiniProject
     {
         public int OrderID { get; set; }
         public int ProductId { get; set; }
-        public int Price { get; set; }
-        public int Amount { get; set; }
-        public string ParentsCategoryName { get; set; }
-        public string OrderDate { get; set; }
-        public string Size { get; set; }
-        public string Color { get; set; }
-        public string PuductorName { get; set; }
-
-        public string UserId { get; set; }
-
-        public string OrderNumber { get; set; }
-        //public string ProductName { get; set; }
+        public int OrderDetailsId { get; set; }
+   
 
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }
+        public string OrderDate { get; internal set; }
+        public string ParentsCategoryName { get; internal set; }
+        public string PuductorName { get; internal set; }
+        public int Amount { get; internal set; }
+        public string Size { get; internal set; }
+        public string Color { get; internal set; }
+        public string OrderNumber { get; internal set; }
+        public string UserId { get; internal set; }
+        public int Price { get; internal set; }
     }
 }

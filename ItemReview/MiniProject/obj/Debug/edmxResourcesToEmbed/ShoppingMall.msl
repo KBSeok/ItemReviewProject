@@ -4,101 +4,101 @@
     <EntitySetMapping Name="Customers">
       <EntityTypeMapping TypeName="ShoppingMallModel.Customer">
         <MappingFragment StoreEntitySet="Customer">
-          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="Address" ColumnName="Address" />
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Employees">
       <EntityTypeMapping TypeName="ShoppingMallModel.Employee">
         <MappingFragment StoreEntitySet="Employees">
-          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="rank" ColumnName="rank" />
-          <ScalarProperty Name="Gender" ColumnName="Gender" />
-          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
-          <ScalarProperty Name="HireDate" ColumnName="HireDate" />
-          <ScalarProperty Name="Address" ColumnName="Address" />
-          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
-          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
           <ScalarProperty Name="LoginPW" ColumnName="LoginPW" />
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="rank" ColumnName="rank" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Order_Details">
       <EntityTypeMapping TypeName="ShoppingMallModel.Order_Detail">
         <MappingFragment StoreEntitySet="Order Details">
-          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
-          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
           <ScalarProperty Name="OrderDetailsId" ColumnName="OrderDetailsId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="ShoppingMallModel.Order">
         <MappingFragment StoreEntitySet="Orders">
-          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
-          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
-          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
-          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
-          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
-          <ScalarProperty Name="RequiredDate" ColumnName="RequiredDate" />
-          <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
-          <ScalarProperty Name="ShiperID" ColumnName="ShiperID" />
           <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ShiperID" ColumnName="ShiperID" />
+          <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+          <ScalarProperty Name="RequiredDate" ColumnName="RequiredDate" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ParentsCategories">
       <EntityTypeMapping TypeName="ShoppingMallModel.ParentsCategory">
         <MappingFragment StoreEntitySet="ParentsCategory">
-          <ScalarProperty Name="ParentsCategoryId" ColumnName="ParentsCategoryId" />
           <ScalarProperty Name="ParentsCategoryName" ColumnName="ParentsCategoryName" />
+          <ScalarProperty Name="ParentsCategoryId" ColumnName="ParentsCategoryId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="ShoppingMallModel.Product">
         <MappingFragment StoreEntitySet="Product">
-          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
-          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
-          <ScalarProperty Name="ParentsCategoryId" ColumnName="ParentsCategoryId" />
-          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="Size" ColumnName="Size" />
-          <ScalarProperty Name="Color" ColumnName="Color" />
           <ScalarProperty Name="StockAmount" ColumnName="StockAmount" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="ParentsCategoryId" ColumnName="ParentsCategoryId" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Shippers">
       <EntityTypeMapping TypeName="ShoppingMallModel.Shipper">
         <MappingFragment StoreEntitySet="Shippers">
-          <ScalarProperty Name="ShipperID" ColumnName="ShipperID" />
-          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
           <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ShipperID" ColumnName="ShipperID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SubCategories">
       <EntityTypeMapping TypeName="ShoppingMallModel.SubCategory">
         <MappingFragment StoreEntitySet="SubCategory">
-          <ScalarProperty Name="ParentsCategoryId" ColumnName="ParentsCategoryId" />
-          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
           <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="ParentsCategoryId" ColumnName="ParentsCategoryId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Suppliers">
       <EntityTypeMapping TypeName="ShoppingMallModel.Supplier">
         <MappingFragment StoreEntitySet="Supplier">
-          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
-          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

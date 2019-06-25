@@ -1,31 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ShoppingMallModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ShoppingMallEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Customers" EntityType="ShoppingMallModel.Customer" />
+    <EntitySet Name="Employees" EntityType="ShoppingMallModel.Employee" />
+    <EntitySet Name="Order_Details" EntityType="ShoppingMallModel.Order_Detail" />
+    <EntitySet Name="Orders" EntityType="ShoppingMallModel.Order" />
+    <EntitySet Name="ParentsCategories" EntityType="ShoppingMallModel.ParentsCategory" />
+    <EntitySet Name="Products" EntityType="ShoppingMallModel.Product" />
+    <EntitySet Name="Shippers" EntityType="ShoppingMallModel.Shipper" />
+    <EntitySet Name="SubCategories" EntityType="ShoppingMallModel.SubCategory" />
+    <EntitySet Name="Suppliers" EntityType="ShoppingMallModel.Supplier" />
+    <AssociationSet Name="FK_Orders_Customer" Association="ShoppingMallModel.FK_Orders_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Employees" Association="ShoppingMallModel.FK_Orders_Employees">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Details_Orders" Association="ShoppingMallModel.FK_Order_Details_Orders">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="Order_Detail" EntitySet="Order_Details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Details_Product" Association="ShoppingMallModel.FK_Order_Details_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Order_Detail" EntitySet="Order_Details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Shippers" Association="ShoppingMallModel.FK_Orders_Shippers">
+      <End Role="Shipper" EntitySet="Shippers" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ParentsCategory" Association="ShoppingMallModel.FK_Product_ParentsCategory">
+      <End Role="ParentsCategory" EntitySet="ParentsCategories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubCategory_ParentsCategory" Association="ShoppingMallModel.FK_SubCategory_ParentsCategory">
+      <End Role="ParentsCategory" EntitySet="ParentsCategories" />
+      <End Role="SubCategory" EntitySet="SubCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_SubCategory" Association="ShoppingMallModel.FK_Product_SubCategory">
+      <End Role="SubCategory" EntitySet="SubCategories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Supplier" Association="ShoppingMallModel.FK_Product_Supplier">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="Customer">
     <Key>
       <PropertyRef Name="CustomerName" />
     </Key>
-    <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Grade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Customer" FromRole="Customer" ToRole="Orders" />
+    <Property Name="CustomerName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Grade" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Orders" Relationship="ShoppingMallModel.FK_Orders_Customer" FromRole="Customer" ToRole="Order" />
   </EntityType>
   <EntityType Name="Employee">
     <Key>
       <PropertyRef Name="EmployeeID" />
     </Key>
     <Property Name="EmployeeID" Type="Int32" Nullable="false" />
-    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="rank" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="BirthDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="HireDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="HomePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="rank" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BirthDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HireDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HomePhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="LoginID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="LoginPW" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Employees" FromRole="Employees" ToRole="Orders" />
+    <NavigationProperty Name="Orders" Relationship="ShoppingMallModel.FK_Orders_Employees" FromRole="Employee" ToRole="Order" />
   </EntityType>
   <EntityType Name="Order_Detail">
     <Key>
@@ -35,8 +82,8 @@
     <Property Name="OrderID" Type="Int32" Nullable="false" />
     <Property Name="ProductId" Type="Int32" Nullable="false" />
     <Property Name="OrderDetailsId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Order" Relationship="Self.FK_Order_Details_Orders" FromRole="Order_Details" ToRole="Orders" />
-    <NavigationProperty Name="Product" Relationship="Self.FK_Order_Details_Product" FromRole="Order_Details" ToRole="Product" />
+    <NavigationProperty Name="Order" Relationship="ShoppingMallModel.FK_Order_Details_Orders" FromRole="Order_Detail" ToRole="Order" />
+    <NavigationProperty Name="Product" Relationship="ShoppingMallModel.FK_Order_Details_Product" FromRole="Order_Detail" ToRole="Product" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
@@ -44,53 +91,53 @@
     </Key>
     <Property Name="OrderID" Type="Int32" Nullable="false" />
     <Property Name="OrderNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CustomerName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="EmployeeID" Type="Int32" Nullable="false" />
-    <Property Name="OrderDate" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="RequiredDate" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="ShippedDate" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderDate" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="RequiredDate" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ShippedDate" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="ShiperID" Type="Int32" Nullable="false" />
     <Property Name="Amount" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Customer" Relationship="Self.FK_Orders_Customer" FromRole="Orders" ToRole="Customer" />
-    <NavigationProperty Name="Employee" Relationship="Self.FK_Orders_Employees" FromRole="Orders" ToRole="Employees" />
-    <NavigationProperty Name="Order_Details" Relationship="Self.FK_Order_Details_Orders" FromRole="Orders" ToRole="Order_Details" />
-    <NavigationProperty Name="Shipper" Relationship="Self.FK_Orders_Shippers" FromRole="Orders" ToRole="Shippers" />
+    <NavigationProperty Name="Customer" Relationship="ShoppingMallModel.FK_Orders_Customer" FromRole="Order" ToRole="Customer" />
+    <NavigationProperty Name="Employee" Relationship="ShoppingMallModel.FK_Orders_Employees" FromRole="Order" ToRole="Employee" />
+    <NavigationProperty Name="Order_Details" Relationship="ShoppingMallModel.FK_Order_Details_Orders" FromRole="Order" ToRole="Order_Detail" />
+    <NavigationProperty Name="Shipper" Relationship="ShoppingMallModel.FK_Orders_Shippers" FromRole="Order" ToRole="Shipper" />
   </EntityType>
   <EntityType Name="ParentsCategory">
     <Key>
       <PropertyRef Name="ParentsCategoryId" />
     </Key>
     <Property Name="ParentsCategoryId" Type="Int32" Nullable="false" />
-    <Property Name="ParentsCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Products" Relationship="Self.FK_Product_ParentsCategory" FromRole="ParentsCategory" ToRole="Product" />
-    <NavigationProperty Name="SubCategories" Relationship="Self.FK_SubCategory_ParentsCategory" FromRole="ParentsCategory" ToRole="SubCategory" />
+    <Property Name="ParentsCategoryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Products" Relationship="ShoppingMallModel.FK_Product_ParentsCategory" FromRole="ParentsCategory" ToRole="Product" />
+    <NavigationProperty Name="SubCategories" Relationship="ShoppingMallModel.FK_SubCategory_ParentsCategory" FromRole="ParentsCategory" ToRole="SubCategory" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
       <PropertyRef Name="ProductId" />
     </Key>
     <Property Name="ProductId" Type="Int32" Nullable="false" />
-    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SupplierId" Type="Int32" Nullable="false" />
     <Property Name="ParentsCategoryId" Type="Int32" Nullable="false" />
     <Property Name="SubCategoryId" Type="Int32" Nullable="false" />
     <Property Name="Price" Type="Int32" Nullable="false" />
-    <Property Name="Size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Size" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="StockAmount" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Order_Details" Relationship="Self.FK_Order_Details_Product" FromRole="Product" ToRole="Order_Details" />
-    <NavigationProperty Name="ParentsCategory" Relationship="Self.FK_Product_ParentsCategory" FromRole="Product" ToRole="ParentsCategory" />
-    <NavigationProperty Name="SubCategory" Relationship="Self.FK_Product_SubCategory" FromRole="Product" ToRole="SubCategory" />
-    <NavigationProperty Name="Supplier" Relationship="Self.FK_Product_Supplier" FromRole="Product" ToRole="Supplier" />
+    <NavigationProperty Name="Order_Details" Relationship="ShoppingMallModel.FK_Order_Details_Product" FromRole="Product" ToRole="Order_Detail" />
+    <NavigationProperty Name="ParentsCategory" Relationship="ShoppingMallModel.FK_Product_ParentsCategory" FromRole="Product" ToRole="ParentsCategory" />
+    <NavigationProperty Name="SubCategory" Relationship="ShoppingMallModel.FK_Product_SubCategory" FromRole="Product" ToRole="SubCategory" />
+    <NavigationProperty Name="Supplier" Relationship="ShoppingMallModel.FK_Product_Supplier" FromRole="Product" ToRole="Supplier" />
   </EntityType>
   <EntityType Name="Shipper">
     <Key>
       <PropertyRef Name="ShipperID" />
     </Key>
     <Property Name="ShipperID" Type="Int32" Nullable="false" />
-    <Property Name="CompanyName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="PhoneNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Shippers" FromRole="Shippers" ToRole="Orders" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Orders" Relationship="ShoppingMallModel.FK_Orders_Shippers" FromRole="Shipper" ToRole="Order" />
   </EntityType>
   <EntityType Name="SubCategory">
     <Key>
@@ -99,82 +146,82 @@
     </Key>
     <Property Name="ParentsCategoryId" Type="Int32" Nullable="false" />
     <Property Name="SubCategoryId" Type="Int32" Nullable="false" />
-    <Property Name="SubCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="ParentsCategory" Relationship="Self.FK_SubCategory_ParentsCategory" FromRole="SubCategory" ToRole="ParentsCategory" />
-    <NavigationProperty Name="Products" Relationship="Self.FK_Product_SubCategory" FromRole="SubCategory" ToRole="Product" />
+    <Property Name="SubCategoryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ParentsCategory" Relationship="ShoppingMallModel.FK_SubCategory_ParentsCategory" FromRole="SubCategory" ToRole="ParentsCategory" />
+    <NavigationProperty Name="Products" Relationship="ShoppingMallModel.FK_Product_SubCategory" FromRole="SubCategory" ToRole="Product" />
   </EntityType>
   <EntityType Name="Supplier">
     <Key>
       <PropertyRef Name="SupplierId" />
     </Key>
     <Property Name="SupplierId" Type="Int32" Nullable="false" />
-    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Products" Relationship="Self.FK_Product_Supplier" FromRole="Supplier" ToRole="Product" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Products" Relationship="ShoppingMallModel.FK_Product_Supplier" FromRole="Supplier" ToRole="Product" />
   </EntityType>
   <Association Name="FK_Orders_Customer">
-    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
-    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <End Type="ShoppingMallModel.Customer" Role="Customer" Multiplicity="1" />
+    <End Type="ShoppingMallModel.Order" Role="Order" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Customer">
         <PropertyRef Name="CustomerName" />
       </Principal>
-      <Dependent Role="Orders">
+      <Dependent Role="Order">
         <PropertyRef Name="CustomerName" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Orders_Employees">
-    <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
-    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <End Type="ShoppingMallModel.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="ShoppingMallModel.Order" Role="Order" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Employees">
+      <Principal Role="Employee">
         <PropertyRef Name="EmployeeID" />
       </Principal>
-      <Dependent Role="Orders">
+      <Dependent Role="Order">
         <PropertyRef Name="EmployeeID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Order_Details_Orders">
-    <End Role="Orders" Type="Self.Order" Multiplicity="1" />
-    <End Role="Order_Details" Type="Self.Order_Detail" Multiplicity="*" />
+    <End Type="ShoppingMallModel.Order" Role="Order" Multiplicity="1" />
+    <End Type="ShoppingMallModel.Order_Detail" Role="Order_Detail" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Orders">
+      <Principal Role="Order">
         <PropertyRef Name="OrderID" />
       </Principal>
-      <Dependent Role="Order_Details">
+      <Dependent Role="Order_Detail">
         <PropertyRef Name="OrderID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Order_Details_Product">
-    <End Role="Product" Type="Self.Product" Multiplicity="1" />
-    <End Role="Order_Details" Type="Self.Order_Detail" Multiplicity="*" />
+    <End Type="ShoppingMallModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="ShoppingMallModel.Order_Detail" Role="Order_Detail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Product">
         <PropertyRef Name="ProductId" />
       </Principal>
-      <Dependent Role="Order_Details">
+      <Dependent Role="Order_Detail">
         <PropertyRef Name="ProductId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Orders_Shippers">
-    <End Role="Shippers" Type="Self.Shipper" Multiplicity="1" />
-    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <End Type="ShoppingMallModel.Shipper" Role="Shipper" Multiplicity="1" />
+    <End Type="ShoppingMallModel.Order" Role="Order" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Shippers">
+      <Principal Role="Shipper">
         <PropertyRef Name="ShipperID" />
       </Principal>
-      <Dependent Role="Orders">
+      <Dependent Role="Order">
         <PropertyRef Name="ShiperID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Product_ParentsCategory">
-    <End Role="ParentsCategory" Type="Self.ParentsCategory" Multiplicity="1" />
-    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <End Type="ShoppingMallModel.ParentsCategory" Role="ParentsCategory" Multiplicity="1" />
+    <End Type="ShoppingMallModel.Product" Role="Product" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ParentsCategory">
         <PropertyRef Name="ParentsCategoryId" />
@@ -185,8 +232,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_SubCategory_ParentsCategory">
-    <End Role="ParentsCategory" Type="Self.ParentsCategory" Multiplicity="1" />
-    <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="*" />
+    <End Type="ShoppingMallModel.ParentsCategory" Role="ParentsCategory" Multiplicity="1" />
+    <End Type="ShoppingMallModel.SubCategory" Role="SubCategory" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ParentsCategory">
         <PropertyRef Name="ParentsCategoryId" />
@@ -197,8 +244,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Product_SubCategory">
-    <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="1" />
-    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <End Type="ShoppingMallModel.SubCategory" Role="SubCategory" Multiplicity="1" />
+    <End Type="ShoppingMallModel.Product" Role="Product" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SubCategory">
         <PropertyRef Name="ParentsCategoryId" />
@@ -211,8 +258,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Product_Supplier">
-    <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
-    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <End Type="ShoppingMallModel.Supplier" Role="Supplier" Multiplicity="1" />
+    <End Type="ShoppingMallModel.Product" Role="Product" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Supplier">
         <PropertyRef Name="SupplierId" />
@@ -222,51 +269,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="ShoppingMallEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Customers" EntityType="Self.Customer" />
-    <EntitySet Name="Employees" EntityType="Self.Employee" />
-    <EntitySet Name="Order_Details" EntityType="Self.Order_Detail" />
-    <EntitySet Name="Orders" EntityType="Self.Order" />
-    <EntitySet Name="ParentsCategories" EntityType="Self.ParentsCategory" />
-    <EntitySet Name="Products" EntityType="Self.Product" />
-    <EntitySet Name="Shippers" EntityType="Self.Shipper" />
-    <EntitySet Name="SubCategories" EntityType="Self.SubCategory" />
-    <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
-    <AssociationSet Name="FK_Orders_Customer" Association="Self.FK_Orders_Customer">
-      <End Role="Customer" EntitySet="Customers" />
-      <End Role="Orders" EntitySet="Orders" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Orders_Employees" Association="Self.FK_Orders_Employees">
-      <End Role="Employees" EntitySet="Employees" />
-      <End Role="Orders" EntitySet="Orders" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Order_Details_Orders" Association="Self.FK_Order_Details_Orders">
-      <End Role="Orders" EntitySet="Orders" />
-      <End Role="Order_Details" EntitySet="Order_Details" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Order_Details_Product" Association="Self.FK_Order_Details_Product">
-      <End Role="Product" EntitySet="Products" />
-      <End Role="Order_Details" EntitySet="Order_Details" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Orders_Shippers" Association="Self.FK_Orders_Shippers">
-      <End Role="Shippers" EntitySet="Shippers" />
-      <End Role="Orders" EntitySet="Orders" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Product_ParentsCategory" Association="Self.FK_Product_ParentsCategory">
-      <End Role="ParentsCategory" EntitySet="ParentsCategories" />
-      <End Role="Product" EntitySet="Products" />
-    </AssociationSet>
-    <AssociationSet Name="FK_SubCategory_ParentsCategory" Association="Self.FK_SubCategory_ParentsCategory">
-      <End Role="ParentsCategory" EntitySet="ParentsCategories" />
-      <End Role="SubCategory" EntitySet="SubCategories" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Product_SubCategory" Association="Self.FK_Product_SubCategory">
-      <End Role="SubCategory" EntitySet="SubCategories" />
-      <End Role="Product" EntitySet="Products" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Product_Supplier" Association="Self.FK_Product_Supplier">
-      <End Role="Supplier" EntitySet="Suppliers" />
-      <End Role="Product" EntitySet="Products" />
-    </AssociationSet>
-  </EntityContainer>
 </Schema>
