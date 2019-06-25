@@ -84,8 +84,14 @@
     <Compile Include="Control\EmployeeUpdateDelete.Designer.cs">
       <DependentUpon>EmployeeUpdateDelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>ShoppingMall.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\ParentsCategoryData.cs" />
     <Compile Include="Data\SubCategoryData.cs" />
+    <Compile Include="Employee.cs">
+      <DependentUpon>ShoppingMall.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form\EmployeeControl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,18 +110,12 @@
     <Compile Include="Control\EmployeeSearchControl.Designer.cs">
       <DependentUpon>EmployeeSearchControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs">
-      <DependentUpon>ShoppingMall.tt</DependentUpon>
-    </Compile>
     <Compile Include="Data\EntityData.cs" />
     <Compile Include="Data\OrderDetailData.cs" />
     <Compile Include="Data\ProductData.cs" />
     <Compile Include="Data\CustomerData.cs" />
     <Compile Include="Data\DB.cs" />
     <Compile Include="Data\EmployeeData.cs" />
-    <Compile Include="Employee.cs">
-      <DependentUpon>ShoppingMall.tt</DependentUpon>
-    </Compile>
     <Compile Include="Form\EmployeeInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,11 +202,11 @@
     <Compile Include="Control\StockSearchControl.Designer.cs">
       <DependentUpon>StockSearchControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Register_Login.cs">
+    <Compile Include="Form\Register_LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Register_Login.Designer.cs">
-      <DependentUpon>Register_Login.cs</DependentUpon>
+    <Compile Include="Form\Register_LoginForm.Designer.cs">
+      <DependentUpon>Register_LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Control\Register_LoginControl.cs">
       <SubType>UserControl</SubType>
@@ -283,8 +283,8 @@
     <EmbeddedResource Include="Form\OderListForm.resx">
       <DependentUpon>OderListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Register_Login.resx">
-      <DependentUpon>Register_Login.cs</DependentUpon>
+    <EmbeddedResource Include="Form\Register_LoginForm.resx">
+      <DependentUpon>Register_LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\StockManagementForm.resx">
       <DependentUpon>StockManagementForm.cs</DependentUpon>

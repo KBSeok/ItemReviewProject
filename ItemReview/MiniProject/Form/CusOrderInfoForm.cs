@@ -21,9 +21,9 @@ namespace Miniproject
 
         private void customerSearchControl1_OnButtonSearchCusInfo(object sender, CustomerSearchControl.OnButtonSearchCusInfoEventArgs e)
         {
-            var customers = DB.customer.SearchInfo(e.Id, e.Grade);
+            var customers = DB.Customer.SearchInfo(e.Id, e.Grade);
             uscOutputCusInfo.SetDataCustomerData(customers);
-            var orderdetail = DB.orderdetail.SearchProductInfo(e.Id, e.Grade);
+            var orderdetail = DB.Orderdetail.SearchProductInfo(e.Id, e.Grade);
             uscCusOrderInfo.SetDataCusOrderData(orderdetail);
         }
     }

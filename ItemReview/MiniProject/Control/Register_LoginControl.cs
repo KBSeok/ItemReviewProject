@@ -64,27 +64,7 @@ namespace MiniProject
             OnButtonCloseForm();
         }
 
-        private void BtnNumberCheck_Click(object sender, EventArgs e)
-        {
-            using(ShoppingMallEntities context = new ShoppingMallEntities())
-            {
-                int number = Convert.ToInt32(txbNumber.Text);
-
-                if(context.Employees.Count(x => x.EmployeeID == number) == 1)
-                {
-
-                    MessageBox.Show("회원가입이 가능한 사번입니다.", "알림", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                }
-
-                if (context.Employees.Count(x => x.EmployeeID == number) == 0)
-                {
-                    MessageBox.Show("등록되지 않은 사번입니다.", "알림", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                }
-            }
-        }
-
+        
         private void BtnIdCheck_Click(object sender, EventArgs e)
         {
             using (ShoppingMallEntities context = new ShoppingMallEntities())
@@ -97,7 +77,7 @@ namespace MiniProject
                 }
                 if (context.Employees.Count(x => x.LoginID == Id) == 0)
                 {
-                    MessageBox.Show("등록가능한 아이디 입니다.", "알림", MessageBoxButtons.OK,
+                    MessageBox.Show("등록가능한 아이디입니다.", "알림", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 }
             }
@@ -105,21 +85,29 @@ namespace MiniProject
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
-            if(txbPW.Text != txbPWCheck.Text)
+            if (txbPW.Text != txbPWCheck.Text)
             {
                 MessageBox.Show("비밀번호가 일치하지 않습니다.", "알림", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
+                return;
             }
             else
             {
-                Employee employee = new Employee();
+                
+                using (ShoppingMallEntities context = new ShoppingMallEntities())
+                {
+                    int employeeId = Convert.ToInt32(txbNumber.Text);
 
-                employee.LoginID = txbId.Text;
-                employee.LoginPW = txbPW.Text;
-                employee.EmployeeID = Convert.ToInt32(txbNumber.Text);
+                    Employee employee = DB.Employee.GetByPK(employeeId);
 
-                DB.employee.Update(employee);
+                    employee.LoginID = txbId.Text;
+                    employee.LoginPW = txbPW.Text;
+
+                    DB.Employee.Update(employee);
+                }
             }
+            MessageBox.Show("변경이 완료되었습니다.", "알림", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
     }
 }

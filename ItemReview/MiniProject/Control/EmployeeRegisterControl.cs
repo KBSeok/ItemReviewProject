@@ -17,9 +17,9 @@ namespace Miniproject
         public RegisterEmployeeControl()
         {
             InitializeComponent();
-            string[] rank = { "사장", "부장", "과장", "대리", "사원" };
+            string[] rank = { "Staff", "Manager", "CEO"};
             cbbLevel.Items.AddRange(rank);
-            string[] gender = { "남", "여" };
+            string[] gender = { "male", "female" };
             cbbGender.Items.AddRange(gender);
         }
         
@@ -46,7 +46,6 @@ namespace Miniproject
                     return;
                 }
                 
-
                 employee.Name = txbName.Text;
                 employee.rank = cbbLevel.Text;
                 employee.Gender = cbbGender.Text;
@@ -55,7 +54,7 @@ namespace Miniproject
                 employee.Address = txbAddress.Text;
                 employee.HomePhone = txbNumber.Text;
 
-                DB.employee.Insert(employee);
+                DB.Employee.Insert(employee);
             }
         }
     }

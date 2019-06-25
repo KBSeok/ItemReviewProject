@@ -26,9 +26,9 @@ namespace Miniproject
             //form1.ShowDialog();
             using (ShoppingMallEntities context = new ShoppingMallEntities())
             {
-                if (DB.employee.GetEmployeeId().Contains(txbId.Text) == true)
+                if (DB.Employee.GetEmployeeId().Contains(txbId.Text) == true)
                 {
-                    if (DB.employee.GetEmployeePW().Contains(txbPassword.Text) == true)
+                    if (DB.Employee.GetEmployeePW().Contains(txbPassword.Text) == true)
                     {
                         MainmenuForm form1 = new MainmenuForm();
                         form1.ShowDialog();

@@ -11,6 +11,14 @@ namespace MiniProject.Data
 {
     class EmployeeData : EntityData<Employee>
     {
+        public Employee GetByPK(int employeeId)
+        {
+            using (ShoppingMallEntities context = new ShoppingMallEntities())
+            {
+                return context.Employees.FirstOrDefault(x => x.EmployeeID == employeeId);
+            }
+        }
+
         public List<string> GetEmployeeId()
         {
             using(ShoppingMallEntities context = new ShoppingMallEntities())
@@ -35,8 +43,6 @@ namespace MiniProject.Data
                 var query = from x in context.Employees
                             where x.Name == Name
                             select x;
-
-                
 
                 return query.ToList();
             }

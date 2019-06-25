@@ -8,11 +8,12 @@ namespace MiniProject.Data
 {
     class SubCategoryData
     {
-        public List<SubCategory> GetAll()
+        public List<String> GetSubName()
         {
             using(ShoppingMallEntities context = new ShoppingMallEntities())
             {
-                return context.SubCategories.Distinct().ToList();
+                return context.SubCategories.Select(x => x.SubCategoryName)
+                    .Distinct().ToList();
             }
         }
     }

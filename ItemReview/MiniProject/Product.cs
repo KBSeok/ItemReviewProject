@@ -24,6 +24,7 @@ namespace MiniProject
         public string ProductName { get; set; }
         public int SupplierId { get; set; }
         public int ParentsCategoryId { get; set; }
+        public Nullable<int> SubCategoryId { get; set; }
         public int Price { get; set; }
         public string Size { get; set; }
         public string Color { get; set; }

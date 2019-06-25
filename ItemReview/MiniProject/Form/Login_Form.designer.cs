@@ -30,11 +30,11 @@
         {
             this.btnLogin = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.txbPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txbId = new System.Windows.Forms.TextBox();
-            this.btnRegister = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "login";
             // 
+            // btnRegister
+            // 
+            this.btnRegister.Location = new System.Drawing.Point(17, 151);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(101, 37);
+            this.btnRegister.TabIndex = 6;
+            this.btnRegister.Text = "아이디비밀번호 변경";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
             // txbPassword
             // 
             this.txbPassword.Location = new System.Drawing.Point(79, 72);
@@ -85,9 +95,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(15, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 12);
+            this.label2.Size = new System.Drawing.Size(23, 12);
             this.label2.TabIndex = 3;
-            this.label2.Text = "PWD";
+            this.label2.Text = "PW";
             // 
             // txbId
             // 
@@ -95,16 +105,6 @@
             this.txbId.Name = "txbId";
             this.txbId.Size = new System.Drawing.Size(135, 21);
             this.txbId.TabIndex = 4;
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.Location = new System.Drawing.Point(17, 151);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(90, 37);
-            this.btnRegister.TabIndex = 6;
-            this.btnRegister.Text = "회원가입";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // Login_Form
             // 

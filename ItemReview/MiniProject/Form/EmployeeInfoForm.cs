@@ -20,7 +20,7 @@ namespace Miniproject
 
         private void EmployeeSearch1_EnterSearchEmpoyeeInfo(object sender, EmployeeSearch.EnterSearchEmpoyeeInfoEventArgs e)
         {
-            var emplyees = DB.employee.SearchInfo(e.Name);
+            var emplyees = DB.Employee.SearchInfo(e.Name);
             uscEmployeeInfo.SetDataEmployeeData(emplyees);
         }
     }

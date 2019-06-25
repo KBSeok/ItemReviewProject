@@ -8,16 +8,16 @@ namespace MiniProject.Data
 {
     class DB
     {
-        public static EmployeeData employee { get; } = new EmployeeData();
+        public static EmployeeData Employee { get; } = new EmployeeData();
 
-        public static CustomerData customer { get; } = new CustomerData();
+        public static CustomerData Customer { get; } = new CustomerData();
 
-        public static ProductData product { get; } = new ProductData();
+        public static ProductData Product { get; } = new ProductData();
 
-        public static OrderDetailData orderdetail { get; } = new OrderDetailData();
-        public static ParentsCategoryData parentscategorydata { get; } =
+        public static OrderDetailData Orderdetail { get; } = new OrderDetailData();
+        public static ParentsCategoryData Parentscategorydata { get; } =
             new ParentsCategoryData();
-        public static SubCategoryData subcategorydata { get; } =
+        public static SubCategoryData Subcategorydata { get; } =
             new SubCategoryData();
     }
 }

@@ -31,8 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnNumberCheck = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
+            this.btnUpdata = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnIdCheck = new System.Windows.Forms.Button();
             this.txbPWCheck = new System.Windows.Forms.TextBox();
@@ -64,8 +63,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnNumberCheck);
-            this.groupBox1.Controls.Add(this.btnRegister);
+            this.groupBox1.Controls.Add(this.btnUpdata);
             this.groupBox1.Controls.Add(this.btnCancel);
             this.groupBox1.Controls.Add(this.btnIdCheck);
             this.groupBox1.Controls.Add(this.txbPWCheck);
@@ -82,25 +80,15 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // btnNumberCheck
+            // btnUpdata
             // 
-            this.btnNumberCheck.Location = new System.Drawing.Point(249, 18);
-            this.btnNumberCheck.Name = "btnNumberCheck";
-            this.btnNumberCheck.Size = new System.Drawing.Size(87, 23);
-            this.btnNumberCheck.TabIndex = 11;
-            this.btnNumberCheck.Text = "중복확인";
-            this.btnNumberCheck.UseVisualStyleBackColor = true;
-            this.btnNumberCheck.Click += new System.EventHandler(this.BtnNumberCheck_Click);
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.Location = new System.Drawing.Point(249, 223);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(87, 23);
-            this.btnRegister.TabIndex = 10;
-            this.btnRegister.Text = "회원가입완료";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
+            this.btnUpdata.Location = new System.Drawing.Point(249, 223);
+            this.btnUpdata.Name = "btnUpdata";
+            this.btnUpdata.Size = new System.Drawing.Size(87, 23);
+            this.btnUpdata.TabIndex = 10;
+            this.btnUpdata.Text = "변경";
+            this.btnUpdata.UseVisualStyleBackColor = true;
+            this.btnUpdata.Click += new System.EventHandler(this.BtnRegister_Click);
             // 
             // btnCancel
             // 
@@ -188,7 +176,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnUpdata;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnIdCheck;
         private System.Windows.Forms.TextBox txbPWCheck;
@@ -197,6 +185,5 @@
         private System.Windows.Forms.TextBox txbId;
         private System.Windows.Forms.TextBox txbNumber;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnNumberCheck;
     }
 }

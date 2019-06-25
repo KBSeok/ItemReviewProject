@@ -36,17 +36,13 @@
             this.chbSubCategory = new System.Windows.Forms.CheckBox();
             this.chbParentsCategory = new System.Windows.Forms.CheckBox();
             this.txbName = new System.Windows.Forms.TextBox();
-            this.cbbColor = new System.Windows.Forms.ComboBox();
-            this.productData = new System.Windows.Forms.BindingSource(this.components);
             this.cbbSize = new System.Windows.Forms.ComboBox();
-            this.subCategoryData = new System.Windows.Forms.BindingSource(this.components);
             this.cbbLCategory = new System.Windows.Forms.ComboBox();
+            this.cbbColor = new System.Windows.Forms.ComboBox();
             this.cbbHCategory = new System.Windows.Forms.ComboBox();
             this.parentsCategoryData = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.gbOrderSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.subCategoryData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parentsCategoryData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,9 +54,9 @@
             this.gbOrderSearch.Controls.Add(this.chbSubCategory);
             this.gbOrderSearch.Controls.Add(this.chbParentsCategory);
             this.gbOrderSearch.Controls.Add(this.txbName);
-            this.gbOrderSearch.Controls.Add(this.cbbColor);
             this.gbOrderSearch.Controls.Add(this.cbbSize);
             this.gbOrderSearch.Controls.Add(this.cbbLCategory);
+            this.gbOrderSearch.Controls.Add(this.cbbColor);
             this.gbOrderSearch.Controls.Add(this.cbbHCategory);
             this.gbOrderSearch.Controls.Add(this.label1);
             this.gbOrderSearch.Location = new System.Drawing.Point(3, 3);
@@ -82,6 +78,8 @@
             // chbSize
             // 
             this.chbSize.AutoSize = true;
+            this.chbSize.Checked = true;
+            this.chbSize.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbSize.Location = new System.Drawing.Point(441, 90);
             this.chbSize.Name = "chbSize";
             this.chbSize.Size = new System.Drawing.Size(60, 16);
@@ -93,6 +91,8 @@
             // chbColor
             // 
             this.chbColor.AutoSize = true;
+            this.chbColor.Checked = true;
+            this.chbColor.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbColor.Location = new System.Drawing.Point(195, 89);
             this.chbColor.Name = "chbColor";
             this.chbColor.Size = new System.Drawing.Size(48, 16);
@@ -104,6 +104,8 @@
             // chbSubCategory
             // 
             this.chbSubCategory.AutoSize = true;
+            this.chbSubCategory.Checked = true;
+            this.chbSubCategory.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbSubCategory.Location = new System.Drawing.Point(441, 34);
             this.chbSubCategory.Name = "chbSubCategory";
             this.chbSubCategory.Size = new System.Drawing.Size(96, 16);
@@ -115,6 +117,8 @@
             // chbParentsCategory
             // 
             this.chbParentsCategory.AutoSize = true;
+            this.chbParentsCategory.Checked = true;
+            this.chbParentsCategory.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbParentsCategory.Location = new System.Drawing.Point(195, 31);
             this.chbParentsCategory.Name = "chbParentsCategory";
             this.chbParentsCategory.Size = new System.Drawing.Size(96, 16);
@@ -130,49 +134,38 @@
             this.txbName.Size = new System.Drawing.Size(100, 21);
             this.txbName.TabIndex = 5;
             // 
-            // cbbColor
-            // 
-            this.cbbColor.DataSource = this.productData;
-            this.cbbColor.DisplayMember = "Size";
-            this.cbbColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbColor.FormattingEnabled = true;
-            this.cbbColor.Location = new System.Drawing.Point(543, 83);
-            this.cbbColor.Name = "cbbColor";
-            this.cbbColor.Size = new System.Drawing.Size(121, 20);
-            this.cbbColor.TabIndex = 4;
-            this.cbbColor.ValueMember = "Size";
-            // 
-            // productData
-            // 
-            this.productData.DataSource = typeof(MiniProject.Product);
-            // 
             // cbbSize
             // 
-            this.cbbSize.DataSource = this.subCategoryData;
-            this.cbbSize.DisplayMember = "SubCategoryName";
+            this.cbbSize.DisplayMember = "Size";
             this.cbbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSize.FormattingEnabled = true;
-            this.cbbSize.Location = new System.Drawing.Point(543, 28);
+            this.cbbSize.Location = new System.Drawing.Point(543, 83);
             this.cbbSize.Name = "cbbSize";
             this.cbbSize.Size = new System.Drawing.Size(121, 20);
-            this.cbbSize.TabIndex = 3;
-            this.cbbSize.ValueMember = "ParentsCategoryId";
-            // 
-            // subCategoryData
-            // 
-            this.subCategoryData.DataSource = typeof(MiniProject.SubCategory);
+            this.cbbSize.TabIndex = 4;
+            this.cbbSize.ValueMember = "Size";
             // 
             // cbbLCategory
             // 
-            this.cbbLCategory.DataSource = this.productData;
-            this.cbbLCategory.DisplayMember = "Color";
+            this.cbbLCategory.DisplayMember = "SubCategoryName";
             this.cbbLCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLCategory.FormattingEnabled = true;
-            this.cbbLCategory.Location = new System.Drawing.Point(296, 83);
+            this.cbbLCategory.Location = new System.Drawing.Point(543, 28);
             this.cbbLCategory.Name = "cbbLCategory";
             this.cbbLCategory.Size = new System.Drawing.Size(121, 20);
-            this.cbbLCategory.TabIndex = 2;
-            this.cbbLCategory.ValueMember = "Color";
+            this.cbbLCategory.TabIndex = 3;
+            this.cbbLCategory.ValueMember = "SubCategoryName";
+            // 
+            // cbbColor
+            // 
+            this.cbbColor.DisplayMember = "Color";
+            this.cbbColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbColor.FormattingEnabled = true;
+            this.cbbColor.Location = new System.Drawing.Point(296, 83);
+            this.cbbColor.Name = "cbbColor";
+            this.cbbColor.Size = new System.Drawing.Size(121, 20);
+            this.cbbColor.TabIndex = 2;
+            this.cbbColor.ValueMember = "Color";
             // 
             // cbbHCategory
             // 
@@ -209,8 +202,6 @@
             this.Size = new System.Drawing.Size(699, 168);
             this.gbOrderSearch.ResumeLayout(false);
             this.gbOrderSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.subCategoryData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.parentsCategoryData)).EndInit();
             this.ResumeLayout(false);
 
@@ -225,13 +216,11 @@
         private System.Windows.Forms.CheckBox chbSubCategory;
         private System.Windows.Forms.CheckBox chbParentsCategory;
         private System.Windows.Forms.TextBox txbName;
-        private System.Windows.Forms.ComboBox cbbColor;
         private System.Windows.Forms.ComboBox cbbSize;
         private System.Windows.Forms.ComboBox cbbLCategory;
+        private System.Windows.Forms.ComboBox cbbColor;
         private System.Windows.Forms.ComboBox cbbHCategory;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource productData;
         private System.Windows.Forms.BindingSource parentsCategoryData;
-        private System.Windows.Forms.BindingSource subCategoryData;
     }
 }

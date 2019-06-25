@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace MiniProject.Data
 {
-    class OrderDetailData
+    class OrderDetailData : EntityData<Order_Detail>
     {
         public List<Order_Detail> SearchProductInfo(string Id, string Grade)
         {
@@ -23,7 +23,7 @@ namespace MiniProject.Data
                                     productname = x.Product.ProductName,
                                     size = x.Product.Size,
                                     color = x.Product.Color,
-                                    amount = x.Product.StockAmount
+                                    amount = x.Order.Amount
 
                                 };
 

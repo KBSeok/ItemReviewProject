@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.uscProductInfo = new Miniproject.StockListControl();
+            this.parentsCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uscSearchProduct = new Miniproject.StockSearchControl();
+            ((System.ComponentModel.ISupportInitialize)(this.parentsCategoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -50,13 +53,16 @@
             this.uscProductInfo.Size = new System.Drawing.Size(714, 195);
             this.uscProductInfo.TabIndex = 2;
             // 
+            // parentsCategoryBindingSource
+            // 
+            this.parentsCategoryBindingSource.DataSource = typeof(MiniProject.ParentsCategory);
+            // 
             // uscSearchProduct
             // 
-            this.uscSearchProduct.Location = new System.Drawing.Point(16, 35);
+            this.uscSearchProduct.Location = new System.Drawing.Point(22, 33);
             this.uscSearchProduct.Name = "uscSearchProduct";
             this.uscSearchProduct.Size = new System.Drawing.Size(699, 168);
             this.uscSearchProduct.TabIndex = 3;
-            this.uscSearchProduct.ButtonSearchProduct += new System.EventHandler<Miniproject.StockSearchControl.ButtonSearchProductEventArgs>(this.stockSearchControl1_ButtonSearchProduct);
             // 
             // StockManagementForm
             // 
@@ -69,6 +75,7 @@
             this.Name = "StockManagementForm";
             this.Text = "StockManagement";
             this.Load += new System.EventHandler(this.StockManagementForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.parentsCategoryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,6 +84,7 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private StockListControl uscProductInfo;
+        private System.Windows.Forms.BindingSource parentsCategoryBindingSource;
         private StockSearchControl uscSearchProduct;
     }
 }
