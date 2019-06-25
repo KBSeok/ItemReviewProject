@@ -177,5 +177,24 @@ namespace MiniProject.Data
             }
 
         }
+
+        public List<Order_Detail> GetSize(string size)
+        {
+            using(ShoppingMallEntities context = new ShoppingMallEntities())
+            {
+                var query = from x in context.Order_Details select x;
+
+
+                if (size.Contains(size))
+                    query = query.Where(x => x.Product.Size == size);
+
+                List<Order_Detail> orders = query.ToList();
+
+                
+                return orders;
+
+            }
+        }
+       
     }
 }

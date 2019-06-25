@@ -51,6 +51,7 @@
             this.orderInfoListControl11.Name = "orderInfoListControl11";
             this.orderInfoListControl11.Size = new System.Drawing.Size(826, 280);
             this.orderInfoListControl11.TabIndex = 2;
+            //this.orderInfoListControl11.AllowUserToAddRowsChanged += new System.EventHandler<Miniproject.OrderInfoListControl1.AllowUserToAddRowsChangedEventArgs>(this.OrderInfoListControl11_AllowUserToAddRowsChanged);
             // 
             // orderSearchControl1
             // 
@@ -63,8 +64,8 @@
             // 
             // insertDeleteControl1
             // 
-            this.insertDeleteControl1.Location = new System.Drawing.Point(607, 491);
-            this.insertDeleteControl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.insertDeleteControl1.Location = new System.Drawing.Point(597, 493);
+            this.insertDeleteControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.insertDeleteControl1.Name = "insertDeleteControl1";
             this.insertDeleteControl1.Size = new System.Drawing.Size(255, 56);
             this.insertDeleteControl1.TabIndex = 3;

@@ -60,6 +60,9 @@
             // 
             // dgvOrderList
             // 
+            this.dgvOrderList.AllowUserToDeleteRows = false;
+            this.dgvOrderList.AllowUserToResizeColumns = false;
+            this.dgvOrderList.AllowUserToResizeRows = false;
             this.dgvOrderList.AutoGenerateColumns = false;
             this.dgvOrderList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrderList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -95,7 +98,7 @@
             this.dgvOrderList.RowTemplate.Height = 23;
             this.dgvOrderList.Size = new System.Drawing.Size(150, 150);
             this.dgvOrderList.TabIndex = 0;
-            this.dgvOrderList.CurrentCellChanged += new System.EventHandler(this.DgvOrderList_CurrentCellChanged);
+            this.dgvOrderList.DoubleClick += new System.EventHandler(this.DgvOrderList_DoubleClick);
             // 
             // OrderNumber
             // 

@@ -21,6 +21,7 @@ namespace Miniproject
 
         private void BtnInsert_Click(object sender, EventArgs e)
         {
+      
             
         }
 

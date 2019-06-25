@@ -23,5 +23,8 @@ namespace Miniproject
             var orders = DB.orderdetail.SearchOrderInfo(e.TxbOrderNumber, e.TxbCusId);
             orderInfoListControl11.SetDataOrder(orders);
         }
+
+        
+
     }
 }
