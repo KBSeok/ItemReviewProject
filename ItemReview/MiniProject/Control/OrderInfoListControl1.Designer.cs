@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bdsOrder = new System.Windows.Forms.DataGridView();
+            this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.bdsOrderList = new System.Windows.Forms.BindingSource(this.components);
             this.OrderNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsOrder)).BeginInit();
+            this.orderDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsOrderList)).BeginInit();
             this.SuspendLayout();
             // 
-            // bdsOrder
+            // dgvOrder
             // 
-            this.bdsOrder.AutoGenerateColumns = false;
-            this.bdsOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bdsOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvOrder.AutoGenerateColumns = false;
+            this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.OrderNumber,
             this.CustomerName,
-            this.OrderDate});
-            this.bdsOrder.DataSource = this.bdsOrderList;
-            this.bdsOrder.Location = new System.Drawing.Point(6, 16);
-            this.bdsOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bdsOrder.Name = "bdsOrder";
-            this.bdsOrder.RowHeadersWidth = 51;
-            this.bdsOrder.RowTemplate.Height = 23;
-            this.bdsOrder.Size = new System.Drawing.Size(807, 250);
-            this.bdsOrder.TabIndex = 0;
+            this.orderDateDataGridViewTextBoxColumn});
+            this.dgvOrder.DataSource = this.bdsOrderList;
+            this.dgvOrder.Location = new System.Drawing.Point(6, 16);
+            this.dgvOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvOrder.Name = "dgvOrder";
+            this.dgvOrder.RowHeadersWidth = 51;
+            this.dgvOrder.RowTemplate.Height = 23;
+            this.dgvOrder.Size = new System.Drawing.Size(807, 250);
+            this.dgvOrder.TabIndex = 0;
             // 
             // bdsOrderList
             // 
@@ -75,23 +75,23 @@
             this.CustomerName.Name = "CustomerName";
             this.CustomerName.Width = 125;
             // 
-            // OrderDate
+            // orderDateDataGridViewTextBoxColumn
             // 
-            this.OrderDate.DataPropertyName = "OrderDate";
-            this.OrderDate.HeaderText = "OrderDate";
-            this.OrderDate.MinimumWidth = 6;
-            this.OrderDate.Name = "OrderDate";
-            this.OrderDate.Width = 125;
+            this.orderDateDataGridViewTextBoxColumn.DataPropertyName = "OrderDate";
+            this.orderDateDataGridViewTextBoxColumn.HeaderText = "OrderDate";
+            this.orderDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.orderDateDataGridViewTextBoxColumn.Name = "orderDateDataGridViewTextBoxColumn";
+            this.orderDateDataGridViewTextBoxColumn.Width = 125;
             // 
             // OrderInfoListControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.bdsOrder);
+            this.Controls.Add(this.dgvOrder);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OrderInfoListControl1";
             this.Size = new System.Drawing.Size(819, 292);
-            ((System.ComponentModel.ISupportInitialize)(this.bdsOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsOrderList)).EndInit();
             this.ResumeLayout(false);
 
@@ -99,10 +99,11 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView bdsOrder;
+        private System.Windows.Forms.DataGridView dgvOrder;
         private System.Windows.Forms.BindingSource bdsOrderList;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OrderDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderDateDataGridViewTextBoxColumn;
+
     }
 }
