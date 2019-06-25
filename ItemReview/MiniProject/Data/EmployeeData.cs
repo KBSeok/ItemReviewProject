@@ -36,6 +36,8 @@ namespace MiniProject.Data
                             where x.Name == Name
                             select x;
 
+                
+
                 return query.ToList();
             }
         }

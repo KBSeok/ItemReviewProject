@@ -15,5 +15,9 @@ namespace MiniProject.Data
         public static ProductData product { get; } = new ProductData();
 
         public static OrderDetailData orderdetail { get; } = new OrderDetailData();
+        public static ParentsCategoryData parentscategorydata { get; } =
+            new ParentsCategoryData();
+        public static SubCategoryData subcategorydata { get; } =
+            new SubCategoryData();
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MiniProject.Data;
 
 namespace Miniproject
 {
@@ -15,15 +16,20 @@ namespace Miniproject
         public StockSearchControl()
         {
             InitializeComponent();
+            cbbColor.Text = "";
             
+        }
+
+        public void LoadProductData()
+        {
+            productData.DataSource = DB.product.GetAll();
+            parentsCategoryData.DataSource = DB.parentscategorydata.GetAll();
+            subCategoryData.DataSource = DB.subcategorydata.GetAll();
         }
 
         private void chbParentsCategory_CheckedChanged(object sender, EventArgs e)
         {
-            if (chbParentsCategory.Checked == false)
-                chbParentsCategory.Enabled = true;
-            else
-                chbParentsCategory.Enabled = false;
+            cbbHCategory.Enabled = chbParentsCategory.Checked;
         }
 
         private void chbSubCategory_CheckedChanged(object sender, EventArgs e)
@@ -53,8 +59,8 @@ namespace Miniproject
         private void btnStockSearch_Click(object sender, EventArgs e)
         {
             string Name = txbName.Text;
-            string ParentsCategory = cbbHCategory.Text;
-            string SubCategory = cbbLCategory.Text;
+            int ParentsCategory = (int)cbbHCategory.SelectedValue;
+            int SubCategory = (int)cbbLCategory.SelectedValue;
             string Color = cbbColor.Text;
             string Size = cbbSize.Text;
 
@@ -70,9 +76,9 @@ namespace Miniproject
                 ButtonSearchProduct(this, e);
         }
 
-        private ButtonSearchProductEventArgs OnButtonSearchProduct(string name, string parentsName, string subName, string color, string size)
+        private ButtonSearchProductEventArgs OnButtonSearchProduct(string name, int parentsId, int subId, string color, string size)
         {
-            ButtonSearchProductEventArgs args = new ButtonSearchProductEventArgs(name, parentsName, subName, color, size);
+            ButtonSearchProductEventArgs args = new ButtonSearchProductEventArgs(name, parentsId, subId, color, size);
             OnButtonSearchProduct(args);
 
             return args;
@@ -89,8 +95,8 @@ namespace Miniproject
         public class ButtonSearchProductEventArgs : EventArgs
         {
             public string Name { get; set; }
-            public string ParentsName { get; set; }
-            public string SubName { get; set; }
+            public int ParentsId { get; set; }
+            public int SubId { get; set; }
             public string Color { get; set; }
             public string Size { get; set; }
 
@@ -98,11 +104,11 @@ namespace Miniproject
             {
             }
 
-            public ButtonSearchProductEventArgs(string name, string parentsName, string subName, string color, string size)
+            public ButtonSearchProductEventArgs(string name, int parentsId, int subId, string color, string size)
             {
                 Name = name;
-                ParentsName = parentsName;
-                SubName = subName;
+                ParentsId = parentsId;
+                SubId = subId;
                 Color = color;
                 Size = size;
             }

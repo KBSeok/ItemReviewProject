@@ -68,6 +68,7 @@
             this.Controls.Add(this.label1);
             this.Name = "StockManagementForm";
             this.Text = "StockManagement";
+            this.Load += new System.EventHandler(this.StockManagementForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

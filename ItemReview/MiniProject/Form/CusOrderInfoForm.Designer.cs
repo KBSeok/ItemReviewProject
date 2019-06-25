@@ -38,7 +38,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(18, 36);
+            this.label1.Location = new System.Drawing.Point(18, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 24);
             this.label1.TabIndex = 1;
@@ -47,14 +47,14 @@
             // 
             // uscOutputCusInfo
             // 
-            this.uscOutputCusInfo.Location = new System.Drawing.Point(22, 87);
+            this.uscOutputCusInfo.Location = new System.Drawing.Point(22, 69);
             this.uscOutputCusInfo.Name = "uscOutputCusInfo";
-            this.uscOutputCusInfo.Size = new System.Drawing.Size(717, 99);
+            this.uscOutputCusInfo.Size = new System.Drawing.Size(717, 152);
             this.uscOutputCusInfo.TabIndex = 2;
             // 
             // uscSearchCusInfo
             // 
-            this.uscSearchCusInfo.Location = new System.Drawing.Point(158, 12);
+            this.uscSearchCusInfo.Location = new System.Drawing.Point(158, 8);
             this.uscSearchCusInfo.Name = "uscSearchCusInfo";
             this.uscSearchCusInfo.Size = new System.Drawing.Size(579, 66);
             this.uscSearchCusInfo.TabIndex = 0;
@@ -62,9 +62,9 @@
             // 
             // uscCusOrderInfo
             // 
-            this.uscCusOrderInfo.Location = new System.Drawing.Point(12, 198);
+            this.uscCusOrderInfo.Location = new System.Drawing.Point(12, 217);
             this.uscCusOrderInfo.Name = "uscCusOrderInfo";
-            this.uscCusOrderInfo.Size = new System.Drawing.Size(713, 238);
+            this.uscCusOrderInfo.Size = new System.Drawing.Size(713, 226);
             this.uscCusOrderInfo.TabIndex = 3;
             // 
             // CusOrderInfoForm

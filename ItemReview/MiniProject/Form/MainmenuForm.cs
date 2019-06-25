@@ -42,10 +42,10 @@ namespace Miniproject
 
         private void BtnStaffM_Click(object sender, EventArgs e)
         {
-            //EmployeeInfoForm frm4 = new EmployeeInfoForm();
-            //frm4.Show();
-            EmployeeControl frm4 = new EmployeeControl();
+            EmployeeInfoForm frm4 = new EmployeeInfoForm();
             frm4.Show();
+            //EmployeeControl frm4 = new EmployeeControl();
+            //frm4.Show();
         }
     }
 }

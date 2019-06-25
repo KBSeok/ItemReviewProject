@@ -84,6 +84,8 @@
     <Compile Include="Control\EmployeeUpdateDelete.Designer.cs">
       <DependentUpon>EmployeeUpdateDelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\ParentsCategoryData.cs" />
+    <Compile Include="Data\SubCategoryData.cs" />
     <Compile Include="Form\EmployeeControl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,7 +316,9 @@
     <None Include="Properties\DataSources\Employee.datasource" />
     <None Include="Properties\DataSources\Order.datasource" />
     <None Include="Properties\DataSources\Order_Detail.datasource" />
+    <None Include="Properties\DataSources\ParentsCategory.datasource" />
     <None Include="Properties\DataSources\Product.datasource" />
+    <None Include="Properties\DataSources\SubCategory.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

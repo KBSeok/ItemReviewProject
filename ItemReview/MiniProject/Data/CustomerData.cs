@@ -13,7 +13,7 @@ namespace MiniProject.Data
         {
             using (ShoppingMallEntities context = new ShoppingMallEntities())
             {
-                return context.Customers.ToList();
+                return context.Customers.Distinct().ToList();
             }
         }
 
@@ -21,11 +21,38 @@ namespace MiniProject.Data
         {
             using (ShoppingMallEntities context = new ShoppingMallEntities())
             {
-                var query = from x in context.Customers
-                            where x.UserId == Id && x.Grade == Grade
-                            select x;
+                if (string.IsNullOrEmpty(Id) == true &&
+                    string.IsNullOrEmpty(Grade) == true)
+                {
+                    var query = from x in context.Customers
+                                select x;
+                    return query.ToList();
+                }
 
-                return query.ToList();
+                else if (string.IsNullOrEmpty(Id) == true)
+                {
+                    var query = from x in context.Customers
+                                where x.Grade == Grade
+                                select x;
+
+                    return query.ToList();
+                }
+                else if (string.IsNullOrEmpty(Grade) == true)
+                {
+                    var query = from x in context.Customers
+                                where x.UserId == Id
+                                select x;
+
+                    return query.ToList();
+                }
+                else
+                {
+                    var query = from x in context.Customers
+                                where x.UserId == Id && x.Grade == Grade
+                                select x;
+                    return query.ToList();
+                }
+                
             }
         }
     }

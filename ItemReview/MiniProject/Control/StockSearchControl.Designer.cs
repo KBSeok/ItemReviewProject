@@ -39,11 +39,15 @@
             this.cbbColor = new System.Windows.Forms.ComboBox();
             this.productData = new System.Windows.Forms.BindingSource(this.components);
             this.cbbSize = new System.Windows.Forms.ComboBox();
+            this.subCategoryData = new System.Windows.Forms.BindingSource(this.components);
             this.cbbLCategory = new System.Windows.Forms.ComboBox();
             this.cbbHCategory = new System.Windows.Forms.ComboBox();
+            this.parentsCategoryData = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.gbOrderSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subCategoryData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parentsCategoryData)).BeginInit();
             this.SuspendLayout();
             // 
             // gbOrderSearch
@@ -129,12 +133,14 @@
             // cbbColor
             // 
             this.cbbColor.DataSource = this.productData;
+            this.cbbColor.DisplayMember = "Size";
             this.cbbColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbColor.FormattingEnabled = true;
             this.cbbColor.Location = new System.Drawing.Point(543, 83);
             this.cbbColor.Name = "cbbColor";
             this.cbbColor.Size = new System.Drawing.Size(121, 20);
             this.cbbColor.TabIndex = 4;
+            this.cbbColor.ValueMember = "Size";
             // 
             // productData
             // 
@@ -142,33 +148,48 @@
             // 
             // cbbSize
             // 
-            this.cbbSize.DataSource = this.productData;
+            this.cbbSize.DataSource = this.subCategoryData;
+            this.cbbSize.DisplayMember = "SubCategoryName";
             this.cbbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSize.FormattingEnabled = true;
             this.cbbSize.Location = new System.Drawing.Point(543, 28);
             this.cbbSize.Name = "cbbSize";
             this.cbbSize.Size = new System.Drawing.Size(121, 20);
             this.cbbSize.TabIndex = 3;
+            this.cbbSize.ValueMember = "ParentsCategoryId";
+            // 
+            // subCategoryData
+            // 
+            this.subCategoryData.DataSource = typeof(MiniProject.SubCategory);
             // 
             // cbbLCategory
             // 
             this.cbbLCategory.DataSource = this.productData;
+            this.cbbLCategory.DisplayMember = "Color";
             this.cbbLCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLCategory.FormattingEnabled = true;
             this.cbbLCategory.Location = new System.Drawing.Point(296, 83);
             this.cbbLCategory.Name = "cbbLCategory";
             this.cbbLCategory.Size = new System.Drawing.Size(121, 20);
             this.cbbLCategory.TabIndex = 2;
+            this.cbbLCategory.ValueMember = "Color";
             // 
             // cbbHCategory
             // 
-            this.cbbHCategory.DataSource = this.productData;
+            this.cbbHCategory.DataSource = this.parentsCategoryData;
+            this.cbbHCategory.DisplayMember = "ParentsCategoryName";
             this.cbbHCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbHCategory.Enabled = false;
             this.cbbHCategory.FormattingEnabled = true;
             this.cbbHCategory.Location = new System.Drawing.Point(296, 28);
             this.cbbHCategory.Name = "cbbHCategory";
             this.cbbHCategory.Size = new System.Drawing.Size(119, 20);
             this.cbbHCategory.TabIndex = 1;
+            this.cbbHCategory.ValueMember = "ParentsCategoryId";
+            // 
+            // parentsCategoryData
+            // 
+            this.parentsCategoryData.DataSource = typeof(MiniProject.ParentsCategory);
             // 
             // label1
             // 
@@ -189,6 +210,8 @@
             this.gbOrderSearch.ResumeLayout(false);
             this.gbOrderSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subCategoryData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parentsCategoryData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -208,5 +231,7 @@
         private System.Windows.Forms.ComboBox cbbHCategory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource productData;
+        private System.Windows.Forms.BindingSource parentsCategoryData;
+        private System.Windows.Forms.BindingSource subCategoryData;
     }
 }

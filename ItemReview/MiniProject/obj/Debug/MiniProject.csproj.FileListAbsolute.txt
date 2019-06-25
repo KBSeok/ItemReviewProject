@@ -124,3 +124,7 @@ C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\MiniProject.Co
 C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\MiniProject.Register_LoginControl.resources
 C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\MiniProject.Register_Login.resources
 C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\MiniProject.EmployeeUpdateDelete.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.EmployeeUpdateDelete.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.Control.EmployeeControl.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.Register_Login.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.Register_LoginControl.resources

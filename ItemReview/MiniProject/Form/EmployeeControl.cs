@@ -22,6 +22,7 @@ namespace MiniProject.Control
         {
             var emplyees = DB.employee.SearchInfo(e.Name);
             uscEmployeeInfo.SetDataEmployeeData(emplyees);
+
         }
     }
 }

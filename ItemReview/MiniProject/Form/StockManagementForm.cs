@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniProject.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,14 @@ namespace Miniproject
 
         private void stockSearchControl1_ButtonSearchProduct(object sender, StockSearchControl.ButtonSearchProductEventArgs e)
         {
-            
+            var product = DB.product.SearchInfo(e.Name, e.ParentsId, e.SubId,
+                e.Size, e.Color);
+            uscProductInfo.SetDataProductData(product);
+        }
+
+        private void StockManagementForm_Load(object sender, EventArgs e)
+        {
+            uscSearchProduct.LoadProductData();
         }
     }
 }

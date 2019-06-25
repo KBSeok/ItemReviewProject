@@ -74,17 +74,25 @@ namespace Miniproject
         private void chbCusId_CheckedChanged(object sender, EventArgs e)
         {
             if (chbCusId.Checked == false)
-                chbCusId.Enabled = true;
+                txbCusId.Enabled = true;
             else
-                chbCusId.Enabled = false;
+            {
+                txbCusId.Enabled = false;
+                txbCusId.Text = null;
+            }
+                
         }
 
         private void chbCusGrade_CheckedChanged(object sender, EventArgs e)
         {
             if (chbCusGrade.Checked == false)
-                chbCusGrade.Enabled = true;
+                cbbGrade.Enabled = true;
             else
-                chbCusGrade.Enabled = false;
+            {
+                cbbGrade.Enabled = false;
+                cbbGrade.Text = null;
+            }
+                
         }
     }
 }

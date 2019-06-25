@@ -29,7 +29,24 @@ namespace Miniproject
             {
                 Employee employee = new Employee();
 
+                if (txbNumber.Text == "")
+                {
+                    MessageBox.Show("다시 입력하세요.", "알림", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
+
                 employee.EmployeeID = Convert.ToInt32(txbNumber.Text);
+
+                
+                if (context.Employees.Count(x => x.EmployeeID == employee.EmployeeID) > 0)
+                {
+                    MessageBox.Show("등록되어 있는 사원번호입니다.", "알림",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                
+
                 employee.Name = txbName.Text;
                 employee.rank = cbbLevel.Text;
                 employee.Gender = cbbGender.Text;

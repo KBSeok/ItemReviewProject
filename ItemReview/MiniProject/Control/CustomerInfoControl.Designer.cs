@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCusInfo = new System.Windows.Forms.DataGridView();
-            this.cusInfo = new System.Windows.Forms.BindingSource(this.components);
             this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cusInfo = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCusInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cusInfo)).BeginInit();
             this.SuspendLayout();
@@ -63,12 +63,8 @@
             this.dgvCusInfo.Location = new System.Drawing.Point(4, 32);
             this.dgvCusInfo.Name = "dgvCusInfo";
             this.dgvCusInfo.RowTemplate.Height = 23;
-            this.dgvCusInfo.Size = new System.Drawing.Size(694, 62);
+            this.dgvCusInfo.Size = new System.Drawing.Size(694, 124);
             this.dgvCusInfo.TabIndex = 2;
-            // 
-            // cusInfo
-            // 
-            this.cusInfo.DataSource = typeof(MiniProject.Customer);
             // 
             // customerNameDataGridViewTextBoxColumn
             // 
@@ -96,6 +92,10 @@
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             this.addressDataGridViewTextBoxColumn.Width = 300;
             // 
+            // cusInfo
+            // 
+            this.cusInfo.DataSource = typeof(MiniProject.Customer);
+            // 
             // CustomerInfoControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -103,7 +103,7 @@
             this.Controls.Add(this.dgvCusInfo);
             this.Controls.Add(this.label1);
             this.Name = "CustomerInfoControl";
-            this.Size = new System.Drawing.Size(708, 99);
+            this.Size = new System.Drawing.Size(708, 159);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCusInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cusInfo)).EndInit();
             this.ResumeLayout(false);
