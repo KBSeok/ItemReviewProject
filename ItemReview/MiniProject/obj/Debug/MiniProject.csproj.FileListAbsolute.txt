@@ -182,3 +182,4 @@ D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.exe
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.pdb
 D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\Miniproject.OrderInfoListControl.resources
+D:\github\KBSeok\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.csprojAssemblyReference.cache

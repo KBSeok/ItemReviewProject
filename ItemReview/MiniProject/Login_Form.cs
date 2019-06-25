@@ -25,6 +25,7 @@ namespace Miniproject
 
             using (ShoppingMallEntities context = new ShoppingMallEntities())
             {
+
                 if (DB.employee.GetEmployeeId().Contains(txbId.Text) == true)
                 {
                     if (DB.employee.GetEmployeePW().Contains(txbPassword.Text) == true)

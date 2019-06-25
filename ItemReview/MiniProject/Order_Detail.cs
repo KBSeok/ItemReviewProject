@@ -18,7 +18,13 @@ namespace MiniProject
         public int ProductId { get; set; }
         public int Price { get; set; }
         public int Amount { get; set; }
-    
+
+
+        public string UserID { get; set; }
+        public string ProductName { get; set; }
+        public string Size { get; set; }
+        public string Color { get; set; }
+
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }
     }

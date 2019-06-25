@@ -17,7 +17,7 @@ namespace Miniproject
         {
             InitializeComponent();
         }
-        public void SetDataOrder(List<Order> order)
+        public void SetDataOrder(List<Order_Detail> order)
         {
             dgvOrder.DataSource = order;
         }

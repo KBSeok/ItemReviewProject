@@ -30,12 +30,6 @@ namespace MiniProject
         public int ShiperID { get; set; }
         public int Freight { get; set; }
 
-        public string UserID { get; set; }
-        public int Price { get; set; }
-        public string ProductName { get; set; }
-        public string Size { get; set; }
-        public string Color { get; set; }
-        public int Amount { get; set; }
 
         public virtual Customer Customer { get; set; }
         public virtual Employee Employee { get; set; }
