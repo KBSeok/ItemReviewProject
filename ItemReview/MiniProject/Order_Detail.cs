@@ -27,7 +27,7 @@ namespace MiniProject
         public string UserId { get; set; }
 
         public string OrderNumber { get; set; }
-        public string ProductName { get; set; }
+        //public string ProductName { get; set; }
 
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }

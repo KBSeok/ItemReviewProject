@@ -141,23 +141,21 @@ namespace MiniProject.Data
         {
             using (ShoppingMallEntities context = new ShoppingMallEntities())
             {
-                var query = from x in context.Order_Details
+               var query = from x in context.Order_Details
                             where x.Order.OrderNumber == orderNumber && x.Order.Customer.UserId == cusId
                             select new
                             {
                                 orderdetail = x,
-                                order = x.Order,
-                                
-                                product = x.Product,                                
-                                customer = x.Order.Customer,
-
+                                //order = x.Order,
+                                //product = x.Product,                                
+                                //customer = x.Order.Customer,
                                 ordernumber = x.Order.OrderNumber,
                                 userId = x.Order.Customer.UserId,
                                 price = x.Product.Price,
-                                productName = x.Product.ProductName,
+                                productorName = x.Product.ProductName,
                                 size = x.Product.Size,
                                 color = x.Product.Color,
-                                //amount = x.Order.Amount,
+                                amount = x.Order.Amount,
                                 orderdate = x.Order.OrderDate
 
                             };
@@ -169,10 +167,10 @@ namespace MiniProject.Data
                     x.orderdetail.OrderNumber = x.ordernumber;
                     x.orderdetail.UserId = x.userId;
                     x.orderdetail.Price = x.price;
-                    x.orderdetail.ProductName = x.productName;
+                    x.orderdetail.PuductorName = x.productorName;
                     x.orderdetail.Color = x.color;
                     x.orderdetail.Size = x.size;
-                    //x.orderdetail.Amount = x.amount;
+                    x.orderdetail.Amount = x.amount;
                     x.orderdetail.OrderDate = x.orderdate;
                 }
                 return list.ConvertAll(x => x.orderdetail);
