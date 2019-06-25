@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniProject.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace Miniproject
         public OderListForm()
         {
             InitializeComponent();
+        }
+
+        private void OrderSearchControl_SearchBottonClicked(object sender, OrderSearchControl.SearchBottonClickedEventArgs e)
+        {
+            var orders = DB.orderdetail.SearchOrderInfo(e.TxbOrderNumber, e.TxbCusId);
+            orderInfoListControl11.SetDataOrder(orders);
         }
     }
 }

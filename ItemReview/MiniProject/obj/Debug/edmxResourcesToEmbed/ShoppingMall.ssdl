@@ -4,26 +4,26 @@
     <Key>
       <PropertyRef Name="CustomerName" />
     </Key>
-    <Property Name="CustomerName" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="UserId" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="Address" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="Phone" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="Grade" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Grade" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Employees">
     <Key>
       <PropertyRef Name="EmployeeID" />
     </Key>
     <Property Name="EmployeeID" Type="int" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="rank" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="Gender" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="BirthDate" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="HireDate" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="Address" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="HomePhone" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="LoginID" Type="nvarchar" MaxLength="10" />
-    <Property Name="LoginPW" Type="nvarchar" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rank" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BirthDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HireDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HomePhone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LoginID" Type="nvarchar" MaxLength="50" />
+    <Property Name="LoginPW" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Order Details">
     <Key>
@@ -32,8 +32,7 @@
     </Key>
     <Property Name="OrderID" Type="int" Nullable="false" />
     <Property Name="ProductId" Type="int" Nullable="false" />
-    <Property Name="Price" Type="int" Nullable="false" />
-    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="OrderDetailsId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Orders">
     <Key>
@@ -41,13 +40,13 @@
     </Key>
     <Property Name="OrderID" Type="int" Nullable="false" />
     <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
-    <Property Name="CustomerName" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="EmployeeID" Type="int" Nullable="false" />
     <Property Name="OrderDate" Type="nvarchar" MaxLength="10" Nullable="false" />
     <Property Name="RequiredDate" Type="nvarchar" MaxLength="10" Nullable="false" />
     <Property Name="ShippedDate" Type="nvarchar" MaxLength="10" Nullable="false" />
     <Property Name="ShiperID" Type="int" Nullable="false" />
-    <Property Name="Freight" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ParentsCategory">
     <Key>
@@ -64,6 +63,7 @@
     <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="SupplierId" Type="int" Nullable="false" />
     <Property Name="ParentsCategoryId" Type="int" Nullable="false" />
+    <Property Name="SubCategoryId" Type="int" Nullable="false" />
     <Property Name="Price" Type="int" Nullable="false" />
     <Property Name="Size" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Color" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -166,6 +166,20 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Product_SubCategory">
+    <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategory">
+        <PropertyRef Name="ParentsCategoryId" />
+        <PropertyRef Name="SubCategoryId" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ParentsCategoryId" />
+        <PropertyRef Name="SubCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Product_Supplier">
     <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
     <End Role="Product" Type="Self.Product" Multiplicity="*" />
@@ -222,6 +236,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_Product_ParentsCategory" Association="Self.FK_Product_ParentsCategory">
       <End Role="ParentsCategory" EntitySet="ParentsCategory" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_SubCategory" Association="Self.FK_Product_SubCategory">
+      <End Role="SubCategory" EntitySet="SubCategory" />
       <End Role="Product" EntitySet="Product" />
     </AssociationSet>
     <AssociationSet Name="FK_Product_Supplier" Association="Self.FK_Product_Supplier">
