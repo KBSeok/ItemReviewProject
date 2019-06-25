@@ -69,9 +69,11 @@
             this.chbCusGrade.TabIndex = 3;
             this.chbCusGrade.Text = "고객등급 : ";
             this.chbCusGrade.UseVisualStyleBackColor = true;
+            this.chbCusGrade.CheckedChanged += new System.EventHandler(this.chbCusGrade_CheckedChanged);
             // 
             // cbbGrade
             // 
+            this.cbbGrade.DisplayMember = "Grade";
             this.cbbGrade.FormattingEnabled = true;
             this.cbbGrade.Location = new System.Drawing.Point(356, 22);
             this.cbbGrade.Name = "cbbGrade";
@@ -88,6 +90,7 @@
             this.chbCusId.TabIndex = 2;
             this.chbCusId.Text = "회원 ID :";
             this.chbCusId.UseVisualStyleBackColor = true;
+            this.chbCusId.CheckedChanged += new System.EventHandler(this.chbCusId_CheckedChanged);
             // 
             // txbCusId
             // 

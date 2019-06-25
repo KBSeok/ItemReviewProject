@@ -27,9 +27,7 @@ namespace MiniProject
         public int Price { get; set; }
         public string Size { get; set; }
         public string Color { get; set; }
-        public string ParentsCategoryName { get; set; }
-
-        public Nullable<int> StockAmount { get; set; }
+        public int StockAmount { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order_Detail> Order_Details { get; set; }

@@ -17,9 +17,9 @@ namespace Miniproject
             InitializeComponent();
         }
 
-
-
-
-
+        private void stockSearchControl1_ButtonSearchProduct(object sender, StockSearchControl.ButtonSearchProductEventArgs e)
+        {
+            
+        }
     }
 }

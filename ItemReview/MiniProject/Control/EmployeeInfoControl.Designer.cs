@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvEmployeeInfo = new System.Windows.Forms.DataGridView();
-            this.EmployeeInfo = new System.Windows.Forms.BindingSource(this.components);
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rankDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +38,7 @@
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hireDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmployeeInfo = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeInfo)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,9 @@
             // 
             // dgvEmployeeInfo
             // 
+            this.dgvEmployeeInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEmployeeInfo.AutoGenerateColumns = false;
             this.dgvEmployeeInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployeeInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -66,15 +69,11 @@
             this.genderDataGridViewTextBoxColumn,
             this.hireDateDataGridViewTextBoxColumn});
             this.dgvEmployeeInfo.DataSource = this.EmployeeInfo;
-            this.dgvEmployeeInfo.Location = new System.Drawing.Point(6, 34);
+            this.dgvEmployeeInfo.Location = new System.Drawing.Point(8, 34);
             this.dgvEmployeeInfo.Name = "dgvEmployeeInfo";
             this.dgvEmployeeInfo.RowTemplate.Height = 23;
-            this.dgvEmployeeInfo.Size = new System.Drawing.Size(704, 124);
+            this.dgvEmployeeInfo.Size = new System.Drawing.Size(742, 174);
             this.dgvEmployeeInfo.TabIndex = 2;
-            // 
-            // EmployeeInfo
-            // 
-            this.EmployeeInfo.DataSource = typeof(MiniProject.Employee);
             // 
             // employeeIDDataGridViewTextBoxColumn
             // 
@@ -118,6 +117,10 @@
             this.hireDateDataGridViewTextBoxColumn.HeaderText = "HireDate";
             this.hireDateDataGridViewTextBoxColumn.Name = "hireDateDataGridViewTextBoxColumn";
             // 
+            // EmployeeInfo
+            // 
+            this.EmployeeInfo.DataSource = typeof(MiniProject.Employee);
+            // 
             // EmployeeInfoControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -125,7 +128,7 @@
             this.Controls.Add(this.dgvEmployeeInfo);
             this.Controls.Add(this.label1);
             this.Name = "EmployeeInfoControl";
-            this.Size = new System.Drawing.Size(714, 170);
+            this.Size = new System.Drawing.Size(754, 220);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeInfo)).EndInit();
             this.ResumeLayout(false);

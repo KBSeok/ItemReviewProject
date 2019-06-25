@@ -1,13 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ShoppingMallModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="CategoryLine">
-    <Key>
-      <PropertyRef Name="CategoryLineId" />
-    </Key>
-    <Property Name="ParentsCategoryId" Type="int" Nullable="false" />
-    <Property Name="SubCategoryId" Type="int" Nullable="false" />
-    <Property Name="CategoryLineId" Type="int" Nullable="false" />
-  </EntityType>
   <EntityType Name="Customer">
     <Key>
       <PropertyRef Name="CustomerName" />
@@ -73,9 +65,9 @@
     <Property Name="SupplierId" Type="int" Nullable="false" />
     <Property Name="ParentsCategoryId" Type="int" Nullable="false" />
     <Property Name="Price" Type="int" Nullable="false" />
-    <Property Name="Size" Type="nvarchar" MaxLength="50" />
-    <Property Name="Color" Type="nvarchar" MaxLength="50" />
-    <Property Name="StockAmount" Type="int" />
+    <Property Name="Size" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Color" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="StockAmount" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Shippers">
     <Key>
@@ -102,18 +94,6 @@
     <Property Name="CompanyName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <Association Name="FK_CategoryLine_ParentsCategory">
-    <End Role="ParentsCategory" Type="Self.ParentsCategory" Multiplicity="1" />
-    <End Role="CategoryLine" Type="Self.CategoryLine" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ParentsCategory">
-        <PropertyRef Name="ParentsCategoryId" />
-      </Principal>
-      <Dependent Role="CategoryLine">
-        <PropertyRef Name="ParentsCategoryId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Order Details_Orders">
     <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
     <End Role="Order Details" Type="Self.Order Details" Multiplicity="*" />
@@ -211,7 +191,6 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="ShoppingMallModelStoreContainer">
-    <EntitySet Name="CategoryLine" EntityType="Self.CategoryLine" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Order Details" EntityType="Self.Order Details" Schema="dbo" store:Type="Tables" />
@@ -221,10 +200,6 @@
     <EntitySet Name="Shippers" EntityType="Self.Shippers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SubCategory" EntityType="Self.SubCategory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_CategoryLine_ParentsCategory" Association="Self.FK_CategoryLine_ParentsCategory">
-      <End Role="ParentsCategory" EntitySet="ParentsCategory" />
-      <End Role="CategoryLine" EntitySet="CategoryLine" />
-    </AssociationSet>
     <AssociationSet Name="FK_Order Details_Orders" Association="Self.FK_Order Details_Orders">
       <End Role="Orders" EntitySet="Orders" />
       <End Role="Order Details" EntitySet="Order Details" />

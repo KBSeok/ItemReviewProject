@@ -21,9 +21,6 @@ namespace Miniproject
 
         }
 
-       
-        
-
         private void btnCusSearch_Click(object sender, EventArgs e)
         {
             string Id = txbCusId.Text;
@@ -73,5 +70,21 @@ namespace Miniproject
             }
         }
         #endregion
+
+        private void chbCusId_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbCusId.Checked == false)
+                chbCusId.Enabled = true;
+            else
+                chbCusId.Enabled = false;
+        }
+
+        private void chbCusGrade_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbCusGrade.Checked == false)
+                chbCusGrade.Enabled = true;
+            else
+                chbCusGrade.Enabled = false;
+        }
     }
 }

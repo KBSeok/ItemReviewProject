@@ -18,15 +18,13 @@ namespace Miniproject
             InitializeComponent();
         }
 
-        
-        
 
         private void customerSearchControl1_OnButtonSearchCusInfo(object sender, CustomerSearchControl.OnButtonSearchCusInfoEventArgs e)
         {
             var customers = DB.customer.SearchInfo(e.Id, e.Grade);
             uscOutputCusInfo.SetDataCustomerData(customers);
-            var products = DB.product.SearchProductInfo(e.Id, e.Grade);
-            uscCusOrderInfo.SetDataCusOrderData(products);
+            var orderdetail = DB.orderdetail.SearchProductInfo(e.Id, e.Grade);
+            uscCusOrderInfo.SetDataCusOrderData(orderdetail);
         }
     }
 }

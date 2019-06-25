@@ -28,28 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gbOrderSearch = new System.Windows.Forms.GroupBox();
             this.btnStockSearch = new System.Windows.Forms.Button();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chbSize = new System.Windows.Forms.CheckBox();
+            this.chbColor = new System.Windows.Forms.CheckBox();
+            this.chbSubCategory = new System.Windows.Forms.CheckBox();
+            this.chbParentsCategory = new System.Windows.Forms.CheckBox();
             this.txbName = new System.Windows.Forms.TextBox();
             this.cbbColor = new System.Windows.Forms.ComboBox();
+            this.productData = new System.Windows.Forms.BindingSource(this.components);
             this.cbbSize = new System.Windows.Forms.ComboBox();
             this.cbbLCategory = new System.Windows.Forms.ComboBox();
             this.cbbHCategory = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gbOrderSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productData)).BeginInit();
             this.SuspendLayout();
             // 
             // gbOrderSearch
             // 
             this.gbOrderSearch.Controls.Add(this.btnStockSearch);
-            this.gbOrderSearch.Controls.Add(this.checkBox4);
-            this.gbOrderSearch.Controls.Add(this.checkBox3);
-            this.gbOrderSearch.Controls.Add(this.checkBox2);
-            this.gbOrderSearch.Controls.Add(this.checkBox1);
+            this.gbOrderSearch.Controls.Add(this.chbSize);
+            this.gbOrderSearch.Controls.Add(this.chbColor);
+            this.gbOrderSearch.Controls.Add(this.chbSubCategory);
+            this.gbOrderSearch.Controls.Add(this.chbParentsCategory);
             this.gbOrderSearch.Controls.Add(this.txbName);
             this.gbOrderSearch.Controls.Add(this.cbbColor);
             this.gbOrderSearch.Controls.Add(this.cbbSize);
@@ -58,54 +61,63 @@
             this.gbOrderSearch.Controls.Add(this.label1);
             this.gbOrderSearch.Location = new System.Drawing.Point(3, 3);
             this.gbOrderSearch.Name = "gbOrderSearch";
-            this.gbOrderSearch.Size = new System.Drawing.Size(572, 160);
+            this.gbOrderSearch.Size = new System.Drawing.Size(689, 160);
             this.gbOrderSearch.TabIndex = 1;
             this.gbOrderSearch.TabStop = false;
             // 
             // btnStockSearch
             // 
-            this.btnStockSearch.Location = new System.Drawing.Point(472, 131);
+            this.btnStockSearch.Location = new System.Drawing.Point(589, 131);
             this.btnStockSearch.Name = "btnStockSearch";
             this.btnStockSearch.Size = new System.Drawing.Size(75, 23);
             this.btnStockSearch.TabIndex = 1;
             this.btnStockSearch.Text = "검색";
             this.btnStockSearch.UseVisualStyleBackColor = true;
+            this.btnStockSearch.Click += new System.EventHandler(this.btnStockSearch_Click);
             // 
-            // checkBox4
+            // chbSize
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(397, 87);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 9;
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chbSize.AutoSize = true;
+            this.chbSize.Location = new System.Drawing.Point(441, 90);
+            this.chbSize.Name = "chbSize";
+            this.chbSize.Size = new System.Drawing.Size(60, 16);
+            this.chbSize.TabIndex = 9;
+            this.chbSize.Text = "사이즈";
+            this.chbSize.UseVisualStyleBackColor = true;
+            this.chbSize.CheckedChanged += new System.EventHandler(this.chbSize_CheckedChanged);
             // 
-            // checkBox3
+            // chbColor
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(195, 89);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 8;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chbColor.AutoSize = true;
+            this.chbColor.Location = new System.Drawing.Point(195, 89);
+            this.chbColor.Name = "chbColor";
+            this.chbColor.Size = new System.Drawing.Size(48, 16);
+            this.chbColor.TabIndex = 8;
+            this.chbColor.Text = "색상";
+            this.chbColor.UseVisualStyleBackColor = true;
+            this.chbColor.CheckedChanged += new System.EventHandler(this.chbColor_CheckedChanged);
             // 
-            // checkBox2
+            // chbSubCategory
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(397, 35);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 7;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chbSubCategory.AutoSize = true;
+            this.chbSubCategory.Location = new System.Drawing.Point(441, 34);
+            this.chbSubCategory.Name = "chbSubCategory";
+            this.chbSubCategory.Size = new System.Drawing.Size(96, 16);
+            this.chbSubCategory.TabIndex = 7;
+            this.chbSubCategory.Text = "하위카테고리";
+            this.chbSubCategory.UseVisualStyleBackColor = true;
+            this.chbSubCategory.CheckedChanged += new System.EventHandler(this.chbSubCategory_CheckedChanged);
             // 
-            // checkBox1
+            // chbParentsCategory
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(195, 31);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chbParentsCategory.AutoSize = true;
+            this.chbParentsCategory.Location = new System.Drawing.Point(195, 31);
+            this.chbParentsCategory.Name = "chbParentsCategory";
+            this.chbParentsCategory.Size = new System.Drawing.Size(96, 16);
+            this.chbParentsCategory.TabIndex = 6;
+            this.chbParentsCategory.Text = "상위카테고리";
+            this.chbParentsCategory.UseVisualStyleBackColor = true;
+            this.chbParentsCategory.CheckedChanged += new System.EventHandler(this.chbParentsCategory_CheckedChanged);
             // 
             // txbName
             // 
@@ -116,33 +128,44 @@
             // 
             // cbbColor
             // 
+            this.cbbColor.DataSource = this.productData;
+            this.cbbColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbColor.FormattingEnabled = true;
-            this.cbbColor.Location = new System.Drawing.Point(427, 86);
+            this.cbbColor.Location = new System.Drawing.Point(543, 83);
             this.cbbColor.Name = "cbbColor";
             this.cbbColor.Size = new System.Drawing.Size(121, 20);
             this.cbbColor.TabIndex = 4;
             // 
+            // productData
+            // 
+            this.productData.DataSource = typeof(MiniProject.Product);
+            // 
             // cbbSize
             // 
+            this.cbbSize.DataSource = this.productData;
+            this.cbbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSize.FormattingEnabled = true;
-            this.cbbSize.Location = new System.Drawing.Point(426, 30);
+            this.cbbSize.Location = new System.Drawing.Point(543, 28);
             this.cbbSize.Name = "cbbSize";
             this.cbbSize.Size = new System.Drawing.Size(121, 20);
             this.cbbSize.TabIndex = 3;
             // 
             // cbbLCategory
             // 
+            this.cbbLCategory.DataSource = this.productData;
+            this.cbbLCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLCategory.FormattingEnabled = true;
-            this.cbbLCategory.Location = new System.Drawing.Point(228, 87);
+            this.cbbLCategory.Location = new System.Drawing.Point(296, 83);
             this.cbbLCategory.Name = "cbbLCategory";
             this.cbbLCategory.Size = new System.Drawing.Size(121, 20);
             this.cbbLCategory.TabIndex = 2;
             // 
             // cbbHCategory
             // 
+            this.cbbHCategory.DataSource = this.productData;
             this.cbbHCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbHCategory.FormattingEnabled = true;
-            this.cbbHCategory.Location = new System.Drawing.Point(228, 31);
+            this.cbbHCategory.Location = new System.Drawing.Point(296, 28);
             this.cbbHCategory.Name = "cbbHCategory";
             this.cbbHCategory.Size = new System.Drawing.Size(119, 20);
             this.cbbHCategory.TabIndex = 1;
@@ -162,9 +185,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gbOrderSearch);
             this.Name = "StockSearchControl";
-            this.Size = new System.Drawing.Size(584, 168);
+            this.Size = new System.Drawing.Size(699, 168);
             this.gbOrderSearch.ResumeLayout(false);
             this.gbOrderSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -173,15 +197,16 @@
 
         private System.Windows.Forms.GroupBox gbOrderSearch;
         private System.Windows.Forms.Button btnStockSearch;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chbSize;
+        private System.Windows.Forms.CheckBox chbColor;
+        private System.Windows.Forms.CheckBox chbSubCategory;
+        private System.Windows.Forms.CheckBox chbParentsCategory;
         private System.Windows.Forms.TextBox txbName;
         private System.Windows.Forms.ComboBox cbbColor;
         private System.Windows.Forms.ComboBox cbbSize;
         private System.Windows.Forms.ComboBox cbbLCategory;
         private System.Windows.Forms.ComboBox cbbHCategory;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource productData;
     }
 }
