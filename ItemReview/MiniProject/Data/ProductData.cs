@@ -25,29 +25,32 @@ namespace MiniProject.Data
                             where x.ProductName == Name
                             select x;
 
-                    if (string.IsNullOrEmpty(Parents) == false)
-                    {
-                        query = from x in query
-                                where x.ParentsCategory.ParentsCategoryName == Parents
-                                select x;
-
-                            if (string.IsNullOrEmpty(Size) == false)
-                            {
-                                query = from x in query
-                                        where x.Size == Size
-                                        select x;
-                            }
-
-                            if (string.IsNullOrEmpty(Color) == false)
-                            {
-                                query = from x in query
-                                        where x.Color == Color
-                                        select x;
-                            }
-                        
-                    }
+                    
                 }
 
+                if (string.IsNullOrEmpty(Parents) == false)
+                {
+                    query = from x in query
+                            where x.ParentsCategory.ParentsCategoryName == Parents
+                            select x;
+
+
+
+                }
+
+                if (string.IsNullOrEmpty(Size) == false)
+                {
+                    query = from x in query
+                            where x.Size == Size
+                            select x;
+                }
+
+                if (string.IsNullOrEmpty(Color) == false)
+                {
+                    query = from x in query
+                            where x.Color == Color
+                            select x;
+                }
                 return query.ToList();
             }
         }
