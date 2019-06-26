@@ -239,6 +239,12 @@
     <Compile Include="Supplier.cs">
       <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
+    <Compile Include="Form\UpdataDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\UpdataDeleteForm.Designer.cs">
+      <DependentUpon>UpdataDeleteForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Control\CustomerInfoControl.resx">
       <DependentUpon>CustomerInfoControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,6 +317,9 @@
     </Compile>
     <EmbeddedResource Include="Control\Register_LoginControl.resx">
       <DependentUpon>Register_LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UpdataDeleteForm.resx">
+      <DependentUpon>UpdataDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Customer.datasource" />

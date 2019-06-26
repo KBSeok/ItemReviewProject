@@ -29,7 +29,10 @@ namespace Miniproject
 
         private void BtnOrderSearch_Click(object sender, EventArgs e)
         {
-            OnSearchBottonClicked(txbOrderNumber.Text, txbCusId.Text);
+            string orderNumber = txbOrderNumber.Text;
+            string cusId = txbCusId.Text;
+
+            OnSearchBottonClicked(orderNumber,cusId);
         }
         #region SearchBottonClicked event things for C# 3.0
         public event EventHandler<SearchBottonClickedEventArgs> SearchBottonClicked;

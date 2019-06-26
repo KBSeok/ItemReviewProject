@@ -33,7 +33,6 @@
             this.orderDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvCusOrderInfo = new System.Windows.Forms.DataGridView();
             this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.puductorNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parentsCategoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,7 +62,6 @@
             this.dgvCusOrderInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCusOrderInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.productIdDataGridViewTextBoxColumn,
-            this.puductorNameDataGridViewTextBoxColumn,
             this.parentsCategoryNameDataGridViewTextBoxColumn,
             this.sizeDataGridViewTextBoxColumn,
             this.colorDataGridViewTextBoxColumn,
@@ -74,7 +72,7 @@
             this.dgvCusOrderInfo.Location = new System.Drawing.Point(0, 42);
             this.dgvCusOrderInfo.Name = "dgvCusOrderInfo";
             this.dgvCusOrderInfo.RowTemplate.Height = 23;
-            this.dgvCusOrderInfo.Size = new System.Drawing.Size(710, 193);
+            this.dgvCusOrderInfo.Size = new System.Drawing.Size(645, 193);
             this.dgvCusOrderInfo.TabIndex = 2;
             // 
             // productIdDataGridViewTextBoxColumn
@@ -82,12 +80,6 @@
             this.productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
             this.productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
             this.productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
-            // 
-            // puductorNameDataGridViewTextBoxColumn
-            // 
-            this.puductorNameDataGridViewTextBoxColumn.DataPropertyName = "PuductorName";
-            this.puductorNameDataGridViewTextBoxColumn.HeaderText = "PuductorName";
-            this.puductorNameDataGridViewTextBoxColumn.Name = "puductorNameDataGridViewTextBoxColumn";
             // 
             // parentsCategoryNameDataGridViewTextBoxColumn
             // 
@@ -126,7 +118,7 @@
             this.Controls.Add(this.dgvCusOrderInfo);
             this.Controls.Add(this.label1);
             this.Name = "CustomerOrderListControl";
-            this.Size = new System.Drawing.Size(710, 235);
+            this.Size = new System.Drawing.Size(645, 235);
             ((System.ComponentModel.ISupportInitialize)(this.orderDetailBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCusOrderInfo)).EndInit();
             this.ResumeLayout(false);

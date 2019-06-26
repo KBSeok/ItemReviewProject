@@ -15,7 +15,6 @@ namespace MiniProject.Data
         {
             using(ShoppingMallEntities context = new ShoppingMallEntities())
             {
-                
                 var query = from x in context.Products
                             select x;
 
@@ -24,8 +23,6 @@ namespace MiniProject.Data
                     query = from x in query
                             where x.ProductName == Name
                             select x;
-
-                    
                 }
 
                 if (string.IsNullOrEmpty(Parents) == false)
@@ -33,11 +30,15 @@ namespace MiniProject.Data
                     query = from x in query
                             where x.ParentsCategory.ParentsCategoryName == Parents
                             select x;
-
-
-
                 }
 
+                if(string.IsNullOrEmpty(Sub) == false)
+                {
+                    query = from x in query
+                            where x.SubCategory.SubCategoryName == Sub && 
+                            x.ParentsCategory.ParentsCategoryName == Parents
+                            select x;
+                }
                 if (string.IsNullOrEmpty(Size) == false)
                 {
                     query = from x in query
@@ -51,6 +52,7 @@ namespace MiniProject.Data
                             where x.Color == Color
                             select x;
                 }
+
                 return query.ToList();
             }
         }
@@ -67,8 +69,6 @@ namespace MiniProject.Data
         {
             using (ShoppingMallEntities context = new ShoppingMallEntities())
             {
-
-
                 return context.Products.Select(x => x.Color).Distinct().ToList();
             }
         }
@@ -81,12 +81,12 @@ namespace MiniProject.Data
             }
         }
 
-        public List<Product> Search(int ParentsId)
+        public List<Product> Search(string ParentsName)
         {
             using(ShoppingMallEntities context = new ShoppingMallEntities())
             {
                 var query = from x in context.Products
-                            where x.ParentsCategoryId == ParentsId
+                            where x.ParentsCategory.ParentsCategoryName == ParentsName
                             select x;
 
                 return query.ToList();

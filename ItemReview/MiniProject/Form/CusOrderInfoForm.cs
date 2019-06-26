@@ -23,7 +23,12 @@ namespace Miniproject
         {
             var customers = DB.Customer.SearchInfo(e.Id, e.Grade);
             uscOutputCusInfo.SetDataCustomerData(customers);
-            var orderdetail = DB.Orderdetail.SearchProductInfo(e.Id, e.Grade);
+           
+        }
+
+        private void UscOutputCusInfo_DoubleClickSearchCusOrderInfo(object sender, CustomerInfoControl.DoubleClickSearchCusOrderInfoEventArgs e)
+        {
+            var orderdetail = DB.Orderdetail.SearchCusProductInfo(e.CustomerName);
             uscCusOrderInfo.SetDataCusOrderData(orderdetail);
         }
     }

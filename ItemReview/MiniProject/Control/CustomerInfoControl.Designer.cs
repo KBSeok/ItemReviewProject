@@ -62,21 +62,26 @@
             this.dgvCusInfo.DataSource = this.cusInfo;
             this.dgvCusInfo.Location = new System.Drawing.Point(4, 32);
             this.dgvCusInfo.Name = "dgvCusInfo";
+            this.dgvCusInfo.ReadOnly = true;
             this.dgvCusInfo.RowTemplate.Height = 23;
+            this.dgvCusInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCusInfo.Size = new System.Drawing.Size(694, 124);
             this.dgvCusInfo.TabIndex = 2;
+            this.dgvCusInfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCusInfo_CellClick);
             // 
             // customerNameDataGridViewTextBoxColumn
             // 
             this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
             this.customerNameDataGridViewTextBoxColumn.HeaderText = "CustomerName";
             this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
+            this.customerNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // phoneDataGridViewTextBoxColumn
             // 
             this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
             this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
             this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
             this.phoneDataGridViewTextBoxColumn.Width = 150;
             // 
             // gradeDataGridViewTextBoxColumn
@@ -84,12 +89,14 @@
             this.gradeDataGridViewTextBoxColumn.DataPropertyName = "Grade";
             this.gradeDataGridViewTextBoxColumn.HeaderText = "Grade";
             this.gradeDataGridViewTextBoxColumn.Name = "gradeDataGridViewTextBoxColumn";
+            this.gradeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // addressDataGridViewTextBoxColumn
             // 
             this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
             this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
             this.addressDataGridViewTextBoxColumn.Width = 300;
             // 
             // cusInfo

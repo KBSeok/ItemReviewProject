@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.uscCusOrderInfo = new Miniproject.CustomerOrderListControl();
             this.uscOutputCusInfo = new Miniproject.CustomerInfoControl();
             this.uscSearchCusInfo = new Miniproject.CustomerSearchControl();
-            this.uscCusOrderInfo = new Miniproject.CustomerOrderListControl();
             this.SuspendLayout();
             // 
             // label1
@@ -45,12 +45,20 @@
             this.label1.Text = "회원관리";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // uscCusOrderInfo
+            // 
+            this.uscCusOrderInfo.Location = new System.Drawing.Point(12, 217);
+            this.uscCusOrderInfo.Name = "uscCusOrderInfo";
+            this.uscCusOrderInfo.Size = new System.Drawing.Size(744, 226);
+            this.uscCusOrderInfo.TabIndex = 3;
+            // 
             // uscOutputCusInfo
             // 
             this.uscOutputCusInfo.Location = new System.Drawing.Point(22, 69);
             this.uscOutputCusInfo.Name = "uscOutputCusInfo";
             this.uscOutputCusInfo.Size = new System.Drawing.Size(717, 152);
             this.uscOutputCusInfo.TabIndex = 2;
+            this.uscOutputCusInfo.DoubleClickSearchCusOrderInfo += new System.EventHandler<Miniproject.CustomerInfoControl.DoubleClickSearchCusOrderInfoEventArgs>(this.UscOutputCusInfo_DoubleClickSearchCusOrderInfo);
             // 
             // uscSearchCusInfo
             // 
@@ -60,18 +68,11 @@
             this.uscSearchCusInfo.TabIndex = 0;
             this.uscSearchCusInfo.OnButtonSearchCusInfo += new System.EventHandler<Miniproject.CustomerSearchControl.OnButtonSearchCusInfoEventArgs>(this.customerSearchControl1_OnButtonSearchCusInfo);
             // 
-            // uscCusOrderInfo
-            // 
-            this.uscCusOrderInfo.Location = new System.Drawing.Point(12, 217);
-            this.uscCusOrderInfo.Name = "uscCusOrderInfo";
-            this.uscCusOrderInfo.Size = new System.Drawing.Size(713, 226);
-            this.uscCusOrderInfo.TabIndex = 3;
-            // 
             // CusOrderInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 448);
+            this.ClientSize = new System.Drawing.Size(782, 448);
             this.Controls.Add(this.uscCusOrderInfo);
             this.Controls.Add(this.uscOutputCusInfo);
             this.Controls.Add(this.label1);

@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
+            this.uscSearchProduct = new Miniproject.StockSearchControl();
             this.uscProductInfo = new Miniproject.StockListControl();
             this.parentsCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uscSearchProduct = new Miniproject.StockSearchControl();
             ((System.ComponentModel.ISupportInitialize)(this.parentsCategoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,17 +46,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "재고조회";
             // 
-            // uscProductInfo
-            // 
-            this.uscProductInfo.Location = new System.Drawing.Point(16, 207);
-            this.uscProductInfo.Name = "uscProductInfo";
-            this.uscProductInfo.Size = new System.Drawing.Size(714, 195);
-            this.uscProductInfo.TabIndex = 2;
-            // 
-            // parentsCategoryBindingSource
-            // 
-            this.parentsCategoryBindingSource.DataSource = typeof(MiniProject.ParentsCategory);
-            // 
             // uscSearchProduct
             // 
             this.uscSearchProduct.Location = new System.Drawing.Point(22, 33);
@@ -64,6 +53,17 @@
             this.uscSearchProduct.Size = new System.Drawing.Size(699, 168);
             this.uscSearchProduct.TabIndex = 3;
             this.uscSearchProduct.ButtonSearchProduct += new System.EventHandler<Miniproject.StockSearchControl.ButtonSearchProductEventArgs>(this.UscSearchProduct_ButtonSearchProduct);
+            // 
+            // uscProductInfo
+            // 
+            this.uscProductInfo.Location = new System.Drawing.Point(41, 207);
+            this.uscProductInfo.Name = "uscProductInfo";
+            this.uscProductInfo.Size = new System.Drawing.Size(646, 189);
+            this.uscProductInfo.TabIndex = 2;
+            // 
+            // parentsCategoryBindingSource
+            // 
+            this.parentsCategoryBindingSource.DataSource = typeof(MiniProject.ParentsCategory);
             // 
             // StockManagementForm
             // 

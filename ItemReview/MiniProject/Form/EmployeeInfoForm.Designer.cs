@@ -45,7 +45,7 @@
             // 
             this.uscEmployeeInfo.Location = new System.Drawing.Point(14, 252);
             this.uscEmployeeInfo.Name = "uscEmployeeInfo";
-            this.uscEmployeeInfo.Size = new System.Drawing.Size(707, 169);
+            this.uscEmployeeInfo.Size = new System.Drawing.Size(760, 169);
             this.uscEmployeeInfo.TabIndex = 1;
             // 
             // registerEmployeeControl1
@@ -59,7 +59,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 450);
+            this.ClientSize = new System.Drawing.Size(786, 450);
             this.Controls.Add(this.employeeSearch1);
             this.Controls.Add(this.uscEmployeeInfo);
             this.Controls.Add(this.registerEmployeeControl1);

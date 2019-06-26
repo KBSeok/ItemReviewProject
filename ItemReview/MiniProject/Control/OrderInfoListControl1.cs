@@ -24,8 +24,6 @@ namespace Miniproject
             dgvOrderList.DataSource = order;
         }
 
-      
-
         private void DgvOrderList_DoubleClick(object sender, EventArgs e)
         {
             Order_Detail order = dgvOrderList.CurrentRow.DataBoundItem as Order_Detail;
@@ -74,6 +72,13 @@ namespace Miniproject
                 Order = order;
             }
         }
+
         #endregion
+
+        private void DgvOrderList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            UPdataDeleteForm frm = new UPdataDeleteForm();
+            frm.Show();
+        }
     }
 }

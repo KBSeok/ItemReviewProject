@@ -45,10 +45,7 @@ namespace Miniproject
             List<string> parentsnames = parentscategorydata.GetParentsCategoryName();
             foreach (var parentsname in parentsnames)
                 cbbHCategory.Items.Add(parentsname);
-
-            //parentsCategoryData.DataSource = DB.Parentscategorydata.GetAll();
         }
-
         private void chbParentsCategory_CheckedChanged(object sender, EventArgs e)
         {
             if (chbParentsCategory.Checked == true)
@@ -63,6 +60,7 @@ namespace Miniproject
                 chbSubCategory.Checked = true;
                 chbColor.Checked = true;
                 chbSize.Checked = true;
+                
             }
 
             else
@@ -113,7 +111,7 @@ namespace Miniproject
             string ParentsCategory = cbbHCategory.Text;
             string SubCategory = cbbLCategory.Text;
             string Color = cbbSize.Text;
-            string Size = cbbLCategory.Text;
+            string Size = cbbSize.Text;
 
             OnButtonSearchProduct(Name, ParentsCategory, SubCategory, Size, Color);
         }

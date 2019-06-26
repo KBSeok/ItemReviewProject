@@ -56,7 +56,7 @@
             this.dgvProductList.Location = new System.Drawing.Point(3, 3);
             this.dgvProductList.Name = "dgvProductList";
             this.dgvProductList.RowTemplate.Height = 23;
-            this.dgvProductList.Size = new System.Drawing.Size(700, 180);
+            this.dgvProductList.Size = new System.Drawing.Size(643, 180);
             this.dgvProductList.TabIndex = 1;
             // 
             // productIdDataGridViewTextBoxColumn
@@ -105,7 +105,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvProductList);
             this.Name = "StockListControl";
-            this.Size = new System.Drawing.Size(708, 190);
+            this.Size = new System.Drawing.Size(657, 190);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductList)).EndInit();
             this.ResumeLayout(false);
