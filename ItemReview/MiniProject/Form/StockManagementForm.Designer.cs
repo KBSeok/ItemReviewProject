@@ -63,6 +63,7 @@
             this.uscSearchProduct.Name = "uscSearchProduct";
             this.uscSearchProduct.Size = new System.Drawing.Size(699, 168);
             this.uscSearchProduct.TabIndex = 3;
+            this.uscSearchProduct.ButtonSearchProduct += new System.EventHandler<Miniproject.StockSearchControl.ButtonSearchProductEventArgs>(this.UscSearchProduct_ButtonSearchProduct);
             // 
             // StockManagementForm
             // 

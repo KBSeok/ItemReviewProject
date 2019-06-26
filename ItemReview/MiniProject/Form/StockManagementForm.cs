@@ -18,16 +18,19 @@ namespace Miniproject
             InitializeComponent();
         }
 
-        private void stockSearchControl1_ButtonSearchProduct(object sender, StockSearchControl.ButtonSearchProductEventArgs e)
-        {
-            var product = DB.Product.SearchInfo(e.Name, e.ParentsName, e.SubName,
-                e.Size, e.Color);
-            uscProductInfo.SetDataProductData(product);
-        }
+        
 
         private void StockManagementForm_Load(object sender, EventArgs e)
         {
             uscSearchProduct.LoadProductData();
+        }
+
+        private void UscSearchProduct_ButtonSearchProduct(object sender, StockSearchControl.ButtonSearchProductEventArgs e)
+        {
+
+            var product = DB.Product.SearchInfo(e.Name, e.ParentsName, e.SubName,
+                e.Size, e.Color);
+            uscProductInfo.SetDataProductData(product);
         }
     }
 }

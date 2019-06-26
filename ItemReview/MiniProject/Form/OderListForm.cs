@@ -20,7 +20,7 @@ namespace Miniproject
 
         private void OrderSearchControl_SearchBottonClicked(object sender, OrderSearchControl.SearchBottonClickedEventArgs e)
         {
-            var orders = DB.orderdetail.SearchOrderInfo(e.TxbOrderNumber, e.TxbCusId);
+            var orders = DB.Orderdetail.SearchOrderInfo(e.TxbOrderNumber, e.TxbCusId);
             orderInfoListControl11.SetDataOrder(orders);
         }
 
