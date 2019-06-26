@@ -19,5 +19,8 @@ namespace MiniProject.Data
             new ParentsCategoryData();
         public static SubCategoryData Subcategorydata { get; } =
             new SubCategoryData();
+
+
+        //public static OrderDetailData orderdetaill { get; set; }
     }
 }

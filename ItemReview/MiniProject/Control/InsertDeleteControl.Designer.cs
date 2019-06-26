@@ -34,30 +34,35 @@
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(13, 13);
+            this.btnInsert.Location = new System.Drawing.Point(15, 16);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(75, 23);
+            this.btnInsert.Size = new System.Drawing.Size(86, 29);
             this.btnInsert.TabIndex = 0;
             this.btnInsert.Text = "변경";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.BtnInsert_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(132, 13);
+            this.btnDelete.Location = new System.Drawing.Point(151, 16);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(86, 29);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // InsertDelete
+            // InsertDeleteControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnInsert);
-            this.Name = "InsertDelete";
-            this.Size = new System.Drawing.Size(223, 45);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "InsertDeleteControl";
+            this.Size = new System.Drawing.Size(255, 56);
             this.ResumeLayout(false);
 
         }

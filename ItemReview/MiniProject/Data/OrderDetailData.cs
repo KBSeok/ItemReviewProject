@@ -136,5 +136,65 @@ namespace MiniProject.Data
                 }
             }
         }
+
+        public List<Order_Detail> SearchOrderInfo(string orderNumber, string cusId)
+        {
+            using (ShoppingMallEntities context = new ShoppingMallEntities())
+            {
+               var query = from x in context.Order_Details
+                            where x.Order.OrderNumber == orderNumber || x.Order.Customer.UserId == cusId
+                            select new
+                            {
+                                orderdetail = x,
+                                //order = x.Order,
+                                product = x.Product,                                
+                                //customer = x.Order.Customer,
+                                ordernumber = x.Order.OrderNumber,
+                                userId = x.Order.Customer.UserId,
+                                price = x.Product.Price,
+                                productName = x.Product.ProductName,
+                                size = x.Product.Size,
+                                color = x.Product.Color,
+                                amount = x.Order.Amount,
+                                orderdate = x.Order.OrderDate
+
+                            };
+
+                var list = query.ToList();
+
+                foreach (var x in list)
+                {
+                    x.orderdetail.OrderNumber = x.ordernumber;
+                    x.orderdetail.UserId = x.userId;
+                    x.orderdetail.Price = x.price;
+                    x.orderdetail.ProductName = x.productName;
+                    x.orderdetail.Color = x.color;
+                    x.orderdetail.Size = x.size;
+                    x.orderdetail.Amount = x.amount;
+                    x.orderdetail.OrderDate = x.orderdate;
+                }
+                return list.ConvertAll(x => x.orderdetail);
+            }
+
+        }
+
+        public List<Order_Detail> GetSize(string size)
+        {
+            using(ShoppingMallEntities context = new ShoppingMallEntities())
+            {
+                var query = from x in context.Order_Details select x;
+
+
+                if (size.Contains(size))
+                    query = query.Where(x => x.Product.Size == size);
+
+                List<Order_Detail> orders = query.ToList();
+
+                
+                return orders;
+
+            }
+        }
+       
     }
 }
