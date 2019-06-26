@@ -20,7 +20,7 @@ namespace Miniproject
 
         private void stockSearchControl1_ButtonSearchProduct(object sender, StockSearchControl.ButtonSearchProductEventArgs e)
         {
-            var product = DB.Product.SearchInfo(e.Name, e.ParentsId, e.SubId,
+            var product = DB.Product.SearchInfo(e.Name, e.ParentsName, e.SubName,
                 e.Size, e.Color);
             uscProductInfo.SetDataProductData(product);
         }

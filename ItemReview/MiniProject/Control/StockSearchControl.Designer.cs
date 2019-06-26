@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.gbOrderSearch = new System.Windows.Forms.GroupBox();
             this.btnStockSearch = new System.Windows.Forms.Button();
             this.chbSize = new System.Windows.Forms.CheckBox();
@@ -40,10 +39,8 @@
             this.cbbLCategory = new System.Windows.Forms.ComboBox();
             this.cbbColor = new System.Windows.Forms.ComboBox();
             this.cbbHCategory = new System.Windows.Forms.ComboBox();
-            this.parentsCategoryData = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.gbOrderSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.parentsCategoryData)).BeginInit();
             this.SuspendLayout();
             // 
             // gbOrderSearch
@@ -169,8 +166,6 @@
             // 
             // cbbHCategory
             // 
-            this.cbbHCategory.DataSource = this.parentsCategoryData;
-            this.cbbHCategory.DisplayMember = "ParentsCategoryName";
             this.cbbHCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbHCategory.Enabled = false;
             this.cbbHCategory.FormattingEnabled = true;
@@ -179,10 +174,6 @@
             this.cbbHCategory.Size = new System.Drawing.Size(119, 20);
             this.cbbHCategory.TabIndex = 1;
             this.cbbHCategory.ValueMember = "ParentsCategoryId";
-            // 
-            // parentsCategoryData
-            // 
-            this.parentsCategoryData.DataSource = typeof(MiniProject.ParentsCategory);
             // 
             // label1
             // 
@@ -202,7 +193,6 @@
             this.Size = new System.Drawing.Size(699, 168);
             this.gbOrderSearch.ResumeLayout(false);
             this.gbOrderSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.parentsCategoryData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,6 +211,5 @@
         private System.Windows.Forms.ComboBox cbbColor;
         private System.Windows.Forms.ComboBox cbbHCategory;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource parentsCategoryData;
     }
 }

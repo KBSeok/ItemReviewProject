@@ -12,8 +12,7 @@ namespace MiniProject.Data
         {
             using(ShoppingMallEntities context = new ShoppingMallEntities())
             {
-                return context.SubCategories.Select(x => x.SubCategoryName)
-                    .Distinct().ToList();
+                return context.SubCategories.Select(x => x.SubCategoryName).Distinct().ToList();
             }
         }
     }

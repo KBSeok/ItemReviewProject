@@ -14,10 +14,18 @@ namespace MiniProject
     
     public partial class SubCategory
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SubCategory()
+        {
+            this.Products = new HashSet<Product>();
+        }
+    
         public int ParentsCategoryId { get; set; }
         public int SubCategoryId { get; set; }
         public string SubCategoryName { get; set; }
     
         public virtual ParentsCategory ParentsCategory { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

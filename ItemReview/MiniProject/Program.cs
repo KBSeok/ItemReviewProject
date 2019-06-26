@@ -16,7 +16,7 @@ namespace Miniproject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StockManagementForm());
+            Application.Run(new Login_Form());
         }
     }
 }

@@ -24,7 +24,7 @@ namespace MiniProject
         public string ProductName { get; set; }
         public int SupplierId { get; set; }
         public int ParentsCategoryId { get; set; }
-        public Nullable<int> SubCategoryId { get; set; }
+        public int SubCategoryId { get; set; }
         public int Price { get; set; }
         public string Size { get; set; }
         public string Color { get; set; }
@@ -33,6 +33,7 @@ namespace MiniProject
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order_Detail> Order_Details { get; set; }
         public virtual ParentsCategory ParentsCategory { get; set; }
+        public virtual SubCategory SubCategory { get; set; }
         public virtual Supplier Supplier { get; set; }
     }
 }

@@ -8,12 +8,15 @@ namespace MiniProject.Data
 {
     class ParentsCategoryData
     {
-        public List<ParentsCategory> GetAll()
+        public List<String> GetParentsCategoryName()
         {
-            using(ShoppingMallEntities context = new ShoppingMallEntities())
+            using (ShoppingMallEntities context = new ShoppingMallEntities())
             {
-                return context.ParentsCategories.ToList();
+                return context.ParentsCategories.
+                    Select(x => x.ParentsCategoryName).Distinct().ToList();
             }
         }
+        
+        
     }
 }

@@ -92,6 +92,7 @@
     <Compile Include="Employee.cs">
       <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Order_Detail.cs" />
     <Compile Include="Form\EmployeeControl.cs">
       <SubType>Form</SubType>
     </Compile>
