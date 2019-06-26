@@ -163,4 +163,3 @@ D:\github\ItemReviewProject2\ItemReview\MiniProject\bin\Debug\EntityFramework.xm
 D:\github\ItemReviewProject2\ItemReview\MiniProject\bin\Debug\EntityFramework.SqlServer.xml
 D:\github\ItemReviewProject2\ItemReview\MiniProject\bin\Debug\ko\EntityFramework.resources.dll
 D:\github\ItemReviewProject2\ItemReview\MiniProject\obj\Debug\MiniProject.csproj.CopyComplete
-D:\github\ItemReviewProject2\ItemReview\MiniProject\obj\Debug\MiniProject.csprojAssemblyReference.cache
