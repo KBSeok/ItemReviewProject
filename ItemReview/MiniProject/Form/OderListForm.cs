@@ -24,7 +24,5 @@ namespace Miniproject
             orderInfoListControl11.SetDataOrder(orders);
         }
 
-        
-
     }
 }

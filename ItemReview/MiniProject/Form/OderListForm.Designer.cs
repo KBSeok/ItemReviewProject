@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.insertDeleteControl1 = new Miniproject.InsertDeleteControl();
             this.orderInfoListControl11 = new Miniproject.OrderInfoListControl1();
             this.orderSearchControl1 = new Miniproject.OrderSearchControl();
-            this.insertDeleteControl1 = new Miniproject.InsertDeleteControl();
             this.SuspendLayout();
             // 
             // label1
@@ -44,6 +44,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "주문관리";
             // 
+            // insertDeleteControl1
+            // 
+            this.insertDeleteControl1.Location = new System.Drawing.Point(597, 493);
+            this.insertDeleteControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.insertDeleteControl1.Name = "insertDeleteControl1";
+            this.insertDeleteControl1.Size = new System.Drawing.Size(255, 56);
+            this.insertDeleteControl1.TabIndex = 3;
+            // 
             // orderInfoListControl11
             // 
             this.orderInfoListControl11.Location = new System.Drawing.Point(42, 201);
@@ -51,7 +59,7 @@
             this.orderInfoListControl11.Name = "orderInfoListControl11";
             this.orderInfoListControl11.Size = new System.Drawing.Size(826, 280);
             this.orderInfoListControl11.TabIndex = 2;
-            //this.orderInfoListControl11.AllowUserToAddRowsChanged += new System.EventHandler<Miniproject.OrderInfoListControl1.AllowUserToAddRowsChangedEventArgs>(this.OrderInfoListControl11_AllowUserToAddRowsChanged);
+            //this.orderInfoListControl11.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OrderInfoListControl11_KeyUp);
             // 
             // orderSearchControl1
             // 
@@ -61,14 +69,6 @@
             this.orderSearchControl1.Size = new System.Drawing.Size(673, 119);
             this.orderSearchControl1.TabIndex = 1;
             this.orderSearchControl1.SearchBottonClicked += new System.EventHandler<Miniproject.OrderSearchControl.SearchBottonClickedEventArgs>(this.OrderSearchControl_SearchBottonClicked);
-            // 
-            // insertDeleteControl1
-            // 
-            this.insertDeleteControl1.Location = new System.Drawing.Point(597, 493);
-            this.insertDeleteControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.insertDeleteControl1.Name = "insertDeleteControl1";
-            this.insertDeleteControl1.Size = new System.Drawing.Size(255, 56);
-            this.insertDeleteControl1.TabIndex = 3;
             // 
             // OderListForm
             // 

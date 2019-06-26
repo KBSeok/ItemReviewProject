@@ -84,6 +84,12 @@
     <Compile Include="Control\EmployeeUpdateDelete.Designer.cs">
       <DependentUpon>EmployeeUpdateDelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control\OrderOptionChangeForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\OrderOptionChangeForm.Designer.cs">
+      <DependentUpon>OrderOptionChangeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs">
       <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control\EmployeeUpdateDelete.resx">
       <DependentUpon>EmployeeUpdateDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\OrderOptionChangeForm.resx">
+      <DependentUpon>OrderOptionChangeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\EmployeeControl.resx">
       <DependentUpon>EmployeeControl.cs</DependentUpon>
