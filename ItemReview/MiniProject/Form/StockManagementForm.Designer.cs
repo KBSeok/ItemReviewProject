@@ -75,7 +75,6 @@
             this.Controls.Add(this.label1);
             this.Name = "StockManagementForm";
             this.Text = "StockManagement";
-            this.Load += new System.EventHandler(this.StockManagementForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.parentsCategoryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

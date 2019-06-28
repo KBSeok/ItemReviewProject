@@ -165,3 +165,4 @@ C:\Users\301-06\Desktop\a\ItemReview\MiniProject\obj\Debug\MiniProject.csproj.Co
 C:\Users\301-06\Desktop\a\ItemReview\MiniProject\obj\Debug\MiniProject.exe
 C:\Users\301-06\Desktop\a\ItemReview\MiniProject\obj\Debug\MiniProject.pdb
 D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.UPdataDeleteForm.resources
+C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\MiniProject.UPdataDeleteForm.resources

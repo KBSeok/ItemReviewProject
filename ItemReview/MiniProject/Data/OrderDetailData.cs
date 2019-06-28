@@ -23,7 +23,7 @@ namespace MiniProject.Data
                                     productname = x.Product.ProductName,
                                     size = x.Product.Size,
                                     color = x.Product.Color,
-                                    amount = x.Order.Amount
+                                    
 
                                 };
 
@@ -34,7 +34,7 @@ namespace MiniProject.Data
                         x.order_detail.OrderDate = x.orderdate;
                         x.order_detail.ParentsCategoryName = x.parentscategotyname;
                         x.order_detail.ProductName = x.productname;
-                        x.order_detail.Amount = x.amount;
+                        
                         x.order_detail.Size = x.size;
                         x.order_detail.Color = x.color;
                     }
@@ -146,137 +146,34 @@ namespace MiniProject.Data
                 {
                     var query = from x in context.Order_Details
                                 where x.Order.OrderNumber == orderNumber && x.Order.Customer.UserId == cusId
-                                select new
-                                {
-                                    orderdetail = x,
-                                    product = x.Product,
-                                    ordernumber = x.Order.OrderNumber,
-                                    userId = x.Order.Customer.UserId,
-                                    price = x.Product.Price,
-                                    productName = x.Product.ProductName,
-                                    size = x.Product.Size,
-                                    color = x.Product.Color,
-                                    amount = x.Order.Amount,
-                                    orderdate = x.Order.OrderDate
+                                select x;
 
-                                };
-
-                    var list = query.ToList();
-
-                    foreach (var x in list)
-                    {
-                        x.orderdetail.OrderNumber = x.ordernumber;
-                        x.orderdetail.UserId = x.userId;
-                        x.orderdetail.Price = x.price;
-                        x.orderdetail.ProductName = x.productName;
-                        x.orderdetail.Color = x.color;
-                        x.orderdetail.Size = x.size;
-                        x.orderdetail.Amount = x.amount;
-                        x.orderdetail.OrderDate = x.orderdate;
-                    }
-                    return list.ConvertAll(x => x.orderdetail);
+                    
+                    return query.ToList();
                 }
                 else if(string.IsNullOrEmpty(orderNumber) == false)
                 {
                     var query = from x in context.Order_Details
                                 where x.Order.OrderNumber == orderNumber
-                                select new
-                                {
-                                    orderdetail = x,
-                                    product = x.Product,
-                                    ordernumber = x.Order.OrderNumber,
-                                    userId = x.Order.Customer.UserId,
-                                    price = x.Product.Price,
-                                    productName = x.Product.ProductName,
-                                    size = x.Product.Size,
-                                    color = x.Product.Color,
-                                    amount = x.Order.Amount,
-                                    orderdate = x.Order.OrderDate
+                                select x;
 
-                                };
-
-                    var list = query.ToList();
-
-                    foreach (var x in list)
-                    {
-                        x.orderdetail.OrderNumber = x.ordernumber;
-                        x.orderdetail.UserId = x.userId;
-                        x.orderdetail.Price = x.price;
-                        x.orderdetail.ProductName = x.productName;
-                        x.orderdetail.Color = x.color;
-                        x.orderdetail.Size = x.size;
-                        x.orderdetail.Amount = x.amount;
-                        x.orderdetail.OrderDate = x.orderdate;
-                    }
-                    return list.ConvertAll(x => x.orderdetail);
+                    return query.ToList(); 
                 }
 
                 else if (string.IsNullOrEmpty(cusId) == false)
                 {
                     var query = from x in context.Order_Details
                                 where x.Order.Customer.UserId == cusId
-                                select new
-                                {
-                                    orderdetail = x,
-                                    product = x.Product,
-                                    ordernumber = x.Order.OrderNumber,
-                                    userId = x.Order.Customer.UserId,
-                                    price = x.Product.Price,
-                                    productName = x.Product.ProductName,
-                                    size = x.Product.Size,
-                                    color = x.Product.Color,
-                                    amount = x.Order.Amount,
-                                    orderdate = x.Order.OrderDate
+                                select x;
 
-                                };
-
-                    var list = query.ToList();
-
-                    foreach (var x in list)
-                    {
-                        x.orderdetail.OrderNumber = x.ordernumber;
-                        x.orderdetail.UserId = x.userId;
-                        x.orderdetail.Price = x.price;
-                        x.orderdetail.ProductName = x.productName;
-                        x.orderdetail.Color = x.color;
-                        x.orderdetail.Size = x.size;
-                        x.orderdetail.Amount = x.amount;
-                        x.orderdetail.OrderDate = x.orderdate;
-                    }
-                    return list.ConvertAll(x => x.orderdetail);
+                    return query.ToList();
                 }
                 else
                 {
                     var query = from x in context.Order_Details
-                                select new
-                                {
-                                    orderdetail = x,
-                                    product = x.Product,
-                                    ordernumber = x.Order.OrderNumber,
-                                    userId = x.Order.Customer.UserId,
-                                    price = x.Product.Price,
-                                    productName = x.Product.ProductName,
-                                    size = x.Product.Size,
-                                    color = x.Product.Color,
-                                    amount = x.Order.Amount,
-                                    orderdate = x.Order.OrderDate
+                                select x;
 
-                                };
-
-                    var list = query.ToList();
-
-                    foreach (var x in list)
-                    {
-                        x.orderdetail.OrderNumber = x.ordernumber;
-                        x.orderdetail.UserId = x.userId;
-                        x.orderdetail.Price = x.price;
-                        x.orderdetail.ProductName = x.productName;
-                        x.orderdetail.Color = x.color;
-                        x.orderdetail.Size = x.size;
-                        x.orderdetail.Amount = x.amount;
-                        x.orderdetail.OrderDate = x.orderdate;
-                    }
-                    return list.ConvertAll(x => x.orderdetail);
+                    return query.ToList();
                 }
             }
         }
@@ -308,13 +205,13 @@ namespace MiniProject.Data
                             select new
                             {
                                 order_detail = x,
-                                product = x.Product,
+                                
                                 orderdate = x.Order.OrderDate,
                                 parentscategotyname = x.Product.ParentsCategory.ParentsCategoryName,
                                 productname = x.Product.ProductName,
                                 size = x.Product.Size,
                                 color = x.Product.Color,
-                                amount = x.Order.Amount
+                                
 
                             };
 
@@ -325,11 +222,19 @@ namespace MiniProject.Data
                     x.order_detail.OrderDate = x.orderdate;
                     x.order_detail.ParentsCategoryName = x.parentscategotyname;
                     x.order_detail.ProductName = x.productname;
-                    x.order_detail.Amount = x.amount;
+                    
                     x.order_detail.Size = x.size;
                     x.order_detail.Color = x.color;
                 }
                 return list.ConvertAll(x => x.order_detail);
+            }
+        }
+        public Order_Detail GetPK(int orderId, int productId)
+        {
+            using(ShoppingMallEntities context = new ShoppingMallEntities())
+            {
+                return context.Order_Details.FirstOrDefault(x => x.OrderID == orderId &&
+                x.ProductId == productId);
             }
         }
     }

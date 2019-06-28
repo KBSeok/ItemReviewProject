@@ -18,13 +18,6 @@ namespace Miniproject
             InitializeComponent();
         }
 
-        
-
-        private void StockManagementForm_Load(object sender, EventArgs e)
-        {
-            uscSearchProduct.LoadProductData();
-        }
-
         private void UscSearchProduct_ButtonSearchProduct(object sender, StockSearchControl.ButtonSearchProductEventArgs e)
         {
 

@@ -11,6 +11,21 @@ namespace MiniProject.Data
 {
     class EntityData<T> where T : class
     {
+        public List<S> Select<S>(Expression<Func<T, S>> selector)
+        {
+            using (ShoppingMallEntities context = new ShoppingMallEntities())
+            {
+                return context.Set<T>().Select(selector).ToList();
+            }
+        }
+
+        public List<T> GetAll()
+        {
+            using (ShoppingMallEntities context = new ShoppingMallEntities())
+            {
+                return context.Set<T>().ToList();
+            }
+        }
 
         public void Insert(T entity)
         {
@@ -31,8 +46,6 @@ namespace MiniProject.Data
                 context.SaveChanges();
             }
         }
-
-
 
         public void Delete(T entity)
         {

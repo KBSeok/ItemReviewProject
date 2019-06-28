@@ -22,8 +22,6 @@ namespace Miniproject
             dgvCusInfo.DataSource = customer;
         }
 
-        
-
         #region DoubleClickSearchCusOrderInfo event things for C# 3.0
         public event EventHandler<DoubleClickSearchCusOrderInfoEventArgs> DoubleClickSearchCusOrderInfo;
 

@@ -93,18 +93,15 @@ namespace MiniProject
             }
             else
             {
+                int employeeId = Convert.ToInt32(txbNumber.Text);
+
+                Employee employee = DB.Employee.GetByPK(employeeId);
+
+                employee.LoginID = txbId.Text;
+                employee.LoginPW = txbPW.Text;
+
+                DB.Employee.Update(employee);
                 
-                using (ShoppingMallEntities context = new ShoppingMallEntities())
-                {
-                    int employeeId = Convert.ToInt32(txbNumber.Text);
-
-                    Employee employee = DB.Employee.GetByPK(employeeId);
-
-                    employee.LoginID = txbId.Text;
-                    employee.LoginPW = txbPW.Text;
-
-                    DB.Employee.Update(employee);
-                }
             }
             MessageBox.Show("변경이 완료되었습니다.", "알림", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);

@@ -17,7 +17,10 @@ namespace Miniproject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new StockManagementForm());
-            Application.Run(new MainmenuForm());
+            Application.Run(new OderListForm());
+            //Application.Run(new EmployeeInfoForm());
+            //Application.Run(new Login_Form());
+
         }
     }
 }

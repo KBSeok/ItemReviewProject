@@ -87,6 +87,7 @@
     <Compile Include="Customer.cs">
       <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\OrderData.cs" />
     <Compile Include="Data\ParentsCategoryData.cs" />
     <Compile Include="Data\SubCategoryData.cs" />
     <Compile Include="Employee.cs">
@@ -215,6 +216,12 @@
     <Compile Include="Control\Register_LoginControl.Designer.cs">
       <DependentUpon>Register_LoginControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\UpdataDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\UpdataDeleteForm.Designer.cs">
+      <DependentUpon>UpdataDeleteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Shipper.cs">
       <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
@@ -238,12 +245,6 @@
     </Compile>
     <Compile Include="Supplier.cs">
       <DependentUpon>ShoppingMall.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Form\UpdataDeleteForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\UpdataDeleteForm.Designer.cs">
-      <DependentUpon>UpdataDeleteForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Control\CustomerInfoControl.resx">
       <DependentUpon>CustomerInfoControl.cs</DependentUpon>

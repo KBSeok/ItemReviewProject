@@ -34,6 +34,7 @@
           <ScalarProperty Name="OrderID" ColumnName="OrderID" />
           <ScalarProperty Name="ProductId" ColumnName="ProductId" />
           <ScalarProperty Name="OrderDetailsId" ColumnName="OrderDetailsId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -48,7 +49,6 @@
           <ScalarProperty Name="RequiredDate" ColumnName="RequiredDate" />
           <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
           <ScalarProperty Name="ShiperID" ColumnName="ShiperID" />
-          <ScalarProperty Name="Amount" ColumnName="Amount" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

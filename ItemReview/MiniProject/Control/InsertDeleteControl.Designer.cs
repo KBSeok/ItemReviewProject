@@ -34,10 +34,9 @@
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(15, 16);
-            this.btnInsert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnInsert.Location = new System.Drawing.Point(13, 13);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(86, 29);
+            this.btnInsert.Size = new System.Drawing.Size(75, 23);
             this.btnInsert.TabIndex = 0;
             this.btnInsert.Text = "변경";
             this.btnInsert.UseVisualStyleBackColor = true;
@@ -45,10 +44,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(151, 16);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDelete.Location = new System.Drawing.Point(132, 13);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(86, 29);
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -56,13 +54,12 @@
             // 
             // InsertDeleteControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnInsert);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "InsertDeleteControl";
-            this.Size = new System.Drawing.Size(255, 56);
+            this.Size = new System.Drawing.Size(227, 55);
             this.ResumeLayout(false);
 
         }

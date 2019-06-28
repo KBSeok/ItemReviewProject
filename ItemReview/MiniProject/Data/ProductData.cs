@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace MiniProject.Data
 {
-    class ProductData
+    class ProductData : EntityData<Product>
     {
         public List<Product> SearchInfo(string Name, string Parents, string Sub,
             string Size, string Color)
@@ -17,12 +17,14 @@ namespace MiniProject.Data
             {
                 var query = from x in context.Products
                             select x;
+                query.ToList();
 
                 if (string.IsNullOrEmpty(Name) == false)
                 {
                     query = from x in query
                             where x.ProductName == Name
                             select x;
+                    query.ToList();
                 }
 
                 if (string.IsNullOrEmpty(Parents) == false)
@@ -30,20 +32,22 @@ namespace MiniProject.Data
                     query = from x in query
                             where x.ParentsCategory.ParentsCategoryName == Parents
                             select x;
+                    query.ToList();
                 }
 
                 if(string.IsNullOrEmpty(Sub) == false)
                 {
                     query = from x in query
-                            where x.SubCategory.SubCategoryName == Sub && 
-                            x.ParentsCategory.ParentsCategoryName == Parents
+                            where x.SubCategory.SubCategoryName == Sub
                             select x;
+                    query.ToList();
                 }
                 if (string.IsNullOrEmpty(Size) == false)
                 {
                     query = from x in query
                             where x.Size == Size
                             select x;
+                    query.ToList();
                 }
 
                 if (string.IsNullOrEmpty(Color) == false)
@@ -51,6 +55,7 @@ namespace MiniProject.Data
                     query = from x in query
                             where x.Color == Color
                             select x;
+                    query.ToList();
                 }
 
                 return query.ToList();
@@ -65,31 +70,48 @@ namespace MiniProject.Data
             }
         }
 
-        public List<string> GetColor()
+        public List<string> GetColor(string ParentsName, string SubName)
         {
             using (ShoppingMallEntities context = new ShoppingMallEntities())
-            {
-                return context.Products.Select(x => x.Color).Distinct().ToList();
-            }
-        }
-
-        public List<string> GetSize()
-        {
-            using (ShoppingMallEntities context = new ShoppingMallEntities())
-            {
-                return context.Products.Select(x => x.Size).Distinct().ToList();
-            }
-        }
-
-        public List<Product> Search(string ParentsName)
-        {
-            using(ShoppingMallEntities context = new ShoppingMallEntities())
             {
                 var query = from x in context.Products
-                            where x.ParentsCategory.ParentsCategoryName == ParentsName
+                            from y in context.SubCategories
+                            where (x.ParentsCategoryId == y.ParentsCategoryId 
+                            && x.SubCategoryId == y.SubCategoryId)
+                            && x.ParentsCategory.ParentsCategoryName == ParentsName 
+                            && x.SubCategory.SubCategoryName == SubName
                             select x;
 
-                return query.ToList();
+                var query1 = query.Select(x => x.Color).Distinct().ToList();
+
+                return query1;
+            }
+        }
+
+        public List<string> GetSize(string ParentsName, string SubName, string Color)
+        {
+            using (ShoppingMallEntities context = new ShoppingMallEntities())
+            {
+                var query = from x in context.Products
+                            from y in context.SubCategories
+                            where (x.ParentsCategoryId == y.ParentsCategoryId
+                            && x.SubCategoryId == y.SubCategoryId)
+                            && x.ParentsCategory.ParentsCategoryName == ParentsName
+                            && x.SubCategory.SubCategoryName == SubName
+                            && x.Color == Color
+                            select x;
+
+                var query1 = query.Select(x => x.Size).Distinct().ToList();
+
+                return query1;
+            }
+        }
+
+        public Product GetByPK(int productId)
+        {
+            using (ShoppingMallEntities context = new ShoppingMallEntities())
+            {
+                return context.Products.FirstOrDefault(x => x.ProductId == productId);
             }
         }
     }

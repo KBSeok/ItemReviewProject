@@ -26,9 +26,13 @@ namespace Miniproject
         {
             txbCusId.Enabled = chbCusId.Checked;
         }
+        
 
         private void BtnOrderSearch_Click(object sender, EventArgs e)
         {
+            InsertDeleteControl.orderNumber = txbOrderNumber.Text;
+            InsertDeleteControl.cusId = txbCusId.Text;
+
             string orderNumber = txbOrderNumber.Text;
             string cusId = txbCusId.Text;
 

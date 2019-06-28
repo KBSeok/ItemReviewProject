@@ -152,6 +152,7 @@
             this.cbbLCategory.Size = new System.Drawing.Size(121, 20);
             this.cbbLCategory.TabIndex = 3;
             this.cbbLCategory.ValueMember = "SubCategoryName";
+            this.cbbLCategory.DropDownClosed += new System.EventHandler(this.cbbLCategory_DropDownClosed);
             // 
             // cbbColor
             // 
@@ -163,9 +164,11 @@
             this.cbbColor.Size = new System.Drawing.Size(121, 20);
             this.cbbColor.TabIndex = 2;
             this.cbbColor.ValueMember = "Color";
+            this.cbbColor.DropDownClosed += new System.EventHandler(this.cbbColor_DropDownClosed);
             // 
             // cbbHCategory
             // 
+            this.cbbHCategory.DisplayMember = "ParentsCategoryId";
             this.cbbHCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbHCategory.Enabled = false;
             this.cbbHCategory.FormattingEnabled = true;
@@ -174,6 +177,7 @@
             this.cbbHCategory.Size = new System.Drawing.Size(119, 20);
             this.cbbHCategory.TabIndex = 1;
             this.cbbHCategory.ValueMember = "ParentsCategoryId";
+            this.cbbHCategory.DropDownClosed += new System.EventHandler(this.cbbHCategory_DropDownClosed);
             // 
             // label1
             // 

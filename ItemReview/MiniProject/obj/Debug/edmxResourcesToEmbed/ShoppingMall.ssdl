@@ -33,6 +33,7 @@
     <Property Name="OrderID" Type="int" Nullable="false" />
     <Property Name="ProductId" Type="int" Nullable="false" />
     <Property Name="OrderDetailsId" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="int" />
   </EntityType>
   <EntityType Name="Orders">
     <Key>
@@ -46,7 +47,6 @@
     <Property Name="RequiredDate" Type="nvarchar" MaxLength="10" Nullable="false" />
     <Property Name="ShippedDate" Type="nvarchar" MaxLength="10" Nullable="false" />
     <Property Name="ShiperID" Type="int" Nullable="false" />
-    <Property Name="Amount" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ParentsCategory">
     <Key>

@@ -9,11 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MiniProject.Data;
 using Miniproject;
+using MiniProject;
 
 namespace Miniproject
 {
     public partial class InsertDeleteControl : UserControl
     {
+        public static int orderIdData;
+        public static int productIdData;
+        public static object updataOrderDetailData;
+        public static string orderNumber;
+        public static string cusId;
+
         public InsertDeleteControl()
         {
             InitializeComponent();
@@ -21,13 +28,76 @@ namespace Miniproject
 
         private void BtnInsert_Click(object sender, EventArgs e)
         {
-      
+            //Order_Detail order_Detail =
+            //    updataOrderDetailData as Order_Detail;
+            Order_Detail order_Detail = 
+                updataOrderDetailData as Order_Detail;
+
+            if (order_Detail == null)
+                return;
+
+            MessageBox.Show("변경이 완료되었습니다.", "알림",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             
+            DB.Orderdetail.Update(order_Detail);
+
+            OnSearchBottonClicked(orderNumber, cusId);
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
+            Order_Detail order_Detail = 
+                DB.Orderdetail.GetPK(orderIdData, productIdData);
 
+            MessageBox.Show("삭제가 완료되었습니다.", "알림",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+            DB.Orderdetail.Delete(order_Detail);
+
+            OnSearchBottonClicked(orderNumber, cusId);
         }
+        #region SearchBottonClicked event things for C# 3.0
+        public event EventHandler<SearchBottonClickedEventArgs> SearchBottonClicked;
+
+        protected virtual void OnSearchBottonClicked(SearchBottonClickedEventArgs e)
+        {
+            if (SearchBottonClicked != null)
+                SearchBottonClicked(this, e);
+        }
+
+        private SearchBottonClickedEventArgs OnSearchBottonClicked(string txbOrderNumber, string txbCusId)
+        {
+            SearchBottonClickedEventArgs args = new SearchBottonClickedEventArgs(txbOrderNumber, txbCusId);
+            OnSearchBottonClicked(args);
+
+            return args;
+        }
+
+        private SearchBottonClickedEventArgs OnSearchBottonClickedForOut()
+        {
+            SearchBottonClickedEventArgs args = new SearchBottonClickedEventArgs();
+            OnSearchBottonClicked(args);
+
+            return args;
+        }
+
+        public class SearchBottonClickedEventArgs : EventArgs
+        {
+            public string TxbOrderNumber { get; set; }
+            public string TxbCusId { get; set; }
+
+            public SearchBottonClickedEventArgs()
+            {
+            }
+
+            public SearchBottonClickedEventArgs(string txbOrderNumber, string txbCusId)
+            {
+                TxbOrderNumber = txbOrderNumber;
+                TxbCusId = txbCusId;
+            }
+        }
+        #endregion
+
+
     }
 }

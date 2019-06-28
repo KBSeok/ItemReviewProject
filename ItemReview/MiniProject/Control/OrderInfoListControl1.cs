@@ -10,75 +10,42 @@ using System.Windows.Forms;
 using MiniProject;
 using MiniProject.Data;
 
+
+
+
 namespace Miniproject
 {
     public partial class OrderInfoListControl1 : UserControl
     {
+        
         public OrderInfoListControl1()
         {
             InitializeComponent();
+            
         }
 
-        public void SetDataOrder(List<Order_Detail> order)
+        public void SetDataOrder(List<Order_Detail> orderdetail)
         {
-            dgvOrderList.DataSource = order;
+            dgvOrderList.DataSource = orderdetail;
         }
 
-        private void DgvOrderList_DoubleClick(object sender, EventArgs e)
+
+        
+
+        private void DgvOrderList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Order_Detail order = dgvOrderList.CurrentRow.DataBoundItem as Order_Detail;
+            InsertDeleteControl.orderIdData =
+                Convert.ToInt32(dgvOrderList.Rows[dgvOrderList.CurrentCellAddress.Y].
+                Cells[0].Value);
 
-            if (order == null)
-                return;
+            InsertDeleteControl.productIdData =
+                Convert.ToInt32(dgvOrderList.Rows[dgvOrderList.CurrentCellAddress.Y].
+                Cells[1].Value);
 
-            OnDoubleClick(order);
+            InsertDeleteControl.updataOrderDetailData =
+                dgvOrderList.CurrentRow.DataBoundItem;
         }
 
-        #region DoubleClick event things for C# 3.0
-        public event EventHandler<DoubleClickEventArgs> DoubleClick;
-
-        protected virtual void OnDoubleClick(DoubleClickEventArgs e)
-        {
-            if (DoubleClick != null)
-                DoubleClick(this, e);
-        }
-
-        private DoubleClickEventArgs OnDoubleClick(Order_Detail order)
-        {
-            DoubleClickEventArgs args = new DoubleClickEventArgs(order);
-            OnDoubleClick(args);
-
-            return args;
-        }
-
-        private DoubleClickEventArgs OnDoubleClickForOut()
-        {
-            DoubleClickEventArgs args = new DoubleClickEventArgs();
-            OnDoubleClick(args);
-
-            return args;
-        }
-
-        public class DoubleClickEventArgs : EventArgs
-        {
-            public Order_Detail Order { get; set; }
-
-            public DoubleClickEventArgs()
-            {
-            }
-
-            public DoubleClickEventArgs(Order_Detail order)
-            {
-                Order = order;
-            }
-        }
-
-        #endregion
-
-        private void DgvOrderList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            UPdataDeleteForm frm = new UPdataDeleteForm();
-            frm.Show();
-        }
+        
     }
 }

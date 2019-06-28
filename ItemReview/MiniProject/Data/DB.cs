@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MiniProject.Data
+﻿namespace MiniProject.Data
 {
     class DB
     {
@@ -20,6 +14,7 @@ namespace MiniProject.Data
         public static SubCategoryData Subcategorydata { get; } =
             new SubCategoryData();
 
+        public static OrderData Order { get; } = new OrderData();
 
         //public static OrderDetailData orderdetaill { get; set; }
     }
