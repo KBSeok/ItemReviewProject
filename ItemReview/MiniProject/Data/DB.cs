@@ -16,6 +16,6 @@
 
         public static OrderData Order { get; } = new OrderData();
 
-        //public static OrderDetailData orderdetaill { get; set; }
+        public static SupplierData Supplier { get; }= new SupplierData();
     }
 }

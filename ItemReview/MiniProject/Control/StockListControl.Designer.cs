@@ -44,6 +44,7 @@
             // dgvProductList
             // 
             this.dgvProductList.AutoGenerateColumns = false;
+            this.dgvProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.productIdDataGridViewTextBoxColumn,

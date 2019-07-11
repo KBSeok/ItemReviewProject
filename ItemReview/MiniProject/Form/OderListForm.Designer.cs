@@ -38,7 +38,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(33, 19);
+            this.label1.Location = new System.Drawing.Point(33, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 21);
             this.label1.TabIndex = 0;
@@ -47,9 +47,9 @@
             // uscOrderList
             // 
             this.uscOrderList.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.uscOrderList.Location = new System.Drawing.Point(235, 161);
+            this.uscOrderList.Location = new System.Drawing.Point(54, 126);
             this.uscOrderList.Name = "uscOrderList";
-            this.uscOrderList.Size = new System.Drawing.Size(344, 241);
+            this.uscOrderList.Size = new System.Drawing.Size(654, 303);
             this.uscOrderList.TabIndex = 4;
             // 
             // insertDeleteControl1
@@ -62,7 +62,7 @@
             // 
             // orderSearchControl1
             // 
-            this.orderSearchControl1.Location = new System.Drawing.Point(94, 59);
+            this.orderSearchControl1.Location = new System.Drawing.Point(94, 31);
             this.orderSearchControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.orderSearchControl1.Name = "orderSearchControl1";
             this.orderSearchControl1.Size = new System.Drawing.Size(589, 95);

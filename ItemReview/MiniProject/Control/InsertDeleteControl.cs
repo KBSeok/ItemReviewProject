@@ -36,12 +36,13 @@ namespace Miniproject
             if (order_Detail == null)
                 return;
 
-            MessageBox.Show("변경이 완료되었습니다.", "알림",
+            DialogResult result = MessageBox.Show("변경 하기겠습니까?", "알림",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             
-            DB.Orderdetail.Update(order_Detail);
-
-            OnSearchBottonClicked(orderNumber, cusId);
+            if(result == DialogResult.OK) { 
+                DB.Orderdetail.Update(order_Detail);
+                OnSearchBottonClicked(orderNumber, cusId);
+            }
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -49,12 +50,13 @@ namespace Miniproject
             Order_Detail order_Detail = 
                 DB.Orderdetail.GetPK(orderIdData, productIdData);
 
-            MessageBox.Show("삭제가 완료되었습니다.", "알림",
+            DialogResult result = MessageBox.Show("삭제 하시겠습니까?", "알림",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
-            DB.Orderdetail.Delete(order_Detail);
-
-            OnSearchBottonClicked(orderNumber, cusId);
+            if(result == DialogResult.OK) { 
+                DB.Orderdetail.Delete(order_Detail);
+                OnSearchBottonClicked(orderNumber, cusId);
+            }
         }
         #region SearchBottonClicked event things for C# 3.0
         public event EventHandler<SearchBottonClickedEventArgs> SearchBottonClicked;

@@ -90,6 +90,7 @@
     <Compile Include="Data\OrderData.cs" />
     <Compile Include="Data\ParentsCategoryData.cs" />
     <Compile Include="Data\SubCategoryData.cs" />
+    <Compile Include="Data\SupplierData.cs" />
     <Compile Include="Employee.cs">
       <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
@@ -246,6 +247,24 @@
     <Compile Include="Supplier.cs">
       <DependentUpon>ShoppingMall.tt</DependentUpon>
     </Compile>
+    <Compile Include="Control\SupplierInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SupplierInfoControl.Designer.cs">
+      <DependentUpon>SupplierInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SupplierSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SupplierSearchControl.Designer.cs">
+      <DependentUpon>SupplierSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SupplierListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SupplierListForm.Designer.cs">
+      <DependentUpon>SupplierListForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Control\CustomerInfoControl.resx">
       <DependentUpon>CustomerInfoControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +276,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control\EmployeeUpdateDelete.resx">
       <DependentUpon>EmployeeUpdateDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SupplierInfoControl.resx">
+      <DependentUpon>SupplierInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SupplierSearchControl.resx">
+      <DependentUpon>SupplierSearchControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\EmployeeControl.resx">
       <DependentUpon>EmployeeControl.cs</DependentUpon>
@@ -306,6 +331,9 @@
     <EmbeddedResource Include="Form\MainmenuForm.resx">
       <DependentUpon>MainmenuForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\SupplierListForm.resx">
+      <DependentUpon>SupplierListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -330,6 +358,7 @@
     <None Include="Properties\DataSources\ParentsCategory.datasource" />
     <None Include="Properties\DataSources\Product.datasource" />
     <None Include="Properties\DataSources\SubCategory.datasource" />
+    <None Include="Properties\DataSources\Supplier.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

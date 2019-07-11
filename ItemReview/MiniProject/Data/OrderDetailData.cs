@@ -146,34 +146,91 @@ namespace MiniProject.Data
                 {
                     var query = from x in context.Order_Details
                                 where x.Order.OrderNumber == orderNumber && x.Order.Customer.UserId == cusId
-                                select x;
+                                select new
+                                {
+                                    orderdetail = x,
+                                    productname = x.Product.ProductName,
+                                    color = x.Product.Color,
+                                    size = x.Product.Size
+                                };
 
-                    
-                    return query.ToList();
+                    var list = query.ToList();
+
+                    foreach(var item in list)
+                    {
+                        item.orderdetail.ProductName = item.productname;
+                        item.orderdetail.Size = item.size;
+                        item.orderdetail.Color = item.color;
+                    }
+                    return list.ConvertAll(x => x.orderdetail);
                 }
+
                 else if(string.IsNullOrEmpty(orderNumber) == false)
                 {
                     var query = from x in context.Order_Details
                                 where x.Order.OrderNumber == orderNumber
-                                select x;
+                                select new
+                                {
+                                    orderdetail = x,
+                                    productname = x.Product.ProductName,
+                                    color = x.Product.Color,
+                                    size = x.Product.Size
+                                };
 
-                    return query.ToList(); 
+                    var list = query.ToList();
+
+                    foreach (var item in list)
+                    {
+                        item.orderdetail.ProductName = item.productname;
+                        item.orderdetail.Size = item.size;
+                        item.orderdetail.Color = item.color;
+                    }
+                    return list.ConvertAll(x => x.orderdetail);
                 }
 
                 else if (string.IsNullOrEmpty(cusId) == false)
                 {
                     var query = from x in context.Order_Details
                                 where x.Order.Customer.UserId == cusId
-                                select x;
+                                select new
+                                {
+                                    orderdetail = x,
+                                    productname = x.Product.ProductName,
+                                    color = x.Product.Color,
+                                    size = x.Product.Size
+                                };
 
-                    return query.ToList();
+                    var list = query.ToList();
+
+                    foreach (var item in list)
+                    {
+                        item.orderdetail.ProductName = item.productname;
+                        item.orderdetail.Size = item.size;
+                        item.orderdetail.Color = item.color;
+                    }
+                    return list.ConvertAll(x => x.orderdetail);
                 }
+
                 else
                 {
                     var query = from x in context.Order_Details
-                                select x;
+                                select new
+                                {
+                                    orderdetail = x,
+                                    productname = x.Product.ProductName,
+                                    color = x.Product.Color,
+                                    size = x.Product.Size
+                                };
 
-                    return query.ToList();
+                    var list = query.ToList();
+
+                    foreach (var item in list)
+                    {
+                        item.orderdetail.ProductName = item.productname;
+                        item.orderdetail.Size = item.size;
+                        item.orderdetail.Color = item.color;
+                    }
+                    return list.ConvertAll(x => x.orderdetail);
                 }
             }
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniProject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,7 +21,7 @@ namespace Miniproject
             Application.Run(new OderListForm());
             //Application.Run(new EmployeeInfoForm());
             //Application.Run(new Login_Form());
-
+            Application.Run(new SupplierListForm());
         }
     }
 }
