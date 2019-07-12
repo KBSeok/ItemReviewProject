@@ -70,6 +70,20 @@ namespace MiniProject.Data
             }
         }
 
+        public List<Product> GetProductName()
+        {
+            using(ShoppingMallEntities context = new ShoppingMallEntities())
+            {
+                var query = from x in context.Products
+                            select x;
+
+                var list = query.Select(x=>x.ProductName).Distinct().ToList();
+
+                return list;
+                    
+            }
+        }
+
         public List<string> GetColor(string ParentsName, string SubName)
         {
             using (ShoppingMallEntities context = new ShoppingMallEntities())

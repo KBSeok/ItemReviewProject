@@ -169,3 +169,5 @@ C:\Users\USER\Desktop\C언어\C#\ItemReview\MiniProject\obj\Debug\MiniProject.UP
 D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.SupplierInfoControl.resources
 D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.SupplierSearchControl.resources
 D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.SupplierListForm.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.CustomerOrder.resources
+D:\김범석\git\ItemReviewProject\ItemReview\MiniProject\obj\Debug\MiniProject.CusOrderForm.resources
